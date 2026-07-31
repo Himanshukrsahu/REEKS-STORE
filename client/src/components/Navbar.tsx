@@ -90,31 +90,7 @@ export default function Navbar() {
             {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
           </button>
 
-          {/* Wishlist */}
-          <Link
-            href="/dashboard?tab=wishlist"
-            className="relative p-2 rounded-full text-foreground/80 hover:text-luxury-blue hover:bg-foreground/5 transition-all"
-          >
-            <Heart size={20} />
-            {wishlistIds.length > 0 && (
-              <span className="absolute top-0 right-0 w-4 h-4 text-[10px] font-bold text-white bg-red-500 rounded-full flex items-center justify-center">
-                {wishlistIds.length}
-              </span>
-            )}
-          </Link>
 
-          {/* Cart */}
-          <Link
-            href="/cart"
-            className="relative p-2 rounded-full text-foreground/80 hover:text-luxury-blue hover:bg-foreground/5 transition-all"
-          >
-            <ShoppingBag size={20} />
-            {totalCartItems > 0 && (
-              <span className="absolute top-0 right-0 w-4 h-4 text-[10px] font-bold text-white bg-luxury-blue rounded-full flex items-center justify-center">
-                {totalCartItems}
-              </span>
-            )}
-          </Link>
 
           {/* Admin badge */}
           {user?.role === 'admin' && (
@@ -156,7 +132,7 @@ export default function Navbar() {
                 href="/auth/register"
                 className="text-sm font-semibold px-5 py-2 rounded-full bg-foreground text-background hover:opacity-90 transition-all shadow-sm"
               >
-                Join Now
+                Join Member
               </Link>
             </div>
           )}
@@ -172,15 +148,7 @@ export default function Navbar() {
             {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
           </button>
 
-          {/* Cart */}
-          <Link href="/cart" className="relative p-2 rounded-full text-foreground/80">
-            <ShoppingBag size={20} />
-            {totalCartItems > 0 && (
-              <span className="absolute top-0 right-0 w-4 h-4 text-[10px] font-bold text-white bg-luxury-blue rounded-full flex items-center justify-center">
-                {totalCartItems}
-              </span>
-            )}
-          </Link>
+
 
           {/* Menu */}
           <button
@@ -216,14 +184,6 @@ export default function Navbar() {
                 <span>Admin Console</span>
               </Link>
             )}
-            <Link
-              href="/dashboard?tab=wishlist"
-              onClick={() => setIsOpen(false)}
-              className="flex items-center space-x-2 border-b border-foreground/5 pb-2"
-            >
-              <Heart size={20} />
-              <span>Wishlist ({wishlistIds.length})</span>
-            </Link>
             {user ? (
               <>
                 <Link
@@ -258,7 +218,7 @@ export default function Navbar() {
                   onClick={() => setIsOpen(false)}
                   className="py-3 text-center font-semibold rounded-full bg-foreground text-background"
                 >
-                  Join Now
+                  Join Member
                 </Link>
               </div>
             )}
