@@ -609,52 +609,85 @@ export default function Home() {
 
       {/* 5c. Team Section */}
       <section id="team" className="py-20 border-t border-card-border bg-foreground/[0.01]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
           <div className="text-center space-y-2">
-            <div className="text-xs font-bold uppercase tracking-wider text-luxury-cyan">Scientific Board</div>
-            <h2 className="text-3xl font-bold tracking-tight">Our Scientific Formulators</h2>
-            <p className="text-sm text-foreground/60 max-w-lg mx-auto">
-              Meet the co-founders, biochemists, and clinical dermatologists who lead our research and formulation standards.
-            </p>
+            <div className="text-xs font-bold uppercase tracking-wider text-luxury-purple">Meet Our Team</div>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">The people behind our vision, technology, and growth.</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: 'Dr. Elena Vance',
-                role: 'Chief Biochemist & Co-Founder',
-                bio: 'PhD in Bio-Molecular Chemistry from Zurich University. Spent 15 years developing cellular skin regeneration vectors.',
-                img: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&auto=format&fit=crop&q=60'
-              },
-              {
-                name: 'Dr. Kabir Mehta',
-                role: 'Head of Clinical Dermatology',
-                bio: 'Consulting Dermatologist with 12+ years of research in barrier recovery and Indian skin phototypes reactivity.',
-                img: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=300&auto=format&fit=crop&q=60'
-              },
-              {
-                name: 'Sarah DuPont',
-                role: 'Director of Cellular Botany',
-                bio: 'Expert in extracting raw bio-actives from Alpine flora. Leads the clean botanical extraction facility in Geneva.',
-                img: 'https://images.unsplash.com/photo-1594824813573-246434e33963?w=300&auto=format&fit=crop&q=60'
-              }
-            ].map((member, idx) => (
-              <div
-                key={idx}
-                className="glass-panel p-6 rounded-3xl border border-card-border flex flex-col items-center text-center space-y-4 hover:border-foreground/10 hover:shadow-lg transition-all"
-              >
-                <div className="w-24 h-24 rounded-full overflow-hidden border border-card-border bg-foreground/5 relative shadow-md">
-                  <img src={member.img} alt={member.name} className="object-cover w-full h-full" />
+          <div className="space-y-12">
+            {/* Leadership Row (Founder & Co-Founder) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
+              {[
+                {
+                  name: 'Alok Kumar Singh',
+                  role: 'Founder',
+                  img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80'
+                },
+                {
+                  name: 'Saumya Papnai',
+                  role: 'Co-Founder',
+                  img: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&auto=format&fit=crop&q=80'
+                }
+              ].map((member, idx) => (
+                <div
+                  key={idx}
+                  className="glass-panel p-8 rounded-3xl border border-luxury-purple/20 shadow-md shadow-luxury-purple/5 flex flex-col items-center text-center space-y-5 hover:border-luxury-purple/40 hover:shadow-lg hover:shadow-luxury-purple/10 hover:-translate-y-1.5 transition-all duration-300 group cursor-pointer"
+                >
+                  <div className="w-32 h-32 rounded-full overflow-hidden border-2 border-luxury-purple/35 bg-foreground/5 relative shadow-inner">
+                    <img
+                      src={member.img}
+                      alt={`Photo of ${member.name}`}
+                      className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="space-y-1.5">
+                    <h3 className="font-extrabold text-lg text-foreground tracking-tight">{member.name}</h3>
+                    <div className="inline-flex px-3 py-1 rounded-full bg-luxury-purple/15 text-luxury-purple text-xs font-bold uppercase tracking-wider">
+                      {member.role}
+                    </div>
+                  </div>
                 </div>
-                <div className="space-y-1">
-                  <h3 className="font-extrabold text-base text-foreground">{member.name}</h3>
-                  <div className="text-xs text-luxury-purple font-semibold">{member.role}</div>
+              ))}
+            </div>
+
+            {/* Core Development & Operations Row */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              {[
+                {
+                  name: 'Himanshu Kumar',
+                  role: 'CTO & Developer',
+                  img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80'
+                },
+                {
+                  name: 'Aditya Sahani',
+                  role: 'CTO & Developer',
+                  img: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&auto=format&fit=crop&q=80'
+                },
+                {
+                  name: 'Ujjwal Prasad Kushwaha',
+                  role: 'Marketing Head',
+                  img: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&auto=format&fit=crop&q=80'
+                }
+              ].map((member, idx) => (
+                <div
+                  key={idx}
+                  className="glass-panel p-6 rounded-3xl border border-card-border flex flex-col items-center text-center space-y-4 hover:border-foreground/15 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
+                >
+                  <div className="w-28 h-28 rounded-full overflow-hidden border border-card-border bg-foreground/5 relative">
+                    <img
+                      src={member.img}
+                      alt={`Photo of ${member.name}`}
+                      className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="space-y-1">
+                    <h3 className="font-bold text-base text-foreground tracking-tight">{member.name}</h3>
+                    <div className="text-xs text-foreground/50 font-semibold uppercase tracking-wider">{member.role}</div>
+                  </div>
                 </div>
-                <p className="text-xs text-foreground/60 leading-relaxed px-2">
-                  {member.bio}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
