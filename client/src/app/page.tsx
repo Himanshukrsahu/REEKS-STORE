@@ -471,6 +471,140 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 5a. Collaboration Brands Section */}
+      <section id="brands" className="py-20 border-t border-card-border bg-foreground/[0.01]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="text-center space-y-2">
+            <div className="text-xs font-bold uppercase tracking-wider text-luxury-purple">Global Alliances</div>
+            <h2 className="text-3xl font-bold tracking-tight">Collaborating Labs & Science Partners</h2>
+            <p className="text-sm text-foreground/60 max-w-lg mx-auto">
+              We collaborate with world-leading cellular biochemistry institutes across Europe and Asia to pioneer clean, bio-active dermatology formulations.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center opacity-70">
+            {[
+              { name: 'Zurich Cellular Lab', desc: 'Geneva Research' },
+              { name: 'Swiss Molecular Bio', desc: 'Alpine Chemistry' },
+              { name: 'Tokyo Derma Labs', desc: 'Efficacy Trials' },
+              { name: 'Geneva Bio-Labs', desc: 'Formulations' },
+              { name: 'Paris Clinical Board', desc: 'Dermatologists' }
+            ].map((brand, idx) => (
+              <div
+                key={idx}
+                className="glass-panel p-6 rounded-2xl border border-card-border hover:border-foreground/10 hover:bg-foreground/5 hover:opacity-100 transition-all text-center w-full space-y-2 group cursor-pointer"
+              >
+                <div className="text-luxury-blue font-black tracking-wider text-xs uppercase group-hover:scale-105 transition-transform">{brand.name}</div>
+                <div className="text-[10px] text-foreground/40 uppercase tracking-widest">{brand.desc}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5b. About Section */}
+      <section id="about" className="py-20 border-t border-card-border relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/4 w-96 h-96 rounded-full bg-luxury-purple/5 blur-3xl pointer-events-none -translate-y-1/2" />
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left Image / Visuals */}
+            <div className="relative group">
+              <div className="absolute -inset-2 rounded-3xl bg-gradient-to-r from-luxury-blue via-luxury-purple to-luxury-cyan opacity-20 blur-xl group-hover:opacity-30 transition-all duration-500" />
+              <div className="relative rounded-3xl overflow-hidden aspect-video lg:aspect-square bg-foreground/5 border border-card-border">
+                <img
+                  src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&auto=format&fit=crop&q=60"
+                  alt="Swiss Dermatology Lab"
+                  className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent flex flex-col justify-end p-8">
+                  <div className="text-xs font-bold text-luxury-cyan uppercase tracking-wider mb-1">Swiss Research Facility</div>
+                  <h3 className="font-extrabold text-xl text-white">Reeks Labs (Geneva, Switzerland)</h3>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Text Content */}
+            <div className="space-y-8">
+              <div className="space-y-2">
+                <div className="text-xs font-bold uppercase tracking-wider text-luxury-blue">Our Mission</div>
+                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Dermatology Redefined Through Molecular Science</h2>
+              </div>
+              <p className="text-sm text-foreground/75 leading-relaxed">
+                Reeks Store was founded on a simple realization: generic skincare treats symptoms, not individual biology. Using advanced bio-informatics and molecular research, we develop custom cellular regimens that sync directly with your skin barrier.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="glass-panel p-5 rounded-2xl border border-card-border space-y-2">
+                  <h4 className="font-bold text-foreground text-sm flex items-center space-x-2">
+                    <Sparkles size={16} className="text-luxury-purple" />
+                    <span>Bio-Active Clean Formulas</span>
+                  </h4>
+                  <p className="text-xs text-foreground/60 leading-relaxed">100% free of synthetic parabens, microplastics, and sulfates. Clinically active concentration.</p>
+                </div>
+                <div className="glass-panel p-5 rounded-2xl border border-card-border space-y-2">
+                  <h4 className="font-bold text-foreground text-sm flex items-center space-x-2">
+                    <ShieldCheck size={16} className="text-luxury-cyan" />
+                    <span>Swiss Clinical Standards</span>
+                  </h4>
+                  <p className="text-xs text-foreground/60 leading-relaxed">Every formula is tested and safety certified by Zurich dermatology boards for cell security.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5c. Team Section */}
+      <section id="team" className="py-20 border-t border-card-border bg-foreground/[0.01]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="text-center space-y-2">
+            <div className="text-xs font-bold uppercase tracking-wider text-luxury-cyan">Scientific Board</div>
+            <h2 className="text-3xl font-bold tracking-tight">Our Scientific Formulators</h2>
+            <p className="text-sm text-foreground/60 max-w-lg mx-auto">
+              Meet the co-founders, biochemists, and clinical dermatologists who lead our research and formulation standards.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                name: 'Dr. Elena Vance',
+                role: 'Chief Biochemist & Co-Founder',
+                bio: 'PhD in Bio-Molecular Chemistry from Zurich University. Spent 15 years developing cellular skin regeneration vectors.',
+                img: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&auto=format&fit=crop&q=60'
+              },
+              {
+                name: 'Dr. Kabir Mehta',
+                role: 'Head of Clinical Dermatology',
+                bio: 'Consulting Dermatologist with 12+ years of research in barrier recovery and Indian skin phototypes reactivity.',
+                img: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=300&auto=format&fit=crop&q=60'
+              },
+              {
+                name: 'Sarah DuPont',
+                role: 'Director of Cellular Botany',
+                bio: 'Expert in extracting raw bio-actives from Alpine flora. Leads the clean botanical extraction facility in Geneva.',
+                img: 'https://images.unsplash.com/photo-1594824813573-246434e33963?w=300&auto=format&fit=crop&q=60'
+              }
+            ].map((member, idx) => (
+              <div
+                key={idx}
+                className="glass-panel p-6 rounded-3xl border border-card-border flex flex-col items-center text-center space-y-4 hover:border-foreground/10 hover:shadow-lg transition-all"
+              >
+                <div className="w-24 h-24 rounded-full overflow-hidden border border-card-border bg-foreground/5 relative shadow-md">
+                  <img src={member.img} alt={member.name} className="object-cover w-full h-full" />
+                </div>
+                <div className="space-y-1">
+                  <h3 className="font-extrabold text-base text-foreground">{member.name}</h3>
+                  <div className="text-xs text-luxury-purple font-semibold">{member.role}</div>
+                </div>
+                <p className="text-xs text-foreground/60 leading-relaxed px-2">
+                  {member.bio}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 6. FAQ Section */}
       <section id="faq" className="py-20 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center space-y-2">

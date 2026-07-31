@@ -32,9 +32,11 @@ export default function Navbar() {
   const totalCartItems = items.reduce((acc, item) => acc + item.quantity, 0);
 
   const navLinks = [
+    { name: 'Home', href: '/' },
     { name: 'Shop', href: '/shop' },
-    { name: 'Skin Quiz', href: '/#skin-quiz' },
-    { name: 'AI Recommendations', href: '/#ai-recommendations' }
+    { name: 'Brands', href: '/#brands' },
+    { name: 'About', href: '/#about' },
+    { name: 'Team', href: '/#team' }
   ];
 
   if (!mounted) {
@@ -143,12 +145,20 @@ export default function Navbar() {
               </button>
             </div>
           ) : (
-            <Link
-              href="/auth/login"
-              className="text-sm font-semibold px-5 py-2 rounded-full bg-foreground text-background hover:opacity-90 transition-all shadow-sm"
-            >
-              Login
-            </Link>
+            <div className="flex items-center space-x-3">
+              <Link
+                href="/auth/login"
+                className="text-sm font-semibold px-4 py-2 rounded-full border border-foreground/10 hover:border-foreground/20 text-foreground transition-all"
+              >
+                Login
+              </Link>
+              <Link
+                href="/auth/register"
+                className="text-sm font-semibold px-5 py-2 rounded-full bg-foreground text-background hover:opacity-90 transition-all shadow-sm"
+              >
+                Join Now
+              </Link>
+            </div>
           )}
         </div>
 
@@ -235,13 +245,22 @@ export default function Navbar() {
                 </button>
               </>
             ) : (
-              <Link
-                href="/auth/login"
-                onClick={() => setIsOpen(false)}
-                className="py-3 text-center rounded-full bg-foreground text-background font-semibold"
-              >
-                Login / Register
-              </Link>
+              <div className="flex flex-col space-y-3 pt-4">
+                <Link
+                  href="/auth/login"
+                  onClick={() => setIsOpen(false)}
+                  className="py-3 text-center rounded-full border border-foreground/10 text-foreground font-semibold"
+                >
+                  Login
+                </Link>
+                <Link
+                  href="/auth/register"
+                  onClick={() => setIsOpen(false)}
+                  className="py-3 text-center font-semibold rounded-full bg-foreground text-background"
+                >
+                  Join Now
+                </Link>
+              </div>
             )}
           </nav>
         </div>
