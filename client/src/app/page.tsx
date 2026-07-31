@@ -6,34 +6,16 @@ import { ArrowRight, Sparkles, ShieldCheck, Zap, Award, Star, Info, ChevronDown,
 import SkinQuiz from '../components/SkinQuiz';
 import SkeletonLoader from '../components/SkeletonLoader';
 import { apiRequest } from '../utils/api';
-import { useCartStore } from '../store/useCartStore';
 import { useToastStore } from '../store/useToastStore';
 
 export default function Home() {
-  const [bestSellers, setBestSellers] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
   const [faqOpen, setFaqOpen] = useState<{ [key: number]: boolean }>({});
 
   const [calibratedType, setCalibratedType] = useState<string | null>(null);
   const [recommendedRoutine, setRecommendedRoutine] = useState<any[]>([]);
   const [routineLoading, setRoutineLoading] = useState(false);
 
-  const { addItem } = useCartStore();
   const { addToast } = useToastStore();
-
-  useEffect(() => {
-    const fetchBestSellers = async () => {
-      try {
-        const data = await apiRequest('/products?isBestSeller=true&limit=4');
-        setBestSellers(data.products || []);
-      } catch (err) {
-        console.error('Error fetching best sellers:', err);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchBestSellers();
-  }, []);
 
   useEffect(() => {
     const checkCalibratedSkin = async () => {
@@ -137,73 +119,6 @@ export default function Home() {
               <div className="text-xs font-semibold uppercase tracking-wider text-foreground/60">Beauty Awards Won</div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* 2. Featured / Best Sellers */}
-      <section className="py-20 bg-background/40 backdrop-blur-sm border-y border-card-border">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
-            <div className="space-y-2">
-              <div className="text-xs font-bold uppercase tracking-wider text-luxury-purple">Curated Selections</div>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Best Sellers</h2>
-            </div>
-
-          </div>
-
-          {loading ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[...Array(4)].map((_, i) => (
-                <SkeletonLoader key={i} className="h-80" />
-              ))}
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {bestSellers.map((product) => (
-                <div
-                  key={product._id}
-                  className="glass-panel p-5 rounded-2xl flex flex-col justify-between border border-card-border relative group hover:shadow-xl transition-all"
-                >
-                  <div className="space-y-4">
-                    <div className="w-full aspect-square rounded-xl overflow-hidden bg-foreground/5 relative">
-                      <img
-                        src={product.images[0]}
-                        alt={product.name}
-                        className="object-cover w-full h-full group-hover:scale-105 transition-all duration-300"
-                      />
-                      {product.discount > 0 && (
-                        <span className="absolute top-2.5 right-2.5 bg-luxury-purple text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full">
-                          -{product.discount}% OFF
-                        </span>
-                      )}
-                    </div>
-                    <div className="space-y-1">
-                      <div className="text-[10px] font-bold text-luxury-purple uppercase tracking-wider">{product.category}</div>
-                      <Link href={`/shop/$1`} className="block">
-                        <h3 className="font-bold text-base tracking-tight text-foreground line-clamp-1 hover:text-luxury-blue transition-colors">
-                          {product.name}
-                        </h3>
-                      </Link>
-                      <div className="flex items-center space-x-1 text-amber-500">
-                        <Star size={12} fill="currentColor" />
-                        <span className="text-xs font-bold">{product.rating}</span>
-                        <span className="text-[10px] text-foreground/50">({product.numReviews})</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="mt-6 flex items-center justify-between pt-4 border-t border-foreground/5">
-                    <div className="flex flex-col">
-                      {product.discount > 0 && (
-                        <span className="text-xs text-foreground/40 line-through">₹{product.price}</span>
-                      )}
-                      <span className="font-extrabold text-lg">₹{product.finalPrice}</span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
         </div>
       </section>
 
