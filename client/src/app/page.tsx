@@ -412,32 +412,98 @@ export default function Home() {
       </section>
 
       {/* 5a. Collaboration Brands Section */}
-      <section id="brands" className="py-20 border-t border-card-border bg-foreground/[0.01]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
-          <div className="text-center space-y-2">
-            <div className="text-xs font-bold uppercase tracking-wider text-luxury-purple">Global Alliances</div>
-            <h2 className="text-3xl font-bold tracking-tight">Collaborating Labs & Science Partners</h2>
+      <section id="brands" className="py-20 border-t border-card-border bg-foreground/[0.01] relative overflow-hidden">
+        <div className="absolute top-1/3 right-1/4 w-72 h-72 rounded-full bg-luxury-purple/5 blur-3xl pointer-events-none" />
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
+          <div className="text-center space-y-3">
+            <div className="inline-flex items-center space-x-2 text-luxury-purple text-xs font-bold tracking-widest uppercase bg-luxury-purple/10 px-4 py-1.5 rounded-full border border-luxury-purple/20">
+              <span>1st Brand Collaboration</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Skininspired × Reeks Store</h2>
             <p className="text-sm text-foreground/60 max-w-lg mx-auto">
-              We collaborate with world-leading cellular biochemistry institutes across Europe and Asia to pioneer clean, bio-active dermatology formulations.
+              Bridging skincare lovers with clean, bio-active science brands.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center opacity-70">
-            {[
-              { name: 'Zurich Cellular Lab', desc: 'Geneva Research' },
-              { name: 'Swiss Molecular Bio', desc: 'Alpine Chemistry' },
-              { name: 'Tokyo Derma Labs', desc: 'Efficacy Trials' },
-              { name: 'Geneva Bio-Labs', desc: 'Formulations' },
-              { name: 'Paris Clinical Board', desc: 'Dermatologists' }
-            ].map((brand, idx) => (
-              <div
-                key={idx}
-                className="glass-panel p-6 rounded-2xl border border-card-border hover:border-foreground/10 hover:bg-foreground/5 hover:opacity-100 transition-all text-center w-full space-y-2 group cursor-pointer"
-              >
-                <div className="text-luxury-blue font-black tracking-wider text-xs uppercase group-hover:scale-105 transition-transform">{brand.name}</div>
-                <div className="text-[10px] text-foreground/40 uppercase tracking-widest">{brand.desc}</div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            {/* Left: Collaboration Info */}
+            <div className="lg:col-span-5 space-y-6">
+              <div className="glass-panel p-8 rounded-3xl border border-card-border space-y-6">
+                <div className="space-y-2">
+                  <div className="text-luxury-blue text-xs font-bold uppercase tracking-wider">Milestone Update</div>
+                  <h3 className="text-2xl font-bold tracking-tight text-foreground">Clean Formulas Landed</h3>
+                </div>
+                <p className="text-sm text-foreground/75 leading-relaxed">
+                  We are thrilled to announce our first official brand partnership with <strong>Skininspired</strong>. We have received their premier batch of clinical, high-performance daily active formulas.
+                </p>
+
+                <div className="space-y-4 pt-2">
+                  <div className="flex items-start space-x-3.5">
+                    <div className="p-2 rounded-xl bg-luxury-purple/10 text-luxury-purple mt-0.5">
+                      <Sparkles size={16} />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-sm text-foreground">Active Batches Online</h4>
+                      <p className="text-xs text-foreground/60 leading-relaxed">All new Skininspired skin matrices are integrated and calibrated in the AI Routine builder.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3.5">
+                    <div className="p-2 rounded-xl bg-luxury-blue/10 text-luxury-blue mt-0.5">
+                      <Award size={16} />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-sm text-foreground">Consistency Streaks & Rewards</h4>
+                      <p className="text-xs text-foreground/60 leading-relaxed">Track daily skincare routines, maintain streaks, and earn points towards future formulation drops.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-            ))}
+            </div>
+
+            {/* Right: Landed Products Grid */}
+            <div className="lg:col-span-7 space-y-4">
+              <div className="text-xs font-bold text-foreground/50 uppercase tracking-wider mb-2">Landed Formulations Batch</div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  {
+                    name: 'Under Arm Serum Mist',
+                    desc: '5-in-1 corrective formula targeting pigmentation, perspiration, and odour.'
+                  },
+                  {
+                    name: 'The Green Sunscreen',
+                    desc: 'Calming SPF 50+ mineral shield powered by Chlorophyll Calm for highly reactive skin.'
+                  },
+                  {
+                    name: 'Invi Shield 365 Spray',
+                    desc: 'Sweat-resistant SPF 80+ daily photo-stable protection spray.'
+                  },
+                  {
+                    name: 'Care Addict Sunscreen',
+                    desc: 'Encapsulated SPF 50+ PA++++ filters defending against blue light damage.'
+                  },
+                  {
+                    name: 'Crème Gel Cleanser',
+                    desc: 'pH-balanced (5.5 - 6.5) soap-free daily amino face wash.'
+                  },
+                  {
+                    name: 'Foaming Face Wash',
+                    desc: 'Soap-free nourishing lather for gentle skin barrier recovery.'
+                  }
+                ].map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="glass-panel p-5 rounded-2xl border border-card-border hover:border-luxury-purple/20 transition-all space-y-2 group cursor-pointer"
+                  >
+                    <div className="text-xs font-extrabold text-luxury-purple tracking-wide group-hover:text-luxury-blue transition-colors">
+                      {item.name}
+                    </div>
+                    <p className="text-[11px] text-foreground/60 leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
