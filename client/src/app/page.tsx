@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Sparkles, ShieldCheck, Zap, Award, Star, Info, ChevronDown } from 'lucide-react';
+import { ArrowRight, Sparkles, ShieldCheck, Zap, Award, Star, Info, ChevronDown, Users } from 'lucide-react';
 import SkinQuiz from '../components/SkinQuiz';
 import SkeletonLoader from '../components/SkeletonLoader';
 import { apiRequest } from '../utils/api';
@@ -510,49 +510,71 @@ export default function Home() {
 
       {/* 5b. About Section */}
       <section id="about" className="py-20 border-t border-card-border relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/4 w-96 h-96 rounded-full bg-luxury-purple/5 blur-3xl pointer-events-none -translate-y-1/2" />
+        <div className="absolute top-1/2 left-1/4 w-96 h-96 rounded-full bg-luxury-blue/5 blur-3xl pointer-events-none -translate-y-1/2" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Left Image / Visuals */}
-            <div className="relative group">
-              <div className="absolute -inset-2 rounded-3xl bg-gradient-to-r from-luxury-blue via-luxury-purple to-luxury-cyan opacity-20 blur-xl group-hover:opacity-30 transition-all duration-500" />
-              <div className="relative rounded-3xl overflow-hidden aspect-video lg:aspect-square bg-foreground/5 border border-card-border">
-                <img
-                  src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&auto=format&fit=crop&q=60"
-                  alt="Swiss Dermatology Lab"
-                  className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent flex flex-col justify-end p-8">
-                  <div className="text-xs font-bold text-luxury-cyan uppercase tracking-wider mb-1">Swiss Research Facility</div>
-                  <h3 className="font-extrabold text-xl text-white">Reeks Labs (Geneva, Switzerland)</h3>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            {/* Left: Brand Vision Statement */}
+            <div className="lg:col-span-5 space-y-6">
+              <div className="space-y-3">
+                <div className="text-xs font-bold uppercase tracking-wider text-luxury-blue">Our Vision</div>
+                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Making Skincare an Unstoppable Daily Habit</h2>
+              </div>
+              <p className="text-sm text-foreground/80 leading-relaxed">
+                The biggest problem in skincare is not finding the right products—it is using them consistently. Many purchase premium products but forget to apply them regularly or lose motivation.
+              </p>
+              <p className="text-sm text-foreground/70 leading-relaxed">
+                <strong>Reeks Store</strong> is India's first skincare habit and consistency platform. By turning daily skincare into an interactive streak-based routine, we motivate users to achieve real skin progress while unlocking authentic brand rewards.
+              </p>
+              <div className="pt-2">
+                <div className="glass-panel p-4 rounded-2xl border border-card-border flex items-center space-x-4">
+                  <div className="text-3xl font-black text-luxury-purple">85%</div>
+                  <div className="text-xs text-foreground/60 leading-normal">
+                    Average increase in user consistency within the first 30 days of streak calibration.
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Right Text Content */}
-            <div className="space-y-8">
-              <div className="space-y-2">
-                <div className="text-xs font-bold uppercase tracking-wider text-luxury-blue">Our Mission</div>
-                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Dermatology Redefined Through Molecular Science</h2>
+            {/* Right: Vision Pillars Grid */}
+            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="glass-panel p-6 rounded-2xl border border-card-border space-y-3">
+                <div className="inline-flex p-2.5 rounded-xl bg-luxury-blue/10 text-luxury-blue">
+                  <Sparkles size={20} />
+                </div>
+                <h3 className="font-extrabold text-base text-foreground">Skincare Streaks</h3>
+                <p className="text-xs text-foreground/60 leading-relaxed">
+                  Build custom AM/PM skincare cards. Mark them completed daily to advance your streak and maintain routine consistency.
+                </p>
               </div>
-              <p className="text-sm text-foreground/75 leading-relaxed">
-                Reeks Store was founded on a simple realization: generic skincare treats symptoms, not individual biology. Using advanced bio-informatics and molecular research, we develop custom cellular regimens that sync directly with your skin barrier.
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="glass-panel p-5 rounded-2xl border border-card-border space-y-2">
-                  <h4 className="font-bold text-foreground text-sm flex items-center space-x-2">
-                    <Sparkles size={16} className="text-luxury-purple" />
-                    <span>Bio-Active Clean Formulas</span>
-                  </h4>
-                  <p className="text-xs text-foreground/60 leading-relaxed">100% free of synthetic parabens, microplastics, and sulfates. Clinically active concentration.</p>
+
+              <div className="glass-panel p-6 rounded-2xl border border-card-border space-y-3">
+                <div className="inline-flex p-2.5 rounded-xl bg-luxury-purple/10 text-luxury-purple">
+                  <Award size={20} />
                 </div>
-                <div className="glass-panel p-5 rounded-2xl border border-card-border space-y-2">
-                  <h4 className="font-bold text-foreground text-sm flex items-center space-x-2">
-                    <ShieldCheck size={16} className="text-luxury-cyan" />
-                    <span>Swiss Clinical Standards</span>
-                  </h4>
-                  <p className="text-xs text-foreground/60 leading-relaxed">Every formula is tested and safety certified by Zurich dermatology boards for cell security.</p>
+                <h3 className="font-extrabold text-base text-foreground">Real Brand Rewards</h3>
+                <p className="text-xs text-foreground/60 leading-relaxed">
+                  Unlock discount codes, exclusive coupons, and product samples from collaborating Indian skincare brands (like Skininspired).
+                </p>
+              </div>
+
+              <div className="glass-panel p-6 rounded-2xl border border-card-border space-y-3">
+                <div className="inline-flex p-2.5 rounded-xl bg-luxury-cyan/10 text-luxury-cyan">
+                  <ShieldCheck size={20} />
                 </div>
+                <h3 className="font-extrabold text-base text-foreground">Clinical Partners</h3>
+                <p className="text-xs text-foreground/60 leading-relaxed">
+                  Earn treatment offers, clinic discounts, and facial analysis vouchers by hitting long-term milestones.
+                </p>
+              </div>
+
+              <div className="glass-panel p-6 rounded-2xl border border-card-border space-y-3">
+                <div className="inline-flex p-2.5 rounded-xl bg-foreground/5 text-foreground/70">
+                  <Users size={20} />
+                </div>
+                <h3 className="font-extrabold text-base text-foreground">Community Ecosystem</h3>
+                <p className="text-xs text-foreground/60 leading-relaxed">
+                  Completely free-to-use MVP. Expanding with optional premium subscriptions for high-tier brand collaborations.
+                </p>
               </div>
             </div>
           </div>
