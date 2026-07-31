@@ -81,14 +81,7 @@ export default function Navbar() {
 
         {/* Icons */}
         <div className="hidden md:flex items-center space-x-6">
-          {/* Dark Mode Toggle */}
-          <button
-            onClick={toggleTheme}
-            className="p-2 rounded-full text-foreground/80 hover:text-luxury-blue hover:bg-foreground/5 transition-all"
-            aria-label="Toggle Theme"
-          >
-            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-          </button>
+
 
 
 
@@ -140,13 +133,7 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <div className="flex items-center space-x-4 md:hidden">
-          {/* Dark Mode */}
-          <button
-            onClick={toggleTheme}
-            className="p-2 rounded-full text-foreground/80 hover:text-luxury-blue"
-          >
-            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-          </button>
+
 
 
 

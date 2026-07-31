@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
-import { Star, ShieldCheck, Heart, ArrowRight, ShoppingCart, RefreshCw, MessageSquare } from 'lucide-react';
+import { Star, ShieldCheck, Heart, ArrowRight, ShoppingCart, RefreshCw, MessageSquare, Sparkles } from 'lucide-react';
 import { apiRequest } from '../../../utils/api';
 import SkeletonLoader from '../../../components/SkeletonLoader';
 import { useCartStore } from '../../../store/useCartStore';
@@ -224,43 +224,23 @@ export default function ProductDetail() {
             )}
           </div>
 
-          {/* Quantity & CTA */}
-          {product.stock > 0 && (
-            <div className="flex flex-col sm:flex-row items-center gap-4">
-              <div className="flex items-center border border-foreground/10 rounded-xl overflow-hidden w-full sm:w-auto">
-                <button
-                  onClick={() => setQuantity(prev => Math.max(1, prev - 1))}
-                  className="px-4 py-2 hover:bg-foreground/5 text-sm font-bold"
-                >
-                  -
-                </button>
-                <span className="px-6 py-2 text-sm font-bold text-foreground/80">{quantity}</span>
-                <button
-                  onClick={() => setQuantity(prev => Math.min(product.stock, prev + 1))}
-                  className="px-4 py-2 hover:bg-foreground/5 text-sm font-bold"
-                >
-                  +
-                </button>
-              </div>
-
-              <button
-                onClick={handleAddToCart}
-                className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-foreground text-background font-bold text-sm tracking-wide hover:opacity-90 transition-all flex items-center justify-center space-x-2 shadow-md"
-              >
-                <ShoppingCart size={16} />
-                <span>Add to Shopping Bag</span>
-              </button>
-
-              <button
-                onClick={handleToggleWishlist}
-                className={`p-3 rounded-full border transition-all ${isWishlisted ? 'border-red-500/30 text-red-500 bg-red-500/5' : 'border-foreground/10 text-foreground/60 hover:text-foreground hover:bg-foreground/5'
-                }`}
-                aria-label="Toggle Wishlist"
-              >
-                <Heart size={20} fill={isWishlisted ? 'red' : 'none'} />
-              </button>
-            </div>
-          )}
+          {/* Clinical Diagnostic Notice */}
+          <div className="glass-panel p-5 rounded-2xl border border-card-border space-y-3">
+            <h4 className="font-bold text-sm text-luxury-purple flex items-center space-x-2">
+              <Sparkles size={16} className="animate-pulse" />
+              <span>Personalized Diagnostic Required</span>
+            </h4>
+            <p className="text-xs text-foreground/60 leading-relaxed">
+              This formula is bio-engineered and requires skin calibration before application. Take our diagnostics evaluation quiz on the home page to configure your cellular compatibility.
+            </p>
+            <Link
+              href="/#skin-quiz"
+              className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-foreground text-background text-xs font-bold hover:opacity-90 transition-all"
+            >
+              <span>Dermatology Quiz</span>
+              <ArrowRight size={12} />
+            </Link>
+          </div>
 
           {/* Details Tabs */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">

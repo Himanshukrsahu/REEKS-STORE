@@ -63,17 +63,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick links */}
-          <div>
-            <h3 className="text-sm font-semibold tracking-wider text-foreground uppercase">Shop</h3>
-            <ul className="mt-4 space-y-2 text-sm text-foreground/70">
-              <li><Link href="/shop?category=Day Cream" className="hover:text-luxury-blue">Day Care</Link></li>
-              <li><Link href="/shop?category=Night Cream" className="hover:text-luxury-blue">Night Recovery</Link></li>
-              <li><Link href="/shop?category=Vitamin C Serum" className="hover:text-luxury-blue">Vitamin C Renewal</Link></li>
-              <li><Link href="/shop?category=Sunscreen SPF50" className="hover:text-luxury-blue">Sun Protection</Link></li>
-            </ul>
-          </div>
-
           {/* Company info */}
           <div>
             <h3 className="text-sm font-semibold tracking-wider text-foreground uppercase">Science & Brand</h3>

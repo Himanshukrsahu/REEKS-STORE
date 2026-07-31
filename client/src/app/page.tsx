@@ -103,13 +103,13 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Link
-              href="/shop"
+            <a
+              href="#skin-quiz"
               className="w-full sm:w-auto px-8 py-4 rounded-full bg-foreground text-background hover:opacity-90 font-bold text-sm tracking-wide shadow-md transition-all flex items-center justify-center space-x-2"
             >
-              <span>Explore Collection</span>
+              <span>Calibrate Routine</span>
               <ArrowRight size={16} />
-            </Link>
+            </a>
             <a
               href="#skin-quiz"
               className="w-full sm:w-auto px-8 py-4 rounded-full glass-panel hover:bg-foreground/5 font-semibold text-sm tracking-wide transition-all flex items-center justify-center space-x-2"
@@ -148,13 +148,7 @@ export default function Home() {
               <div className="text-xs font-bold uppercase tracking-wider text-luxury-purple">Curated Selections</div>
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Best Sellers</h2>
             </div>
-            <Link
-              href="/shop"
-              className="text-sm font-bold text-luxury-blue hover:underline flex items-center space-x-1"
-            >
-              <span>View All Products</span>
-              <ArrowRight size={16} />
-            </Link>
+
           </div>
 
           {loading ? (
@@ -205,22 +199,6 @@ export default function Home() {
                       )}
                       <span className="font-extrabold text-lg">₹{product.finalPrice}</span>
                     </div>
-                    <button
-                      onClick={() => {
-                        addItem({
-                          productId: product._id,
-                          sku: product.sku,
-                          name: product.name,
-                          price: product.finalPrice,
-                          image: product.images[0] || '',
-                          stock: product.stock
-                        }, 1);
-                        addToast(`Added $1 to cart.`, 'success');
-                      }}
-                      className="px-4 py-2 rounded-xl bg-foreground text-background hover:bg-luxury-blue hover:text-white transition-all text-xs font-bold"
-                    >
-                      Add to Cart
-                    </button>
                   </div>
                 </div>
               ))}
@@ -291,9 +269,7 @@ export default function Home() {
                           </div>
 
                           <div className="text-center space-y-1">
-                            <Link href={`/shop/$1`}>
-                              <h4 className="font-extrabold text-sm hover:text-luxury-blue line-clamp-1 transition-colors">{product.name}</h4>
-                            </Link>
+                              <h4 className="font-extrabold text-sm line-clamp-1">{product.name}</h4>
                             <p className="text-[10px] text-foreground/50 line-clamp-2 leading-relaxed">
                               {product.benefits[0] || 'Targeted molecular delivery for skin barrier recovery.'}
                             </p>
@@ -302,49 +278,13 @@ export default function Home() {
 
                         <div className="pt-4 border-t border-foreground/5 flex items-center justify-between">
                           <span className="font-black text-sm">₹{product.finalPrice}</span>
-                          <button
-                            onClick={() => {
-                              addItem({
-                                productId: product._id,
-                                sku: product.sku,
-                                name: product.name,
-                                price: product.finalPrice,
-                                image: product.images[0] || '',
-                                stock: product.stock
-                              }, 1);
-                              addToast(`Added $1 to cart.`, 'success');
-                            }}
-                            className="text-[10px] font-bold text-luxury-blue hover:underline"
-                          >
-                            Add Single Step
-                          </button>
                         </div>
                       </div>
                     );
                   })}
                 </div>
 
-                <div className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
-                  <button
-                    onClick={() => {
-                      recommendedRoutine.forEach(product => {
-                        addItem({
-                          productId: product._id,
-                          sku: product.sku,
-                          name: product.name,
-                          price: product.finalPrice,
-                          image: product.images[0] || '',
-                          stock: product.stock
-                        }, 1);
-                      });
-                      addToast('Entire molecular routine added to your cart!', 'success');
-                    }}
-                    className="w-full sm:w-auto px-8 py-3.5 bg-foreground text-background font-bold text-sm rounded-full hover:opacity-90 transition-all flex items-center justify-center space-x-2"
-                  >
-                    <Sparkles size={16} className="text-luxury-purple animate-pulse" />
-                    <span>Add Complete Routine to Bag</span>
-                  </button>
-                </div>
+
               </div>
             )}
           </div>

@@ -344,14 +344,7 @@ export default function Shop() {
                             alt={product.name}
                             className="object-cover w-full h-full group-hover:scale-105 transition-all duration-300"
                           />
-                          {/* Wishlist Icon */}
-                          <button
-                            onClick={() => handleToggleWishlist(product)}
-                            className="absolute top-2.5 left-2.5 p-1.5 rounded-full glass-panel border-card-border bg-background/50 hover:text-red-500 transition-all"
-                            aria-label="Wishlist"
-                          >
-                            <Heart size={14} fill={isWish ? 'red' : 'none'} className={isWish ? 'text-red-500' : ''} />
-                          </button>
+
                           {/* Compare Icon */}
                           <button
                             onClick={() => handleToggleCompare(product)}
@@ -389,23 +382,12 @@ export default function Shop() {
                           )}
                           <span className="font-extrabold text-sm">₹{product.finalPrice}</span>
                         </div>
-                        <button
-                          onClick={() => {
-                            addItem({
-                              productId: product._id,
-                              sku: product.sku,
-                              name: product.name,
-                              price: product.finalPrice,
-                              image: product.images[0] || '',
-                              stock: product.stock
-                            }, 1);
-                            addToast(`Added $1 to cart.`, 'success');
-                          }}
-                          className="p-2 rounded-xl bg-foreground text-background hover:bg-luxury-blue hover:text-white transition-all text-xs font-semibold flex items-center space-x-1"
+                        <Link
+                          href={`/shop/${product.sku}`}
+                          className="px-3 py-1.5 rounded-xl border border-foreground/10 hover:border-foreground text-foreground hover:bg-foreground/5 transition-all text-xs font-semibold"
                         >
-                          <ShoppingBag size={12} />
-                          <span>Buy</span>
-                        </button>
+                          <span>View Formula</span>
+                        </Link>
                       </div>
                     </div>
                   );
