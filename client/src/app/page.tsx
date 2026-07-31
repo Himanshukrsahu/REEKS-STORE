@@ -460,46 +460,57 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right: Landed Products Grid */}
+            {/* Right: Landed Products Grid with Images */}
             <div className="lg:col-span-7 space-y-4">
               <div className="text-xs font-bold text-foreground/50 uppercase tracking-wider mb-2">Landed Formulations Batch</div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
                   {
                     name: 'Under Arm Serum Mist',
-                    desc: '5-in-1 corrective formula targeting pigmentation, perspiration, and odour.'
+                    desc: '5-in-1 corrective formula targeting pigmentation, perspiration, and odour.',
+                    img: 'https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=300&auto=format&fit=crop&q=60'
                   },
                   {
                     name: 'The Green Sunscreen',
-                    desc: 'Calming SPF 50+ mineral shield powered by Chlorophyll Calm for highly reactive skin.'
+                    desc: 'Calming SPF 50+ mineral shield powered by Chlorophyll Calm for highly reactive skin.',
+                    img: 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=300&auto=format&fit=crop&q=60'
                   },
                   {
                     name: 'Invi Shield 365 Spray',
-                    desc: 'Sweat-resistant SPF 80+ daily photo-stable protection spray.'
+                    desc: 'Sweat-resistant SPF 80+ daily photo-stable protection spray.',
+                    img: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=300&auto=format&fit=crop&q=60'
                   },
                   {
                     name: 'Care Addict Sunscreen',
-                    desc: 'Encapsulated SPF 50+ PA++++ filters defending against blue light damage.'
+                    desc: 'Encapsulated SPF 50+ PA++++ filters defending against blue light damage.',
+                    img: 'https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=300&auto=format&fit=crop&q=60'
                   },
                   {
                     name: 'Crème Gel Cleanser',
-                    desc: 'pH-balanced (5.5 - 6.5) soap-free daily amino face wash.'
+                    desc: 'pH-balanced (5.5 - 6.5) soap-free daily amino face wash.',
+                    img: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=300&auto=format&fit=crop&q=60'
                   },
                   {
                     name: 'Foaming Face Wash',
-                    desc: 'Soap-free nourishing lather for gentle skin barrier recovery.'
+                    desc: 'Soap-free nourishing lather for gentle skin barrier recovery.',
+                    img: 'https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=300&auto=format&fit=crop&q=60'
                   }
                 ].map((item, idx) => (
                   <div
                     key={idx}
-                    className="glass-panel p-5 rounded-2xl border border-card-border hover:border-luxury-purple/20 transition-all space-y-2 group cursor-pointer"
+                    className="glass-panel p-4 rounded-2xl border border-card-border hover:border-luxury-purple/20 transition-all flex items-center gap-4 group cursor-pointer"
                   >
-                    <div className="text-xs font-extrabold text-luxury-purple tracking-wide group-hover:text-luxury-blue transition-colors">
-                      {item.name}
+                    <div className="w-16 h-16 rounded-xl overflow-hidden bg-foreground/5 relative flex-shrink-0 border border-card-border">
+                      <img src={item.img} alt={item.name} className="object-cover w-full h-full group-hover:scale-105 transition-all duration-300" />
                     </div>
-                    <p className="text-[11px] text-foreground/60 leading-relaxed">
-                      {item.desc}
-                    </p>
+                    <div className="space-y-1 text-left">
+                      <div className="text-xs font-extrabold text-luxury-purple tracking-wide group-hover:text-luxury-blue transition-colors">
+                        {item.name}
+                      </div>
+                      <p className="text-[10px] text-foreground/60 leading-relaxed line-clamp-2">
+                        {item.desc}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -535,46 +546,61 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right: Vision Pillars Grid */}
-            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="glass-panel p-6 rounded-2xl border border-card-border space-y-3">
-                <div className="inline-flex p-2.5 rounded-xl bg-luxury-blue/10 text-luxury-blue">
-                  <Sparkles size={20} />
+            {/* Right: Layered Image / Visual Composite */}
+            <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div className="relative group">
+                <div className="absolute -inset-2 rounded-3xl bg-gradient-to-r from-luxury-blue via-luxury-purple to-luxury-cyan opacity-20 blur-xl group-hover:opacity-30 transition-all duration-500" />
+                <div className="relative rounded-3xl overflow-hidden aspect-[4/5] bg-foreground/5 border border-card-border">
+                  <img
+                    src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=60"
+                    alt="Daily Skincare Consistency Habit"
+                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
+                  />
+                  {/* Floating glass card overlay */}
+                  <div className="absolute bottom-6 left-6 right-6 glass-panel p-4 rounded-2xl border border-white/10 bg-background/60 backdrop-blur-md space-y-1 shadow-lg">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[10px] font-bold text-luxury-cyan uppercase tracking-wider">Routine Progress</span>
+                      <span className="text-[10px] font-bold text-emerald-500">Active Streak</span>
+                    </div>
+                    <div className="text-sm font-black text-foreground">🔥 Day 18 Consistency Streak</div>
+                    <div className="w-full bg-foreground/10 h-1.5 rounded-full overflow-hidden mt-1.5">
+                      <div className="bg-gradient-to-r from-luxury-blue to-luxury-purple h-full w-[85%]" />
+                    </div>
+                  </div>
                 </div>
-                <h3 className="font-extrabold text-base text-foreground">Skincare Streaks</h3>
-                <p className="text-xs text-foreground/60 leading-relaxed">
-                  Build custom AM/PM skincare cards. Mark them completed daily to advance your streak and maintain routine consistency.
-                </p>
               </div>
 
-              <div className="glass-panel p-6 rounded-2xl border border-card-border space-y-3">
-                <div className="inline-flex p-2.5 rounded-xl bg-luxury-purple/10 text-luxury-purple">
-                  <Award size={20} />
+              {/* Vision Pillars Grid */}
+              <div className="space-y-6">
+                <div className="glass-panel p-6 rounded-2xl border border-card-border space-y-3">
+                  <div className="inline-flex p-2.5 rounded-xl bg-luxury-blue/10 text-luxury-blue">
+                    <Sparkles size={18} />
+                  </div>
+                  <h3 className="font-extrabold text-sm text-foreground">Skincare Streaks</h3>
+                  <p className="text-[11px] text-foreground/60 leading-relaxed">
+                    Build AM/PM routines, check them off daily to grow consistency streaks.
+                  </p>
                 </div>
-                <h3 className="font-extrabold text-base text-foreground">Real Brand Rewards</h3>
-                <p className="text-xs text-foreground/60 leading-relaxed">
-                  Unlock discount codes, exclusive coupons, and product samples from collaborating Indian skincare brands (like Skininspired).
-                </p>
-              </div>
 
-              <div className="glass-panel p-6 rounded-2xl border border-card-border space-y-3">
-                <div className="inline-flex p-2.5 rounded-xl bg-luxury-cyan/10 text-luxury-cyan">
-                  <ShieldCheck size={20} />
+                <div className="glass-panel p-6 rounded-2xl border border-card-border space-y-3">
+                  <div className="inline-flex p-2.5 rounded-xl bg-luxury-purple/10 text-luxury-purple">
+                    <Award size={18} />
+                  </div>
+                  <h3 className="font-extrabold text-sm text-foreground">Real Brand Rewards</h3>
+                  <p className="text-[11px] text-foreground/60 leading-relaxed">
+                    Unlock exclusive codes and samples from premium brands (like Skininspired).
+                  </p>
                 </div>
-                <h3 className="font-extrabold text-base text-foreground">Clinical Partners</h3>
-                <p className="text-xs text-foreground/60 leading-relaxed">
-                  Earn treatment offers, clinic discounts, and facial analysis vouchers by hitting long-term milestones.
-                </p>
-              </div>
 
-              <div className="glass-panel p-6 rounded-2xl border border-card-border space-y-3">
-                <div className="inline-flex p-2.5 rounded-xl bg-foreground/5 text-foreground/70">
-                  <Users size={20} />
+                <div className="glass-panel p-6 rounded-2xl border border-card-border space-y-3">
+                  <div className="inline-flex p-2.5 rounded-xl bg-luxury-cyan/10 text-luxury-cyan">
+                    <ShieldCheck size={18} />
+                  </div>
+                  <h3 className="font-extrabold text-sm text-foreground">Clinical Partners</h3>
+                  <p className="text-[11px] text-foreground/60 leading-relaxed">
+                    Earn consultation credits and analysis offers at dermatology clinics.
+                  </p>
                 </div>
-                <h3 className="font-extrabold text-base text-foreground">Community Ecosystem</h3>
-                <p className="text-xs text-foreground/60 leading-relaxed">
-                  Completely free-to-use MVP. Expanding with optional premium subscriptions for high-tier brand collaborations.
-                </p>
               </div>
             </div>
           </div>
