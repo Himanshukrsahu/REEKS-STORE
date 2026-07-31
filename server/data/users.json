@@ -1,0 +1,32 @@
+[
+  {
+    "_id": "admin-mock-id-12345",
+    "name": "Reeks Store Executive Admin",
+    "email": "admin@reeksstore.com",
+    "password": "adminpassword123",
+    "role": "admin",
+    "isVerified": true,
+    "addresses": []
+  },
+  {
+    "_id": "customer-mock-id-12345",
+    "name": "Slick Skincare Dev",
+    "email": "user@reeksstore.com",
+    "password": "userpassword123",
+    "role": "user",
+    "isVerified": true,
+    "addresses": [
+      {
+        "_id": "addr-mock-id-12345",
+        "name": "Slick Skincare Dev",
+        "phone": "+1 555 123 4567",
+        "street": "123 Aurora Glass Way",
+        "city": "San Francisco",
+        "state": "CA",
+        "zipCode": "94105",
+        "country": "United States",
+        "isDefault": true
+      }
+    ]
+  }
+]

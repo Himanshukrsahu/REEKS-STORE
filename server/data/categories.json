@@ -1,0 +1,127 @@
+[
+  {
+    "name": "Day Cream",
+    "slug": "day-cream",
+    "description": "Hydrating, protective daily formulas."
+  },
+  {
+    "name": "Night Cream",
+    "slug": "night-cream",
+    "description": "Restorative overnight creams."
+  },
+  {
+    "name": "Moisturizer",
+    "slug": "moisturizer",
+    "description": "Daily hydration lock for all skin types."
+  },
+  {
+    "name": "Sunscreen SPF50",
+    "slug": "sunscreen",
+    "description": "High protection UV shields."
+  },
+  {
+    "name": "Face Wash",
+    "slug": "face-wash",
+    "description": "Gentle clarifying daily cleansers."
+  },
+  {
+    "name": "Face Cleanser",
+    "slug": "face-cleanser",
+    "description": "Deep melting oil and water-based cleansers."
+  },
+  {
+    "name": "Toner",
+    "slug": "toner",
+    "description": "pH balancing and prep lotions."
+  },
+  {
+    "name": "Vitamin C Serum",
+    "slug": "vitamin-c-serum",
+    "description": "Brightening antioxidant elixirs."
+  },
+  {
+    "name": "Niacinamide Serum",
+    "slug": "niacinamide-serum",
+    "description": "Pore refining and barrier support."
+  },
+  {
+    "name": "Retinol Serum",
+    "slug": "retinol-serum",
+    "description": "Age defying cell renewal concentrates."
+  },
+  {
+    "name": "Hyaluronic Acid Serum",
+    "slug": "hyaluronic-serum",
+    "description": "Intense moisture plumping serums."
+  },
+  {
+    "name": "Salicylic Acid Serum",
+    "slug": "salicylic-serum",
+    "description": "Clarifying and acne care serums."
+  },
+  {
+    "name": "Eye Cream",
+    "slug": "eye-cream",
+    "description": "Targeted care for dark circles and fine lines."
+  },
+  {
+    "name": "Lip Balm",
+    "slug": "lip-balm",
+    "description": "Restorative lip hydration treatments."
+  },
+  {
+    "name": "Face Mask",
+    "slug": "face-mask",
+    "description": "Express nourishment sheets and gels."
+  },
+  {
+    "name": "Clay Mask",
+    "slug": "clay-mask",
+    "description": "Detoxifying mineral mud treatments."
+  },
+  {
+    "name": "Acne Care",
+    "slug": "acne-care",
+    "description": "Targeted spot and breakout care."
+  },
+  {
+    "name": "Brightening Cream",
+    "slug": "brightening-cream",
+    "description": "Tone evening radiance creams."
+  },
+  {
+    "name": "Anti Aging Cream",
+    "slug": "anti-aging-cream",
+    "description": "Line smoothing peptide matrices."
+  },
+  {
+    "name": "Body Lotion",
+    "slug": "body-lotion",
+    "description": "Silken body moisture locks."
+  },
+  {
+    "name": "Body Wash",
+    "slug": "body-wash",
+    "description": "Refreshing aromatic shower gels."
+  },
+  {
+    "name": "Shampoo",
+    "slug": "shampoo",
+    "description": "Scalp optimizing clarifying shampoos."
+  },
+  {
+    "name": "Conditioner",
+    "slug": "conditioner",
+    "description": "Deep nourishing hair conditioners."
+  },
+  {
+    "name": "Hair Serum",
+    "slug": "hair-serum",
+    "description": "Frizz control and hair gloss elixirs."
+  },
+  {
+    "name": "Hair Oil",
+    "slug": "hair-oil",
+    "description": "Traditional root nourishing treatments."
+  }
+]

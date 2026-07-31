@@ -1,0 +1,2780 @@
+[
+  {
+    "name": "Reeks Store Clarifying Day Cream v1",
+    "sku": "RKST-DAY-1001",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store clarifying day cream v1. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Squalane",
+      "Retinol",
+      "Hyaluronic Acid",
+      "Green Tea Extract",
+      "Salicylic Acid"
+    ],
+    "skinType": [
+      "Sensitive",
+      "Dry"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.9,
+    "numReviews": 122,
+    "price": 3699,
+    "discount": 5,
+    "finalPrice": 3514,
+    "couponEligible": true,
+    "stock": 46,
+    "category": "Day Cream",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Advanced Day Cream v2",
+    "sku": "RKST-DAY-1002",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store advanced day cream v2. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Tea Tree Oil",
+      "Green Tea Extract",
+      "Ceramides"
+    ],
+    "skinType": [
+      "Dry",
+      "Normal"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.8,
+    "numReviews": 105,
+    "price": 2699,
+    "discount": 0,
+    "finalPrice": 2699,
+    "couponEligible": true,
+    "stock": 146,
+    "category": "Day Cream",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Clarifying Day Cream v3",
+    "sku": "RKST-DAY-1003",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store clarifying day cream v3. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Retinol",
+      "Green Tea Extract",
+      "Glycolic Acid",
+      "Salicylic Acid"
+    ],
+    "skinType": [
+      "Normal",
+      "Dry",
+      "Sensitive"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.4,
+    "numReviews": 40,
+    "price": 4199,
+    "discount": 0,
+    "finalPrice": 4199,
+    "couponEligible": true,
+    "stock": 32,
+    "category": "Day Cream",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Ultimate Night Cream v1",
+    "sku": "RKST-NIG-1004",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store ultimate night cream v1. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Ceramides",
+      "Bakuchiol",
+      "Hyaluronic Acid",
+      "Green Tea Extract"
+    ],
+    "skinType": [
+      "Dry",
+      "Combination"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.6,
+    "numReviews": 95,
+    "price": 1399,
+    "discount": 0,
+    "finalPrice": 1399,
+    "couponEligible": true,
+    "stock": 23,
+    "category": "Night Cream",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Ultimate Night Cream v2",
+    "sku": "RKST-NIG-1005",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store ultimate night cream v2. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Centella Asiatica",
+      "Allantoin",
+      "Ceramides",
+      "Panthenol"
+    ],
+    "skinType": [
+      "Combination",
+      "Sensitive",
+      "Normal"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.2,
+    "numReviews": 97,
+    "price": 4099,
+    "discount": 23,
+    "finalPrice": 3156,
+    "couponEligible": true,
+    "stock": 118,
+    "category": "Night Cream",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": true,
+    "isBestSeller": true
+  },
+  {
+    "name": "Reeks Store Advanced Night Cream v3",
+    "sku": "RKST-NIG-1006",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store advanced night cream v3. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Allantoin",
+      "Tea Tree Oil",
+      "Vitamin C",
+      "Panthenol"
+    ],
+    "skinType": [
+      "Combination",
+      "Dry"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.5,
+    "numReviews": 50,
+    "price": 1299,
+    "discount": 0,
+    "finalPrice": 1299,
+    "couponEligible": true,
+    "stock": 40,
+    "category": "Night Cream",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1601049676099-e7ed07d825b0?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": true
+  },
+  {
+    "name": "Reeks Store Clarifying Moisturizer v1",
+    "sku": "RKST-MOI-1007",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store clarifying moisturizer v1. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Centella Asiatica",
+      "Niacinamide",
+      "Shea Butter",
+      "Retinol"
+    ],
+    "skinType": [
+      "Dry",
+      "Sensitive",
+      "Combination"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.3,
+    "numReviews": 5,
+    "price": 4899,
+    "discount": 6,
+    "finalPrice": 4605,
+    "couponEligible": true,
+    "stock": 152,
+    "category": "Moisturizer",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1601049676099-e7ed07d825b0?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": true
+  },
+  {
+    "name": "Reeks Store Luminous Moisturizer v2",
+    "sku": "RKST-MOI-1008",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store luminous moisturizer v2. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Coenzyme Q10",
+      "Tea Tree Oil",
+      "Salicylic Acid",
+      "Hyaluronic Acid",
+      "Vitamin C"
+    ],
+    "skinType": [
+      "Combination",
+      "Normal"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.3,
+    "numReviews": 25,
+    "price": 4399,
+    "discount": 28,
+    "finalPrice": 3167,
+    "couponEligible": true,
+    "stock": 13,
+    "category": "Moisturizer",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": true
+  },
+  {
+    "name": "Reeks Store Ceramide-Infused Moisturizer v3",
+    "sku": "RKST-MOI-1009",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store ceramide-infused moisturizer v3. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Allantoin",
+      "Coenzyme Q10",
+      "Glycolic Acid",
+      "Niacinamide"
+    ],
+    "skinType": [
+      "Dry",
+      "Oily",
+      "Normal",
+      "Sensitive"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.8,
+    "numReviews": 6,
+    "price": 2899,
+    "discount": 20,
+    "finalPrice": 2319,
+    "couponEligible": true,
+    "stock": 126,
+    "category": "Moisturizer",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1608248597481-496100c80836?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Clarifying Sunscreen SPF50 v1",
+    "sku": "RKST-SUN-1010",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store clarifying sunscreen spf50 v1. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Centella Asiatica",
+      "Vitamin C",
+      "Niacinamide"
+    ],
+    "skinType": [
+      "Normal",
+      "Oily",
+      "Sensitive"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.5,
+    "numReviews": 96,
+    "price": 2199,
+    "discount": 0,
+    "finalPrice": 2199,
+    "couponEligible": true,
+    "stock": 60,
+    "category": "Sunscreen SPF50",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1608248597481-496100c80836?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": true
+  },
+  {
+    "name": "Reeks Store Restorative Sunscreen SPF50 v2",
+    "sku": "RKST-SUN-1011",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store restorative sunscreen spf50 v2. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Peptides",
+      "Niacinamide",
+      "Squalane",
+      "Retinol"
+    ],
+    "skinType": [
+      "Sensitive",
+      "Oily",
+      "Dry"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.2,
+    "numReviews": 5,
+    "price": 2399,
+    "discount": 12,
+    "finalPrice": 2111,
+    "couponEligible": true,
+    "stock": 53,
+    "category": "Sunscreen SPF50",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Deep Renewal Sunscreen SPF50 v3",
+    "sku": "RKST-SUN-1012",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store deep renewal sunscreen spf50 v3. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Panthenol",
+      "Retinol",
+      "Salicylic Acid",
+      "Shea Butter",
+      "Niacinamide"
+    ],
+    "skinType": [
+      "Sensitive",
+      "Combination"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.2,
+    "numReviews": 72,
+    "price": 1899,
+    "discount": 10,
+    "finalPrice": 1709,
+    "couponEligible": true,
+    "stock": 14,
+    "category": "Sunscreen SPF50",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": true,
+    "isBestSeller": true
+  },
+  {
+    "name": "Reeks Store Deep Renewal Face Wash v1",
+    "sku": "RKST-FAC-1013",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store deep renewal face wash v1. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Bakuchiol",
+      "Ceramides",
+      "Centella Asiatica"
+    ],
+    "skinType": [
+      "Oily",
+      "Normal",
+      "Combination"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.7,
+    "numReviews": 43,
+    "price": 4499,
+    "discount": 0,
+    "finalPrice": 4499,
+    "couponEligible": true,
+    "stock": 133,
+    "category": "Face Wash",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Ultimate Face Wash v2",
+    "sku": "RKST-FAC-1014",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store ultimate face wash v2. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Coenzyme Q10",
+      "Niacinamide",
+      "Glycolic Acid"
+    ],
+    "skinType": [
+      "Combination",
+      "Oily",
+      "Sensitive"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4,
+    "numReviews": 94,
+    "price": 4599,
+    "discount": 21,
+    "finalPrice": 3633,
+    "couponEligible": true,
+    "stock": 101,
+    "category": "Face Wash",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": true,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Restorative Face Wash v3",
+    "sku": "RKST-FAC-1015",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store restorative face wash v3. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Retinol",
+      "Niacinamide",
+      "Shea Butter",
+      "Ceramides"
+    ],
+    "skinType": [
+      "Dry",
+      "Combination",
+      "Sensitive"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.1,
+    "numReviews": 95,
+    "price": 3599,
+    "discount": 6,
+    "finalPrice": 3383,
+    "couponEligible": true,
+    "stock": 83,
+    "category": "Face Wash",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Ceramide-Infused Face Cleanser v1",
+    "sku": "RKST-FAC-1016",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store ceramide-infused face cleanser v1. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Squalane",
+      "Hyaluronic Acid",
+      "Ceramides"
+    ],
+    "skinType": [
+      "Oily",
+      "Dry"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.6,
+    "numReviews": 11,
+    "price": 999,
+    "discount": 0,
+    "finalPrice": 999,
+    "couponEligible": true,
+    "stock": 66,
+    "category": "Face Cleanser",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1601049676099-e7ed07d825b0?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": true
+  },
+  {
+    "name": "Reeks Store Clarifying Face Cleanser v2",
+    "sku": "RKST-FAC-1017",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store clarifying face cleanser v2. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Hyaluronic Acid",
+      "Squalane",
+      "Green Tea Extract",
+      "Niacinamide"
+    ],
+    "skinType": [
+      "Normal",
+      "Oily",
+      "Sensitive",
+      "Dry"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4,
+    "numReviews": 102,
+    "price": 1999,
+    "discount": 0,
+    "finalPrice": 1999,
+    "couponEligible": true,
+    "stock": 54,
+    "category": "Face Cleanser",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1601049676099-e7ed07d825b0?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Bio-Active Face Cleanser v3",
+    "sku": "RKST-FAC-1018",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store bio-active face cleanser v3. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Tea Tree Oil",
+      "Vitamin C",
+      "Allantoin",
+      "Salicylic Acid",
+      "Panthenol"
+    ],
+    "skinType": [
+      "Combination",
+      "Oily",
+      "Normal"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.1,
+    "numReviews": 95,
+    "price": 3499,
+    "discount": 19,
+    "finalPrice": 2834,
+    "couponEligible": true,
+    "stock": 72,
+    "category": "Face Cleanser",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": true,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Advanced Toner v1",
+    "sku": "RKST-TON-1019",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store advanced toner v1. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Ceramides",
+      "Green Tea Extract",
+      "Bakuchiol",
+      "Salicylic Acid",
+      "Glycerin"
+    ],
+    "skinType": [
+      "Normal",
+      "Sensitive",
+      "Oily"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.8,
+    "numReviews": 66,
+    "price": 3899,
+    "discount": 14,
+    "finalPrice": 3353,
+    "couponEligible": true,
+    "stock": 38,
+    "category": "Toner",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1608248597481-496100c80836?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Advanced Toner v2",
+    "sku": "RKST-TON-1020",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store advanced toner v2. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Glycolic Acid",
+      "Bakuchiol",
+      "Squalane"
+    ],
+    "skinType": [
+      "Sensitive",
+      "Combination",
+      "Dry",
+      "Normal"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.5,
+    "numReviews": 45,
+    "price": 2599,
+    "discount": 24,
+    "finalPrice": 1975,
+    "couponEligible": true,
+    "stock": 131,
+    "category": "Toner",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1608248597481-496100c80836?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Deep Renewal Toner v3",
+    "sku": "RKST-TON-1021",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store deep renewal toner v3. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Retinol",
+      "Allantoin",
+      "Tea Tree Oil",
+      "Peptides",
+      "Bakuchiol"
+    ],
+    "skinType": [
+      "Combination",
+      "Oily"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.7,
+    "numReviews": 98,
+    "price": 4899,
+    "discount": 0,
+    "finalPrice": 4899,
+    "couponEligible": true,
+    "stock": 121,
+    "category": "Toner",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Ultimate Vitamin C Serum v1",
+    "sku": "RKST-VIT-1022",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store ultimate vitamin c serum v1. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Ceramides",
+      "Coenzyme Q10",
+      "Hyaluronic Acid"
+    ],
+    "skinType": [
+      "Combination",
+      "Sensitive",
+      "Dry"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.2,
+    "numReviews": 40,
+    "price": 1399,
+    "discount": 0,
+    "finalPrice": 1399,
+    "couponEligible": true,
+    "stock": 92,
+    "category": "Vitamin C Serum",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": true,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Hydra-Intense Vitamin C Serum v2",
+    "sku": "RKST-VIT-1023",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store hydra-intense vitamin c serum v2. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Green Tea Extract",
+      "Salicylic Acid",
+      "Shea Butter",
+      "Hyaluronic Acid"
+    ],
+    "skinType": [
+      "Normal",
+      "Dry",
+      "Combination"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4,
+    "numReviews": 28,
+    "price": 3599,
+    "discount": 5,
+    "finalPrice": 3419,
+    "couponEligible": true,
+    "stock": 52,
+    "category": "Vitamin C Serum",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": true,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Restorative Vitamin C Serum v3",
+    "sku": "RKST-VIT-1024",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store restorative vitamin c serum v3. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Allantoin",
+      "Retinol",
+      "Niacinamide",
+      "Centella Asiatica",
+      "Bakuchiol"
+    ],
+    "skinType": [
+      "Normal",
+      "Combination"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.4,
+    "numReviews": 44,
+    "price": 1799,
+    "discount": 0,
+    "finalPrice": 1799,
+    "couponEligible": true,
+    "stock": 67,
+    "category": "Vitamin C Serum",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": true
+  },
+  {
+    "name": "Reeks Store Ultimate Niacinamide Serum v1",
+    "sku": "RKST-NIA-1025",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store ultimate niacinamide serum v1. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Allantoin",
+      "Niacinamide",
+      "Retinol"
+    ],
+    "skinType": [
+      "Normal",
+      "Oily",
+      "Combination"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.6,
+    "numReviews": 104,
+    "price": 3499,
+    "discount": 11,
+    "finalPrice": 3114,
+    "couponEligible": true,
+    "stock": 156,
+    "category": "Niacinamide Serum",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Luminous Niacinamide Serum v2",
+    "sku": "RKST-NIA-1026",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store luminous niacinamide serum v2. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Centella Asiatica",
+      "Allantoin",
+      "Hyaluronic Acid"
+    ],
+    "skinType": [
+      "Sensitive",
+      "Combination",
+      "Dry"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.5,
+    "numReviews": 36,
+    "price": 2099,
+    "discount": 13,
+    "finalPrice": 1826,
+    "couponEligible": true,
+    "stock": 126,
+    "category": "Niacinamide Serum",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1601049676099-e7ed07d825b0?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Luminous Niacinamide Serum v3",
+    "sku": "RKST-NIA-1027",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store luminous niacinamide serum v3. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Retinol",
+      "Coenzyme Q10",
+      "Vitamin C"
+    ],
+    "skinType": [
+      "Dry",
+      "Oily"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.3,
+    "numReviews": 122,
+    "price": 2799,
+    "discount": 28,
+    "finalPrice": 2015,
+    "couponEligible": true,
+    "stock": 72,
+    "category": "Niacinamide Serum",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1601049676099-e7ed07d825b0?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Restorative Retinol Serum v1",
+    "sku": "RKST-RET-1028",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store restorative retinol serum v1. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Allantoin",
+      "Panthenol",
+      "Retinol",
+      "Ceramides",
+      "Tea Tree Oil"
+    ],
+    "skinType": [
+      "Normal",
+      "Dry"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.8,
+    "numReviews": 58,
+    "price": 4299,
+    "discount": 0,
+    "finalPrice": 4299,
+    "couponEligible": true,
+    "stock": 84,
+    "category": "Retinol Serum",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": true
+  },
+  {
+    "name": "Reeks Store Luminous Retinol Serum v2",
+    "sku": "RKST-RET-1029",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store luminous retinol serum v2. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Centella Asiatica",
+      "Shea Butter",
+      "Squalane",
+      "Glycerin",
+      "Glycolic Acid"
+    ],
+    "skinType": [
+      "Normal",
+      "Dry",
+      "Combination"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.3,
+    "numReviews": 78,
+    "price": 2699,
+    "discount": 0,
+    "finalPrice": 2699,
+    "couponEligible": true,
+    "stock": 84,
+    "category": "Retinol Serum",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1608248597481-496100c80836?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Ultimate Retinol Serum v3",
+    "sku": "RKST-RET-1030",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store ultimate retinol serum v3. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Coenzyme Q10",
+      "Glycolic Acid",
+      "Hyaluronic Acid",
+      "Glycerin",
+      "Panthenol"
+    ],
+    "skinType": [
+      "Normal",
+      "Dry"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.1,
+    "numReviews": 73,
+    "price": 1099,
+    "discount": 0,
+    "finalPrice": 1099,
+    "couponEligible": true,
+    "stock": 50,
+    "category": "Retinol Serum",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1608248597481-496100c80836?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Clarifying Hyaluronic Acid Serum v1",
+    "sku": "RKST-HYA-1031",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store clarifying hyaluronic acid serum v1. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Panthenol",
+      "Squalane",
+      "Centella Asiatica",
+      "Bakuchiol"
+    ],
+    "skinType": [
+      "Oily",
+      "Sensitive",
+      "Normal"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.9,
+    "numReviews": 110,
+    "price": 1799,
+    "discount": 0,
+    "finalPrice": 1799,
+    "couponEligible": true,
+    "stock": 18,
+    "category": "Hyaluronic Acid Serum",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Advanced Hyaluronic Acid Serum v2",
+    "sku": "RKST-HYA-1032",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store advanced hyaluronic acid serum v2. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Glycerin",
+      "Shea Butter",
+      "Green Tea Extract",
+      "Retinol",
+      "Squalane"
+    ],
+    "skinType": [
+      "Dry",
+      "Oily",
+      "Sensitive",
+      "Combination"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.8,
+    "numReviews": 33,
+    "price": 2799,
+    "discount": 26,
+    "finalPrice": 2071,
+    "couponEligible": true,
+    "stock": 131,
+    "category": "Hyaluronic Acid Serum",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": true
+  },
+  {
+    "name": "Reeks Store Luminous Hyaluronic Acid Serum v3",
+    "sku": "RKST-HYA-1033",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store luminous hyaluronic acid serum v3. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Bakuchiol",
+      "Glycolic Acid",
+      "Retinol",
+      "Ceramides"
+    ],
+    "skinType": [
+      "Combination",
+      "Sensitive"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.4,
+    "numReviews": 20,
+    "price": 1799,
+    "discount": 0,
+    "finalPrice": 1799,
+    "couponEligible": true,
+    "stock": 14,
+    "category": "Hyaluronic Acid Serum",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": true,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Deep Renewal Salicylic Acid Serum v1",
+    "sku": "RKST-SAL-1034",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store deep renewal salicylic acid serum v1. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Hyaluronic Acid",
+      "Niacinamide",
+      "Retinol"
+    ],
+    "skinType": [
+      "Sensitive",
+      "Dry",
+      "Combination",
+      "Normal"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.7,
+    "numReviews": 52,
+    "price": 4799,
+    "discount": 29,
+    "finalPrice": 3407,
+    "couponEligible": true,
+    "stock": 42,
+    "category": "Salicylic Acid Serum",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Ceramide-Infused Salicylic Acid Serum v2",
+    "sku": "RKST-SAL-1035",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store ceramide-infused salicylic acid serum v2. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Green Tea Extract",
+      "Centella Asiatica",
+      "Coenzyme Q10"
+    ],
+    "skinType": [
+      "Combination",
+      "Oily"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.6,
+    "numReviews": 43,
+    "price": 1199,
+    "discount": 28,
+    "finalPrice": 863,
+    "couponEligible": true,
+    "stock": 29,
+    "category": "Salicylic Acid Serum",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": true,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Bio-Active Salicylic Acid Serum v3",
+    "sku": "RKST-SAL-1036",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store bio-active salicylic acid serum v3. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Ceramides",
+      "Green Tea Extract",
+      "Bakuchiol",
+      "Niacinamide",
+      "Tea Tree Oil"
+    ],
+    "skinType": [
+      "Normal",
+      "Sensitive",
+      "Oily"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.7,
+    "numReviews": 112,
+    "price": 2299,
+    "discount": 6,
+    "finalPrice": 2161,
+    "couponEligible": true,
+    "stock": 48,
+    "category": "Salicylic Acid Serum",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1601049676099-e7ed07d825b0?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": true,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Pure Eye Cream v1",
+    "sku": "RKST-EYE-1037",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store pure eye cream v1. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Vitamin C",
+      "Glycerin",
+      "Panthenol",
+      "Salicylic Acid",
+      "Bakuchiol"
+    ],
+    "skinType": [
+      "Normal",
+      "Oily"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.3,
+    "numReviews": 37,
+    "price": 3199,
+    "discount": 0,
+    "finalPrice": 3199,
+    "couponEligible": true,
+    "stock": 48,
+    "category": "Eye Cream",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1601049676099-e7ed07d825b0?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": true,
+    "isBestSeller": true
+  },
+  {
+    "name": "Reeks Store Deep Renewal Eye Cream v2",
+    "sku": "RKST-EYE-1038",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store deep renewal eye cream v2. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Green Tea Extract",
+      "Panthenol",
+      "Niacinamide",
+      "Tea Tree Oil"
+    ],
+    "skinType": [
+      "Normal",
+      "Oily",
+      "Combination",
+      "Dry"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.6,
+    "numReviews": 26,
+    "price": 2599,
+    "discount": 10,
+    "finalPrice": 2339,
+    "couponEligible": true,
+    "stock": 65,
+    "category": "Eye Cream",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Ceramide-Infused Eye Cream v3",
+    "sku": "RKST-EYE-1039",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store ceramide-infused eye cream v3. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Glycerin",
+      "Salicylic Acid",
+      "Panthenol",
+      "Allantoin"
+    ],
+    "skinType": [
+      "Oily",
+      "Combination"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.6,
+    "numReviews": 71,
+    "price": 4699,
+    "discount": 0,
+    "finalPrice": 4699,
+    "couponEligible": true,
+    "stock": 150,
+    "category": "Eye Cream",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1608248597481-496100c80836?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Bio-Active Lip Balm v1",
+    "sku": "RKST-LIP-1040",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store bio-active lip balm v1. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Glycerin",
+      "Hyaluronic Acid",
+      "Allantoin",
+      "Ceramides"
+    ],
+    "skinType": [
+      "Normal",
+      "Dry",
+      "Oily",
+      "Sensitive"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.7,
+    "numReviews": 58,
+    "price": 3099,
+    "discount": 0,
+    "finalPrice": 3099,
+    "couponEligible": true,
+    "stock": 87,
+    "category": "Lip Balm",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1608248597481-496100c80836?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Ultimate Lip Balm v2",
+    "sku": "RKST-LIP-1041",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store ultimate lip balm v2. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Tea Tree Oil",
+      "Centella Asiatica",
+      "Squalane"
+    ],
+    "skinType": [
+      "Dry",
+      "Oily",
+      "Sensitive"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.2,
+    "numReviews": 18,
+    "price": 3599,
+    "discount": 0,
+    "finalPrice": 3599,
+    "couponEligible": true,
+    "stock": 145,
+    "category": "Lip Balm",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": true,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Pure Lip Balm v3",
+    "sku": "RKST-LIP-1042",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store pure lip balm v3. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Glycolic Acid",
+      "Bakuchiol",
+      "Retinol",
+      "Squalane",
+      "Niacinamide"
+    ],
+    "skinType": [
+      "Oily",
+      "Sensitive",
+      "Normal",
+      "Dry"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.9,
+    "numReviews": 97,
+    "price": 1799,
+    "discount": 0,
+    "finalPrice": 1799,
+    "couponEligible": true,
+    "stock": 109,
+    "category": "Lip Balm",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Clarifying Face Mask v1",
+    "sku": "RKST-FAC-1043",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store clarifying face mask v1. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Salicylic Acid",
+      "Ceramides",
+      "Shea Butter",
+      "Squalane"
+    ],
+    "skinType": [
+      "Dry",
+      "Sensitive",
+      "Combination"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.9,
+    "numReviews": 14,
+    "price": 3099,
+    "discount": 0,
+    "finalPrice": 3099,
+    "couponEligible": true,
+    "stock": 139,
+    "category": "Face Mask",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Ceramide-Infused Face Mask v2",
+    "sku": "RKST-FAC-1044",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store ceramide-infused face mask v2. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Tea Tree Oil",
+      "Squalane",
+      "Peptides",
+      "Allantoin"
+    ],
+    "skinType": [
+      "Dry",
+      "Normal",
+      "Oily",
+      "Sensitive"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.3,
+    "numReviews": 89,
+    "price": 2499,
+    "discount": 0,
+    "finalPrice": 2499,
+    "couponEligible": true,
+    "stock": 48,
+    "category": "Face Mask",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": true,
+    "isBestSeller": true
+  },
+  {
+    "name": "Reeks Store Restorative Face Mask v3",
+    "sku": "RKST-FAC-1045",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store restorative face mask v3. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Allantoin",
+      "Glycerin",
+      "Coenzyme Q10",
+      "Shea Butter"
+    ],
+    "skinType": [
+      "Normal",
+      "Sensitive",
+      "Oily"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.4,
+    "numReviews": 39,
+    "price": 4899,
+    "discount": 0,
+    "finalPrice": 4899,
+    "couponEligible": true,
+    "stock": 43,
+    "category": "Face Mask",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Restorative Clay Mask v1",
+    "sku": "RKST-CLA-1046",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store restorative clay mask v1. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Coenzyme Q10",
+      "Bakuchiol",
+      "Hyaluronic Acid",
+      "Ceramides",
+      "Peptides"
+    ],
+    "skinType": [
+      "Oily",
+      "Combination",
+      "Dry"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.3,
+    "numReviews": 12,
+    "price": 1599,
+    "discount": 0,
+    "finalPrice": 1599,
+    "couponEligible": true,
+    "stock": 40,
+    "category": "Clay Mask",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1601049676099-e7ed07d825b0?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Luminous Clay Mask v2",
+    "sku": "RKST-CLA-1047",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store luminous clay mask v2. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Panthenol",
+      "Allantoin",
+      "Glycolic Acid",
+      "Green Tea Extract"
+    ],
+    "skinType": [
+      "Sensitive",
+      "Normal",
+      "Oily",
+      "Dry"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.2,
+    "numReviews": 23,
+    "price": 2099,
+    "discount": 0,
+    "finalPrice": 2099,
+    "couponEligible": true,
+    "stock": 69,
+    "category": "Clay Mask",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1601049676099-e7ed07d825b0?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Pure Clay Mask v3",
+    "sku": "RKST-CLA-1048",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store pure clay mask v3. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Centella Asiatica",
+      "Shea Butter",
+      "Allantoin",
+      "Peptides"
+    ],
+    "skinType": [
+      "Dry",
+      "Oily"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.7,
+    "numReviews": 85,
+    "price": 4899,
+    "discount": 0,
+    "finalPrice": 4899,
+    "couponEligible": true,
+    "stock": 91,
+    "category": "Clay Mask",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": true
+  },
+  {
+    "name": "Reeks Store Clarifying Acne Care v1",
+    "sku": "RKST-ACN-1049",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store clarifying acne care v1. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Hyaluronic Acid",
+      "Green Tea Extract",
+      "Ceramides",
+      "Salicylic Acid"
+    ],
+    "skinType": [
+      "Oily",
+      "Sensitive",
+      "Normal",
+      "Combination"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 5,
+    "numReviews": 70,
+    "price": 2899,
+    "discount": 0,
+    "finalPrice": 2899,
+    "couponEligible": true,
+    "stock": 121,
+    "category": "Acne Care",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1608248597481-496100c80836?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": true,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Pure Acne Care v2",
+    "sku": "RKST-ACN-1050",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store pure acne care v2. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Green Tea Extract",
+      "Peptides",
+      "Centella Asiatica",
+      "Salicylic Acid",
+      "Squalane"
+    ],
+    "skinType": [
+      "Normal",
+      "Dry",
+      "Combination",
+      "Sensitive"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.2,
+    "numReviews": 117,
+    "price": 1099,
+    "discount": 17,
+    "finalPrice": 912,
+    "couponEligible": true,
+    "stock": 41,
+    "category": "Acne Care",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1608248597481-496100c80836?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Clarifying Acne Care v3",
+    "sku": "RKST-ACN-1051",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store clarifying acne care v3. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Hyaluronic Acid",
+      "Salicylic Acid",
+      "Squalane",
+      "Bakuchiol",
+      "Coenzyme Q10"
+    ],
+    "skinType": [
+      "Oily",
+      "Sensitive",
+      "Dry"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.8,
+    "numReviews": 119,
+    "price": 1599,
+    "discount": 0,
+    "finalPrice": 1599,
+    "couponEligible": true,
+    "stock": 133,
+    "category": "Acne Care",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": true,
+    "isBestSeller": true
+  },
+  {
+    "name": "Reeks Store Hydra-Intense Brightening Cream v1",
+    "sku": "RKST-BRI-1052",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store hydra-intense brightening cream v1. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Allantoin",
+      "Peptides",
+      "Squalane"
+    ],
+    "skinType": [
+      "Combination",
+      "Dry",
+      "Normal"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.7,
+    "numReviews": 55,
+    "price": 2299,
+    "discount": 19,
+    "finalPrice": 1862,
+    "couponEligible": true,
+    "stock": 159,
+    "category": "Brightening Cream",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Clarifying Brightening Cream v2",
+    "sku": "RKST-BRI-1053",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store clarifying brightening cream v2. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Salicylic Acid",
+      "Niacinamide",
+      "Centella Asiatica",
+      "Coenzyme Q10"
+    ],
+    "skinType": [
+      "Normal",
+      "Oily",
+      "Sensitive"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.8,
+    "numReviews": 56,
+    "price": 4399,
+    "discount": 0,
+    "finalPrice": 4399,
+    "couponEligible": true,
+    "stock": 83,
+    "category": "Brightening Cream",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": true,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Pure Brightening Cream v3",
+    "sku": "RKST-BRI-1054",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store pure brightening cream v3. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Green Tea Extract",
+      "Tea Tree Oil",
+      "Vitamin C",
+      "Niacinamide",
+      "Bakuchiol"
+    ],
+    "skinType": [
+      "Sensitive",
+      "Oily",
+      "Combination",
+      "Normal"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.3,
+    "numReviews": 59,
+    "price": 3299,
+    "discount": 13,
+    "finalPrice": 2870,
+    "couponEligible": true,
+    "stock": 75,
+    "category": "Brightening Cream",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Luminous Anti Aging Cream v1",
+    "sku": "RKST-ANT-1055",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store luminous anti aging cream v1. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Tea Tree Oil",
+      "Shea Butter",
+      "Niacinamide",
+      "Coenzyme Q10",
+      "Green Tea Extract"
+    ],
+    "skinType": [
+      "Sensitive",
+      "Oily",
+      "Combination",
+      "Dry"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.3,
+    "numReviews": 9,
+    "price": 2999,
+    "discount": 0,
+    "finalPrice": 2999,
+    "couponEligible": true,
+    "stock": 128,
+    "category": "Anti Aging Cream",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": true
+  },
+  {
+    "name": "Reeks Store Luminous Anti Aging Cream v2",
+    "sku": "RKST-ANT-1056",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store luminous anti aging cream v2. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Coenzyme Q10",
+      "Shea Butter",
+      "Bakuchiol",
+      "Tea Tree Oil"
+    ],
+    "skinType": [
+      "Normal",
+      "Oily",
+      "Sensitive",
+      "Dry"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.9,
+    "numReviews": 79,
+    "price": 1299,
+    "discount": 0,
+    "finalPrice": 1299,
+    "couponEligible": true,
+    "stock": 24,
+    "category": "Anti Aging Cream",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1601049676099-e7ed07d825b0?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": true
+  },
+  {
+    "name": "Reeks Store Bio-Active Anti Aging Cream v3",
+    "sku": "RKST-ANT-1057",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store bio-active anti aging cream v3. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Retinol",
+      "Panthenol",
+      "Bakuchiol",
+      "Shea Butter",
+      "Glycolic Acid"
+    ],
+    "skinType": [
+      "Sensitive",
+      "Normal",
+      "Dry"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.7,
+    "numReviews": 66,
+    "price": 4899,
+    "discount": 0,
+    "finalPrice": 4899,
+    "couponEligible": true,
+    "stock": 13,
+    "category": "Anti Aging Cream",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1601049676099-e7ed07d825b0?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": true
+  },
+  {
+    "name": "Reeks Store Restorative Body Lotion v1",
+    "sku": "RKST-BOD-1058",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store restorative body lotion v1. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Tea Tree Oil",
+      "Glycolic Acid",
+      "Retinol",
+      "Panthenol"
+    ],
+    "skinType": [
+      "Dry",
+      "Combination"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.2,
+    "numReviews": 107,
+    "price": 3599,
+    "discount": 12,
+    "finalPrice": 3167,
+    "couponEligible": true,
+    "stock": 144,
+    "category": "Body Lotion",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": true
+  },
+  {
+    "name": "Reeks Store Luminous Body Lotion v2",
+    "sku": "RKST-BOD-1059",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store luminous body lotion v2. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Vitamin C",
+      "Retinol",
+      "Shea Butter",
+      "Salicylic Acid",
+      "Coenzyme Q10"
+    ],
+    "skinType": [
+      "Combination",
+      "Sensitive",
+      "Dry",
+      "Normal"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.2,
+    "numReviews": 28,
+    "price": 1199,
+    "discount": 27,
+    "finalPrice": 875,
+    "couponEligible": true,
+    "stock": 74,
+    "category": "Body Lotion",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1608248597481-496100c80836?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Deep Renewal Body Lotion v3",
+    "sku": "RKST-BOD-1060",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store deep renewal body lotion v3. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Panthenol",
+      "Glycerin",
+      "Retinol",
+      "Tea Tree Oil"
+    ],
+    "skinType": [
+      "Normal",
+      "Sensitive",
+      "Dry"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.3,
+    "numReviews": 6,
+    "price": 1799,
+    "discount": 0,
+    "finalPrice": 1799,
+    "couponEligible": true,
+    "stock": 103,
+    "category": "Body Lotion",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1608248597481-496100c80836?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": true,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Advanced Body Wash v1",
+    "sku": "RKST-BOD-1061",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store advanced body wash v1. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Peptides",
+      "Squalane",
+      "Glycolic Acid"
+    ],
+    "skinType": [
+      "Normal",
+      "Combination",
+      "Oily"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.5,
+    "numReviews": 99,
+    "price": 3599,
+    "discount": 14,
+    "finalPrice": 3095,
+    "couponEligible": true,
+    "stock": 85,
+    "category": "Body Wash",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": true
+  },
+  {
+    "name": "Reeks Store Clarifying Body Wash v2",
+    "sku": "RKST-BOD-1062",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store clarifying body wash v2. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Centella Asiatica",
+      "Niacinamide",
+      "Salicylic Acid"
+    ],
+    "skinType": [
+      "Combination",
+      "Normal",
+      "Oily"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.3,
+    "numReviews": 61,
+    "price": 2599,
+    "discount": 0,
+    "finalPrice": 2599,
+    "couponEligible": true,
+    "stock": 39,
+    "category": "Body Wash",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Advanced Body Wash v3",
+    "sku": "RKST-BOD-1063",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store advanced body wash v3. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Tea Tree Oil",
+      "Hyaluronic Acid",
+      "Shea Butter",
+      "Panthenol"
+    ],
+    "skinType": [
+      "Normal",
+      "Combination",
+      "Dry",
+      "Oily"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.5,
+    "numReviews": 72,
+    "price": 2799,
+    "discount": 10,
+    "finalPrice": 2519,
+    "couponEligible": true,
+    "stock": 99,
+    "category": "Body Wash",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": true,
+    "isBestSeller": true
+  },
+  {
+    "name": "Reeks Store Pure Shampoo v1",
+    "sku": "RKST-SHA-1064",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store pure shampoo v1. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Peptides",
+      "Vitamin C",
+      "Glycolic Acid"
+    ],
+    "skinType": [
+      "Dry",
+      "Normal"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.7,
+    "numReviews": 25,
+    "price": 1099,
+    "discount": 15,
+    "finalPrice": 934,
+    "couponEligible": true,
+    "stock": 158,
+    "category": "Shampoo",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Ultimate Shampoo v2",
+    "sku": "RKST-SHA-1065",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store ultimate shampoo v2. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Tea Tree Oil",
+      "Shea Butter",
+      "Centella Asiatica",
+      "Bakuchiol",
+      "Green Tea Extract"
+    ],
+    "skinType": [
+      "Combination",
+      "Oily"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.2,
+    "numReviews": 14,
+    "price": 3699,
+    "discount": 0,
+    "finalPrice": 3699,
+    "couponEligible": true,
+    "stock": 157,
+    "category": "Shampoo",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Pure Shampoo v3",
+    "sku": "RKST-SHA-1066",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store pure shampoo v3. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Bakuchiol",
+      "Niacinamide",
+      "Ceramides",
+      "Green Tea Extract"
+    ],
+    "skinType": [
+      "Sensitive",
+      "Dry",
+      "Normal"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.7,
+    "numReviews": 124,
+    "price": 1599,
+    "discount": 0,
+    "finalPrice": 1599,
+    "couponEligible": true,
+    "stock": 35,
+    "category": "Shampoo",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1601049676099-e7ed07d825b0?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": true,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Ultimate Conditioner v1",
+    "sku": "RKST-CON-1067",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store ultimate conditioner v1. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Glycerin",
+      "Panthenol",
+      "Hyaluronic Acid",
+      "Peptides",
+      "Vitamin C"
+    ],
+    "skinType": [
+      "Dry",
+      "Oily"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.6,
+    "numReviews": 70,
+    "price": 2899,
+    "discount": 0,
+    "finalPrice": 2899,
+    "couponEligible": true,
+    "stock": 102,
+    "category": "Conditioner",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1601049676099-e7ed07d825b0?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": true
+  },
+  {
+    "name": "Reeks Store Deep Renewal Conditioner v2",
+    "sku": "RKST-CON-1068",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store deep renewal conditioner v2. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Green Tea Extract",
+      "Vitamin C",
+      "Shea Butter"
+    ],
+    "skinType": [
+      "Combination",
+      "Normal",
+      "Oily"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.9,
+    "numReviews": 123,
+    "price": 1599,
+    "discount": 0,
+    "finalPrice": 1599,
+    "couponEligible": true,
+    "stock": 20,
+    "category": "Conditioner",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Ultimate Conditioner v3",
+    "sku": "RKST-CON-1069",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store ultimate conditioner v3. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Centella Asiatica",
+      "Bakuchiol",
+      "Glycolic Acid",
+      "Glycerin",
+      "Tea Tree Oil"
+    ],
+    "skinType": [
+      "Sensitive",
+      "Dry",
+      "Oily",
+      "Combination"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.4,
+    "numReviews": 114,
+    "price": 4099,
+    "discount": 0,
+    "finalPrice": 4099,
+    "couponEligible": true,
+    "stock": 31,
+    "category": "Conditioner",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1608248597481-496100c80836?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Hydra-Intense Hair Serum v1",
+    "sku": "RKST-HAI-1070",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store hydra-intense hair serum v1. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Squalane",
+      "Shea Butter",
+      "Vitamin C",
+      "Salicylic Acid",
+      "Retinol"
+    ],
+    "skinType": [
+      "Sensitive",
+      "Oily"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.6,
+    "numReviews": 42,
+    "price": 4699,
+    "discount": 0,
+    "finalPrice": 4699,
+    "couponEligible": true,
+    "stock": 32,
+    "category": "Hair Serum",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1608248597481-496100c80836?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": true
+  },
+  {
+    "name": "Reeks Store Restorative Hair Serum v2",
+    "sku": "RKST-HAI-1071",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store restorative hair serum v2. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Niacinamide",
+      "Ceramides",
+      "Panthenol",
+      "Squalane"
+    ],
+    "skinType": [
+      "Sensitive",
+      "Combination",
+      "Normal",
+      "Oily"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.2,
+    "numReviews": 16,
+    "price": 3499,
+    "discount": 0,
+    "finalPrice": 3499,
+    "couponEligible": true,
+    "stock": 96,
+    "category": "Hair Serum",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Luminous Hair Serum v3",
+    "sku": "RKST-HAI-1072",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store luminous hair serum v3. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Retinol",
+      "Tea Tree Oil",
+      "Centella Asiatica"
+    ],
+    "skinType": [
+      "Dry",
+      "Normal",
+      "Sensitive",
+      "Combination"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 5,
+    "numReviews": 27,
+    "price": 2199,
+    "discount": 28,
+    "finalPrice": 1583,
+    "couponEligible": true,
+    "stock": 23,
+    "category": "Hair Serum",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Clarifying Hair Oil v1",
+    "sku": "RKST-HAI-1073",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store clarifying hair oil v1. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Squalane",
+      "Salicylic Acid",
+      "Tea Tree Oil"
+    ],
+    "skinType": [
+      "Oily",
+      "Sensitive"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.3,
+    "numReviews": 36,
+    "price": 2599,
+    "discount": 24,
+    "finalPrice": 1975,
+    "couponEligible": true,
+    "stock": 151,
+    "category": "Hair Oil",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": true,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Ultimate Hair Oil v2",
+    "sku": "RKST-HAI-1074",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store ultimate hair oil v2. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Glycolic Acid",
+      "Retinol",
+      "Centella Asiatica",
+      "Glycerin",
+      "Bakuchiol"
+    ],
+    "skinType": [
+      "Dry",
+      "Combination",
+      "Sensitive"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.7,
+    "numReviews": 62,
+    "price": 4699,
+    "discount": 0,
+    "finalPrice": 4699,
+    "couponEligible": true,
+    "stock": 115,
+    "category": "Hair Oil",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": false,
+    "isBestSeller": false
+  },
+  {
+    "name": "Reeks Store Ceramide-Infused Hair Oil v3",
+    "sku": "RKST-HAI-1075",
+    "description": "Experience the future of dermatology with Reeks Store's reeks store ceramide-infused hair oil v3. Formulated in Switzerland, this luxury blend utilizes micro-encapsulation technology to deliver active molecules deep within the skin layers. Perfect for daily incorporation to achieve a glass-like skin finish.",
+    "ingredients": [
+      "Retinol",
+      "Bakuchiol",
+      "Coenzyme Q10",
+      "Green Tea Extract"
+    ],
+    "skinType": [
+      "Combination",
+      "Normal",
+      "Sensitive"
+    ],
+    "usage": "Apply 3-4 drops to cleansed, damp skin morning and night. Gently press into the face and neck until fully absorbed, following with your custom Reeks Store moisturizer.",
+    "benefits": [
+      "Enhances skin barrier function and hydration retention by up to 200%.",
+      "Noticeably refines pores and smooths uneven skin texture within 14 days.",
+      "Protects against urban pollutants and oxidative stress factors."
+    ],
+    "rating": 4.8,
+    "numReviews": 49,
+    "price": 3499,
+    "discount": 27,
+    "finalPrice": 2554,
+    "couponEligible": true,
+    "stock": 157,
+    "category": "Hair Oil",
+    "brand": "Reeks Store",
+    "images": [
+      "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=600&auto=format&fit=crop&q=60"
+    ],
+    "isNewArrival": true,
+    "isBestSeller": true
+  }
+]

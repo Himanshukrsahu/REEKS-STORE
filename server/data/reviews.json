@@ -1,0 +1,57 @@
+[
+  {
+    "_id": "rev-0",
+    "user": "customer-mock-id-12345",
+    "userName": "Slick Skincare Dev",
+    "product": "mock-p-0",
+    "rating": 5,
+    "title": "Absolutely Life-Changing",
+    "comment": "This product completely transformed my skin texture in just a week! The glassmorphic aesthetic of the bottle matches the glow it gives my face. 10/10 recommendation.",
+    "verifiedPurchase": true,
+    "createdAt": "2026-07-30T17:33:39.808Z"
+  },
+  {
+    "_id": "rev-1",
+    "user": "customer-mock-id-12345",
+    "userName": "Slick Skincare Dev",
+    "product": "mock-p-1",
+    "rating": 5,
+    "title": "Absolutely Life-Changing",
+    "comment": "This product completely transformed my skin texture in just a week! The glassmorphic aesthetic of the bottle matches the glow it gives my face. 10/10 recommendation.",
+    "verifiedPurchase": true,
+    "createdAt": "2026-07-30T17:33:39.808Z"
+  },
+  {
+    "_id": "rev-2",
+    "user": "customer-mock-id-12345",
+    "userName": "Slick Skincare Dev",
+    "product": "mock-p-2",
+    "rating": 5,
+    "title": "Absolutely Life-Changing",
+    "comment": "This product completely transformed my skin texture in just a week! The glassmorphic aesthetic of the bottle matches the glow it gives my face. 10/10 recommendation.",
+    "verifiedPurchase": true,
+    "createdAt": "2026-07-30T17:33:39.808Z"
+  },
+  {
+    "_id": "rev-3",
+    "user": "customer-mock-id-12345",
+    "userName": "Slick Skincare Dev",
+    "product": "mock-p-3",
+    "rating": 5,
+    "title": "Absolutely Life-Changing",
+    "comment": "This product completely transformed my skin texture in just a week! The glassmorphic aesthetic of the bottle matches the glow it gives my face. 10/10 recommendation.",
+    "verifiedPurchase": true,
+    "createdAt": "2026-07-30T17:33:39.808Z"
+  },
+  {
+    "_id": "rev-4",
+    "user": "customer-mock-id-12345",
+    "userName": "Slick Skincare Dev",
+    "product": "mock-p-4",
+    "rating": 5,
+    "title": "Absolutely Life-Changing",
+    "comment": "This product completely transformed my skin texture in just a week! The glassmorphic aesthetic of the bottle matches the glow it gives my face. 10/10 recommendation.",
+    "verifiedPurchase": true,
+    "createdAt": "2026-07-30T17:33:39.808Z"
+  }
+]

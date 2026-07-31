@@ -1,0 +1,55 @@
+[
+  {
+    "_id": "c1",
+    "code": "WELCOME20",
+    "discountPercentage": 20,
+    "expiryDate": "2028-12-31",
+    "minOrderAmount": 1000,
+    "maxDiscountAmount": 300,
+    "usageLimit": 100,
+    "usageCount": 0,
+    "isActive": true
+  },
+  {
+    "_id": "c2",
+    "code": "SKIN10",
+    "discountPercentage": 10,
+    "expiryDate": "2028-12-31",
+    "minOrderAmount": 500,
+    "maxDiscountAmount": 150,
+    "usageLimit": 100,
+    "usageCount": 0,
+    "isActive": true
+  },
+  {
+    "_id": "c3",
+    "code": "FIRSTORDER",
+    "discountPercentage": 15,
+    "expiryDate": "2028-12-31",
+    "minOrderAmount": 0,
+    "usageLimit": 100,
+    "usageCount": 0,
+    "isActive": true
+  },
+  {
+    "_id": "c4",
+    "code": "SUMMER25",
+    "discountPercentage": 25,
+    "expiryDate": "2028-09-01",
+    "minOrderAmount": 2000,
+    "maxDiscountAmount": 500,
+    "usageLimit": 100,
+    "usageCount": 0,
+    "isActive": true
+  },
+  {
+    "_id": "c5",
+    "code": "BUY2GET1",
+    "discountPercentage": 33,
+    "expiryDate": "2028-12-31",
+    "minOrderAmount": 1500,
+    "usageLimit": 100,
+    "usageCount": 0,
+    "isActive": true
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "_id": "n1",
+    "user": "customer-mock-id-12345",
+    "title": "Welcome to Reeks Store",
+    "message": "Welcome to the premium skincare universe of Reeks Store. Take the AI Quiz to start your routine.",
+    "read": false,
+    "createdAt": "2026-07-30T17:33:39.806Z"
+  },
+  {
+    "_id": "n2",
+    "user": "customer-mock-id-12345",
+    "title": "Claim Your Welcome Gift",
+    "message": "Use coupon code WELCOME20 to get 20% off your first luxury order above ₹1,000.",
+    "read": false,
+    "createdAt": "2026-07-30T17:33:39.807Z"
+  }
+]
