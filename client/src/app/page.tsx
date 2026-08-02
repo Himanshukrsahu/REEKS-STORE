@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Sparkles, ShieldCheck, Zap, Award, Star, Info, ChevronDown, Users } from 'lucide-react';
+import { ArrowRight, Sparkles, ShieldCheck, Zap, Award, Star, Info, ChevronDown, Users, Check, Loader2 } from 'lucide-react';
 import SkinQuiz from '../components/SkinQuiz';
 import SkeletonLoader from '../components/SkeletonLoader';
 import { apiRequest } from '../utils/api';
@@ -16,6 +16,69 @@ export default function Home() {
   const [routineLoading, setRoutineLoading] = useState(false);
 
   const { addToast } = useToastStore();
+
+  // Collaboration Form State
+  const [partnerForm, setPartnerForm] = useState({
+    brandName: '',
+    contactPerson: '',
+    brandEmail: '',
+    contactNumber: '',
+    companyWebsite: '',
+    brandCategory: '',
+    monthlyMarketingBudget: '',
+    expectedDuration: '',
+    collaborationType: 'Social Media Promotion',
+    retailerBudget: '',
+    message: ''
+  });
+  const [formLoading, setFormLoading] = useState(false);
+  const [formSuccess, setFormSuccess] = useState(false);
+  const [formError, setFormError] = useState<string | null>(null);
+
+  const handlePartnerSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setFormError(null);
+    setFormSuccess(false);
+
+    // Basic Validation
+    if (!partnerForm.brandName.trim()) {
+      setFormError('Brand Name is required.');
+      return;
+    }
+    if (!partnerForm.contactPerson.trim()) {
+      setFormError('Contact Person Name is required.');
+      return;
+    }
+    if (!partnerForm.brandEmail.trim() || !partnerForm.brandEmail.includes('@')) {
+      setFormError('A valid Official Brand Email is required.');
+      return;
+    }
+    if (!partnerForm.contactNumber.trim()) {
+      setFormError('Personal Contact Number is required.');
+      return;
+    }
+
+    setFormLoading(true);
+    // Simulate API request delay
+    setTimeout(() => {
+      setFormLoading(false);
+      setFormSuccess(true);
+      // Reset form
+      setPartnerForm({
+        brandName: '',
+        contactPerson: '',
+        brandEmail: '',
+        contactNumber: '',
+        companyWebsite: '',
+        brandCategory: '',
+        monthlyMarketingBudget: '',
+        expectedDuration: '',
+        collaborationType: 'Social Media Promotion',
+        retailerBudget: '',
+        message: ''
+      });
+    }, 1500);
+  };
 
   useEffect(() => {
     const checkCalibratedSkin = async () => {
@@ -326,111 +389,366 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5a. Collaboration Brands Section */}
-      <section id="brands" className="py-20 border-t border-card-border bg-foreground/[0.01] relative overflow-hidden">
-        <div className="absolute top-1/3 right-1/4 w-72 h-72 rounded-full bg-luxury-purple/5 blur-3xl pointer-events-none" />
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
-          <div className="text-center space-y-3">
-            <div className="inline-flex items-center space-x-2 text-luxury-purple text-xs font-bold tracking-widest uppercase bg-luxury-purple/10 px-4 py-1.5 rounded-full border border-luxury-purple/20">
-              <span>1st Brand Collaboration</span>
+      {/* 5a. Collaboration Brands & Partnerships Section */}
+      <section id="brands" className="py-24 border-t border-card-border relative overflow-hidden bg-foreground/[0.01]">
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-luxury-purple/5 blur-3xl pointer-events-none" />
+        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 rounded-full bg-luxury-blue/5 blur-3xl pointer-events-none" />
+        
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-20 relative z-10">
+          
+          {/* SECTION 1: Brand Collaboration */}
+          <div className="space-y-12">
+            <div className="text-center space-y-3">
+              <div className="inline-flex items-center space-x-2 text-luxury-purple text-xs font-bold tracking-widest uppercase bg-luxury-purple/10 px-4 py-1.5 rounded-full border border-luxury-purple/20">
+                <Sparkles size={12} />
+                <span>Featured Collaboration</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground">Trusted Brand Collaborations</h2>
+              <p className="text-sm text-foreground/60 max-w-2xl mx-auto leading-relaxed">
+                We proudly collaborate with innovative brands that share our vision of quality, creativity, and customer satisfaction.
+              </p>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Skininspired × Reeks Store</h2>
-            <p className="text-sm text-foreground/60 max-w-lg mx-auto">
-              Bridging skincare lovers with clean, bio-active science brands.
-            </p>
+
+            {/* Featured Brand: SkinInspired */}
+            <div className="glass-panel p-8 sm:p-12 rounded-3xl border border-card-border space-y-12 shadow-2xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-luxury-blue/5 blur-3xl rounded-full" />
+              
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                {/* Left Column: Brand Info & Highlights */}
+                <div className="lg:col-span-5 space-y-8">
+                  <div className="space-y-4">
+                    {/* Brand Logo Placeholder */}
+                    <div className="inline-flex items-center space-x-3 bg-foreground/5 border border-card-border px-5 py-3 rounded-2xl">
+                      <span className="text-lg font-black tracking-widest text-foreground bg-gradient-to-r from-luxury-blue via-luxury-purple to-luxury-cyan bg-clip-text text-transparent uppercase">
+                        SkinInspired
+                      </span>
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-luxury-purple bg-luxury-purple/10 px-2 py-0.5 rounded-full border border-luxury-purple/20">
+                        Official Partner
+                      </span>
+                    </div>
+                    
+                    <h3 className="text-2xl font-bold tracking-tight text-foreground">Scientific Skincare Redefined</h3>
+                    <p className="text-sm text-foreground/75 leading-relaxed">
+                      SkinInspired is a modern skincare brand dedicated to creating high-quality skincare solutions designed for healthy, glowing skin. The brand focuses on carefully selected active ingredients, innovative formulations, and clinical customer satisfaction. With a commitment to quality and authenticity, SkinInspired continues to inspire confidence through effective skincare products suitable for everyday routines.
+                    </p>
+                  </div>
+
+                  {/* Highlights Grid */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {[
+                      'Premium Quality Products',
+                      'Trusted Skincare Solutions',
+                      'Customer-Centric Approach',
+                      'Quality Ingredients',
+                      'Growing Brand Presence',
+                      'Modern Beauty & Wellness'
+                    ].map((hl, idx) => (
+                      <div key={idx} className="flex items-center space-x-2 text-xs font-semibold text-foreground/80">
+                        <div className="p-1 rounded-full bg-emerald-500/10 text-emerald-500">
+                          <Check size={12} className="stroke-[3]" />
+                        </div>
+                        <span>{hl}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="pt-2">
+                    <a
+                      href="https://skininspired.in"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center space-x-2 px-6 py-3 rounded-full bg-foreground text-background font-bold text-xs hover:opacity-90 transition-all shadow-md"
+                    >
+                      <span>Visit SkinInspired Website</span>
+                      <ArrowRight size={12} />
+                    </a>
+                  </div>
+                </div>
+
+                {/* Right Column: Gallery & Banner */}
+                <div className="lg:col-span-7 space-y-6">
+                  {/* Brand Banner */}
+                  <div className="relative rounded-2xl overflow-hidden aspect-[21/9] bg-foreground/5 border border-card-border group">
+                    <img
+                      src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=1000&auto=format&fit=crop&q=80"
+                      alt="SkinInspired Skincare shelf banner"
+                      className="object-cover w-full h-full group-hover:scale-[1.02] transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent flex flex-col justify-end p-6">
+                      <span className="text-[10px] font-bold text-luxury-cyan uppercase tracking-widest mb-0.5">Brand Showcase</span>
+                      <h4 className="text-base font-bold text-white tracking-tight">Efficacy Meets Active Science</h4>
+                    </div>
+                  </div>
+
+                  {/* Gallery Grid */}
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    {[
+                      {
+                        title: 'Under Arm Mist',
+                        img: 'https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=400&auto=format&fit=crop&q=80'
+                      },
+                      {
+                        title: 'Green Sunscreen',
+                        img: 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&auto=format&fit=crop&q=80'
+                      },
+                      {
+                        title: 'Shield Spray',
+                        img: 'https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=400&auto=format&fit=crop&q=80'
+                      },
+                      {
+                        title: 'Barrier Recovery',
+                        img: 'https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=400&auto=format&fit=crop&q=80'
+                      }
+                    ].map((item, idx) => (
+                      <div key={idx} className="relative rounded-xl overflow-hidden aspect-square bg-foreground/5 border border-card-border group shadow-sm">
+                        <img
+                          src={item.img}
+                          alt={item.title}
+                          className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-background/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-2 text-center">
+                          <span className="text-[10px] font-extrabold text-foreground uppercase tracking-wider">{item.title}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Small Action Prompt */}
+                  <div className="pt-4 border-t border-foreground/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <span className="text-xs font-semibold text-foreground/60">Interested in exploring SkinInspired products?</span>
+                    <a
+                      href="https://skininspired.in"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2.5 rounded-xl border border-foreground/10 hover:border-foreground hover:bg-foreground/5 transition-all text-xs font-bold"
+                    >
+                      Visit SkinInspired Website
+                    </a>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            {/* Left: Collaboration Info */}
-            <div className="lg:col-span-5 space-y-6">
-              <div className="glass-panel p-8 rounded-3xl border border-card-border space-y-6">
-                <div className="space-y-2">
-                  <div className="text-luxury-blue text-xs font-bold uppercase tracking-wider">Milestone Update</div>
-                  <h3 className="text-2xl font-bold tracking-tight text-foreground">Clean Formulas Landed</h3>
+          {/* SECTION 2: Become Our Brand Partner */}
+          <div id="partner" className="space-y-12 border-t border-card-border pt-20">
+            <div className="text-center space-y-3">
+              <div className="inline-flex items-center space-x-2 text-luxury-blue text-xs font-bold tracking-widest uppercase bg-luxury-blue/10 px-4 py-1.5 rounded-full border border-luxury-blue/20">
+                <Users size={12} />
+                <span>Growth & Co-Branding</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground">Partner With Us</h2>
+              <p className="text-sm text-foreground/60 max-w-2xl mx-auto leading-relaxed">
+                Interested in promoting your brand? We'd love to collaborate and create impactful campaigns together.
+              </p>
+            </div>
+
+            <div className="glass-panel p-8 sm:p-12 rounded-3xl border border-card-border max-w-4xl mx-auto shadow-xl relative overflow-hidden">
+              <div className="absolute bottom-0 right-0 w-64 h-64 bg-luxury-purple/5 blur-3xl rounded-full" />
+              
+              <form onSubmit={handlePartnerSubmit} className="space-y-8 relative z-10">
+                {formError && (
+                  <div className="p-4 rounded-xl border border-red-500/20 bg-red-500/10 text-red-500 text-xs font-semibold text-center">
+                    {formError}
+                  </div>
+                )}
+                {formSuccess && (
+                  <div className="p-4 rounded-xl border border-emerald-500/20 bg-emerald-500/10 text-emerald-500 text-xs font-semibold text-center">
+                    Thank you! Your brand collaboration application has been submitted successfully. Our marketing team will connect with you shortly.
+                  </div>
+                )}
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Brand Name */}
+                  <div className="space-y-1.5">
+                    <label htmlFor="brandName" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Brand Name *</label>
+                    <input
+                      type="text"
+                      id="brandName"
+                      required
+                      placeholder="e.g. SkinInspired"
+                      value={partnerForm.brandName}
+                      onChange={(e) => setPartnerForm({ ...partnerForm, brandName: e.target.value })}
+                      className="w-full px-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-sm outline-none transition-all"
+                    />
+                  </div>
+
+                  {/* Contact Person Name */}
+                  <div className="space-y-1.5">
+                    <label htmlFor="contactPerson" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Contact Person Name *</label>
+                    <input
+                      type="text"
+                      id="contactPerson"
+                      required
+                      placeholder="e.g. Alok Kumar"
+                      value={partnerForm.contactPerson}
+                      onChange={(e) => setPartnerForm({ ...partnerForm, contactPerson: e.target.value })}
+                      className="w-full px-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-sm outline-none transition-all"
+                    />
+                  </div>
+
+                  {/* Official Brand Email */}
+                  <div className="space-y-1.5">
+                    <label htmlFor="brandEmail" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Official Brand Email *</label>
+                    <input
+                      type="email"
+                      id="brandEmail"
+                      required
+                      placeholder="e.g. partners@brand.com"
+                      value={partnerForm.brandEmail}
+                      onChange={(e) => setPartnerForm({ ...partnerForm, brandEmail: e.target.value })}
+                      className="w-full px-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-sm outline-none transition-all"
+                    />
+                  </div>
+
+                  {/* Personal Contact Number */}
+                  <div className="space-y-1.5">
+                    <label htmlFor="contactNumber" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Personal Contact Number *</label>
+                    <input
+                      type="tel"
+                      id="contactNumber"
+                      required
+                      placeholder="e.g. +91 98765 43210"
+                      value={partnerForm.contactNumber}
+                      onChange={(e) => setPartnerForm({ ...partnerForm, contactNumber: e.target.value })}
+                      className="w-full px-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-sm outline-none transition-all"
+                    />
+                  </div>
+
+                  {/* Company Website */}
+                  <div className="space-y-1.5">
+                    <label htmlFor="companyWebsite" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Company Website (Optional)</label>
+                    <input
+                      type="url"
+                      id="companyWebsite"
+                      placeholder="e.g. https://brand.com"
+                      value={partnerForm.companyWebsite}
+                      onChange={(e) => setPartnerForm({ ...partnerForm, companyWebsite: e.target.value })}
+                      className="w-full px-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-sm outline-none transition-all"
+                    />
+                  </div>
+
+                  {/* Brand Category */}
+                  <div className="space-y-1.5">
+                    <label htmlFor="brandCategory" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Brand Category</label>
+                    <input
+                      type="text"
+                      id="brandCategory"
+                      placeholder="e.g. Active Clinical Skincare"
+                      value={partnerForm.brandCategory}
+                      onChange={(e) => setPartnerForm({ ...partnerForm, brandCategory: e.target.value })}
+                      className="w-full px-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-sm outline-none transition-all"
+                    />
+                  </div>
+
+                  {/* Monthly Marketing Budget */}
+                  <div className="space-y-1.5">
+                    <label htmlFor="monthlyMarketingBudget" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Monthly Marketing Budget</label>
+                    <input
+                      type="text"
+                      id="monthlyMarketingBudget"
+                      placeholder="e.g. ₹50,000 - ₹2,000,000"
+                      value={partnerForm.monthlyMarketingBudget}
+                      onChange={(e) => setPartnerForm({ ...partnerForm, monthlyMarketingBudget: e.target.value })}
+                      className="w-full px-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-sm outline-none transition-all"
+                    />
+                  </div>
+
+                  {/* Expected Promotion Duration */}
+                  <div className="space-y-1.5">
+                    <label htmlFor="expectedDuration" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Expected Promotion Duration</label>
+                    <input
+                      type="text"
+                      id="expectedDuration"
+                      placeholder="e.g. 3 Months, 6 Months"
+                      value={partnerForm.expectedDuration}
+                      onChange={(e) => setPartnerForm({ ...partnerForm, expectedDuration: e.target.value })}
+                      className="w-full px-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-sm outline-none transition-all"
+                    />
+                  </div>
+
+                  {/* Preferred Collaboration Type */}
+                  <div className="space-y-1.5">
+                    <label htmlFor="collaborationType" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Preferred Collaboration Type</label>
+                    <select
+                      id="collaborationType"
+                      value={partnerForm.collaborationType}
+                      onChange={(e) => setPartnerForm({ ...partnerForm, collaborationType: e.target.value })}
+                      className="w-full px-4 py-3 rounded-xl border border-card-border bg-background focus:border-luxury-blue text-sm outline-none transition-all appearance-none cursor-pointer"
+                    >
+                      <option value="Social Media Promotion">Social Media Promotion</option>
+                      <option value="Product Review">Product Review</option>
+                      <option value="Brand Partnership">Brand Partnership</option>
+                      <option value="Website Promotion">Website Promotion</option>
+                      <option value="Campaign Collaboration">Campaign Collaboration</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  {/* Monthly Retailer Promotion Budget */}
+                  <div className="space-y-1.5">
+                    <label htmlFor="retailerBudget" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Monthly Retailer Promotion Budget</label>
+                    <div className="relative">
+                      <span className="absolute left-4 top-3 text-sm font-bold text-foreground/45">₹</span>
+                      <input
+                        type="text"
+                        id="retailerBudget"
+                        placeholder="Enter your monthly promotion budget"
+                        value={partnerForm.retailerBudget}
+                        onChange={(e) => setPartnerForm({ ...partnerForm, retailerBudget: e.target.value })}
+                        className="w-full pl-8 pr-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-sm outline-none transition-all"
+                      />
+                    </div>
+                  </div>
                 </div>
-                <p className="text-sm text-foreground/75 leading-relaxed">
-                  We are thrilled to announce our first official brand partnership with <strong>Skininspired</strong>. We have received their premier batch of clinical, high-performance daily active formulas.
+
+                {/* Budget Retail Note */}
+                <p className="text-[11px] text-foreground/50 leading-relaxed italic">
+                  * We offer flexible promotional plans tailored to your marketing goals and campaign requirements.
                 </p>
 
-                <div className="space-y-4 pt-2">
-                  <div className="flex items-start space-x-3.5">
-                    <div className="p-2 rounded-xl bg-luxury-purple/10 text-luxury-purple mt-0.5">
-                      <Sparkles size={16} />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-sm text-foreground">Active Batches Online</h4>
-                      <p className="text-xs text-foreground/60 leading-relaxed">All new Skininspired skin matrices are integrated and calibrated in the AI Routine builder.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3.5">
-                    <div className="p-2 rounded-xl bg-luxury-blue/10 text-luxury-blue mt-0.5">
-                      <Award size={16} />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-sm text-foreground">Consistency Streaks & Rewards</h4>
-                      <p className="text-xs text-foreground/60 leading-relaxed">Track daily skincare routines, maintain streaks, and earn points towards future formulation drops.</p>
-                    </div>
-                  </div>
+                {/* Additional Message */}
+                <div className="space-y-1.5">
+                  <label htmlFor="message" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Additional Message</label>
+                  <textarea
+                    id="message"
+                    rows={4}
+                    placeholder="Tell us about your brand, products, marketing goals, and collaboration expectations."
+                    value={partnerForm.message}
+                    onChange={(e) => setPartnerForm({ ...partnerForm, message: e.target.value })}
+                    className="w-full px-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-sm outline-none transition-all resize-none"
+                  />
                 </div>
-              </div>
-            </div>
 
-            {/* Right: Landed Products Grid with Images */}
-            <div className="lg:col-span-7 space-y-4">
-              <div className="text-xs font-bold text-foreground/50 uppercase tracking-wider mb-2">Landed Formulations Batch</div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {[
-                  {
-                    name: 'Under Arm Serum Mist',
-                    desc: '5-in-1 corrective formula targeting pigmentation, perspiration, and odour.',
-                    img: 'https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=300&auto=format&fit=crop&q=60'
-                  },
-                  {
-                    name: 'The Green Sunscreen',
-                    desc: 'Calming SPF 50+ mineral shield powered by Chlorophyll Calm for highly reactive skin.',
-                    img: 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=300&auto=format&fit=crop&q=60'
-                  },
-                  {
-                    name: 'Invi Shield 365 Spray',
-                    desc: 'Sweat-resistant SPF 80+ daily photo-stable protection spray.',
-                    img: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=300&auto=format&fit=crop&q=60'
-                  },
-                  {
-                    name: 'Care Addict Sunscreen',
-                    desc: 'Encapsulated SPF 50+ PA++++ filters defending against blue light damage.',
-                    img: 'https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=300&auto=format&fit=crop&q=60'
-                  },
-                  {
-                    name: 'Crème Gel Cleanser',
-                    desc: 'pH-balanced (5.5 - 6.5) soap-free daily amino face wash.',
-                    img: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=300&auto=format&fit=crop&q=60'
-                  },
-                  {
-                    name: 'Foaming Face Wash',
-                    desc: 'Soap-free nourishing lather for gentle skin barrier recovery.',
-                    img: 'https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=300&auto=format&fit=crop&q=60'
-                  }
-                ].map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="glass-panel p-4 rounded-2xl border border-card-border hover:border-luxury-purple/20 transition-all flex items-center gap-4 group cursor-pointer"
+                {/* Submit Button */}
+                <div className="pt-2 flex justify-center">
+                  <button
+                    type="submit"
+                    disabled={formLoading}
+                    className="w-full sm:w-auto px-8 py-4 rounded-full bg-foreground text-background font-bold text-sm tracking-wide hover:opacity-90 disabled:opacity-75 disabled:pointer-events-none transition-all flex items-center justify-center space-x-2.5 shadow-md shadow-foreground/5"
                   >
-                    <div className="w-16 h-16 rounded-xl overflow-hidden bg-foreground/5 relative flex-shrink-0 border border-card-border">
-                      <img src={item.img} alt={item.name} className="object-cover w-full h-full group-hover:scale-105 transition-all duration-300" />
-                    </div>
-                    <div className="space-y-1 text-left">
-                      <div className="text-xs font-extrabold text-luxury-purple tracking-wide group-hover:text-luxury-blue transition-colors">
-                        {item.name}
-                      </div>
-                      <p className="text-[10px] text-foreground/60 leading-relaxed line-clamp-2">
-                        {item.desc}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+                    {formLoading ? (
+                      <>
+                        <Loader2 size={16} className="animate-spin" />
+                        <span>Sending Request...</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>Apply for Brand Collaboration</span>
+                        <ArrowRight size={14} />
+                      </>
+                    )}
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
+
         </div>
       </section>
 
