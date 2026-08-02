@@ -65,17 +65,33 @@ export default function Navbar() {
 
         {/* Desktop Links */}
         <nav className="hidden md:flex items-center space-x-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className={`text-sm font-medium tracking-wide transition-colors hover:text-luxury-blue ${
-                pathname === link.href ? 'text-luxury-blue font-semibold' : 'text-foreground/80'
-              }`}
-            >
-              {link.name}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isHash = link.href.startsWith('/#') || link.href.includes('#');
+            if (isHash) {
+              return (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className={`text-sm font-medium tracking-wide transition-colors hover:text-luxury-blue ${
+                    pathname === link.href ? 'text-luxury-blue font-semibold' : 'text-foreground/80'
+                  }`}
+                >
+                  {link.name}
+                </a>
+              );
+            }
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                className={`text-sm font-medium tracking-wide transition-colors hover:text-luxury-blue ${
+                  pathname === link.href ? 'text-luxury-blue font-semibold' : 'text-foreground/80'
+                }`}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Icons */}
@@ -150,16 +166,31 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden fixed top-16 left-0 right-0 bottom-0 z-40 bg-background/95 backdrop-blur-lg flex flex-col p-6 animate-fade-in">
           <nav className="flex flex-col space-y-6 text-lg font-medium">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className="hover:text-luxury-blue border-b border-foreground/5 pb-2"
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isHash = link.href.startsWith('/#') || link.href.includes('#');
+              if (isHash) {
+                return (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className="hover:text-luxury-blue border-b border-foreground/5 pb-2 text-left"
+                  >
+                    {link.name}
+                  </a>
+                );
+              }
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="hover:text-luxury-blue border-b border-foreground/5 pb-2 text-left"
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
             {user?.role === 'admin' && (
               <Link
                 href="/admin"

@@ -161,7 +161,7 @@ export default function Home() {
               <div className="absolute -inset-2 rounded-3xl bg-gradient-to-r from-luxury-blue via-luxury-purple to-luxury-cyan opacity-20 blur-xl group-hover:opacity-35 transition-all duration-500" />
               <div className="relative rounded-3xl overflow-hidden aspect-square bg-foreground/5 border border-card-border shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d1?w=600&auto=format&fit=crop&q=80"
+                  src="/hero_dashboard.jpg"
                   alt="SaaS skincare routine tracking dashboard illustration"
                   className="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-500"
                 />
@@ -270,7 +270,7 @@ export default function Home() {
       </section>
 
       {/* 4. Brand Collaboration Section */}
-      <section id="brands" className="py-24 border-t border-card-border relative overflow-hidden bg-foreground/[0.01]">
+      <section id="brands" className="py-24 border-t border-card-border relative overflow-hidden bg-foreground/[0.01] scroll-mt-24">
         <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-luxury-purple/5 blur-3xl pointer-events-none" />
         
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-20 relative z-10">
@@ -403,7 +403,7 @@ export default function Home() {
       </section>
 
       {/* 5. About Section */}
-      <section id="about" className="py-24 border-t border-card-border relative overflow-hidden">
+      <section id="about" className="py-24 border-t border-card-border relative overflow-hidden scroll-mt-24">
         <div className="absolute top-1/2 left-1/4 w-96 h-96 rounded-full bg-luxury-blue/5 blur-3xl pointer-events-none -translate-y-1/2" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
@@ -482,7 +482,7 @@ export default function Home() {
       </section>
 
       {/* 6. Team Section */}
-      <section id="team" className="py-24 border-t border-card-border bg-foreground/[0.01]">
+      <section id="team" className="py-24 border-t border-card-border bg-foreground/[0.01] scroll-mt-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
           <div className="text-center space-y-2">
             <div className="text-xs font-bold uppercase tracking-wider text-luxury-purple">Meet Our Team</div>
@@ -531,7 +531,7 @@ export default function Home() {
                 {
                   name: 'Aarushi Patel',
                   role: 'Developer',
-                  img: 'https://images.unsplash.com/photo-1594824813573-246434e33963?w=300&auto=format&fit=crop&q=60'
+                  img: '/aarushi_profile.jpg'
                 },
                 {
                   name: 'Himanshu Kumar',
@@ -572,7 +572,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-20 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 space-y-12">
+      <section id="faq" className="py-20 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 space-y-12 scroll-mt-24">
         <div className="text-center space-y-2">
           <div className="text-xs font-bold uppercase tracking-wider text-luxury-purple">Common Inquiries</div>
           <h2 className="text-3xl font-bold tracking-tight">Frequently Asked Questions</h2>
