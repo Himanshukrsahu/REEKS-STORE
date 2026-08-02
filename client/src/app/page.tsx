@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Sparkles, ShieldCheck, Zap, Award, Star, Info, ChevronDown, Users, Check, Loader2 } from 'lucide-react';
+import { ArrowRight, Sparkles, ShieldCheck, Zap, Award, Star, Info, ChevronDown, Users, Check, Loader2, Clock, Gift, Trophy, Bell } from 'lucide-react';
 import SkinQuiz from '../components/SkinQuiz';
 import SkeletonLoader from '../components/SkeletonLoader';
 import { apiRequest } from '../utils/api';
@@ -14,6 +14,7 @@ export default function Home() {
   const { addToast } = useToastStore();
 
   // Collaboration Form State
+  const [showCollabModal, setShowCollabModal] = useState(false);
   const [partnerForm, setPartnerForm] = useState({
     brandName: '',
     contactPerson: '',
@@ -22,8 +23,7 @@ export default function Home() {
     companyWebsite: '',
     brandCategory: '',
     monthlyMarketingBudget: '',
-    expectedDuration: '',
-    collaborationType: 'Social Media Promotion',
+    expectedDuration: 'Social Media Promotion',
     retailerBudget: '',
     message: ''
   });
@@ -36,29 +36,40 @@ export default function Home() {
     setFormError(null);
     setFormSuccess(false);
 
-    // Basic Validation
-    if (!partnerForm.brandName.trim()) {
-      setFormError('Brand Name is required.');
-      return;
-    }
-    if (!partnerForm.contactPerson.trim()) {
-      setFormError('Contact Person Name is required.');
-      return;
-    }
-    if (!partnerForm.brandEmail.trim() || !partnerForm.brandEmail.includes('@')) {
-      setFormError('A valid Official Brand Email is required.');
-      return;
-    }
-    if (!partnerForm.contactNumber.trim()) {
-      setFormError('Personal Contact Number is required.');
+    // Validation
+    if (!partnerForm.brandName.trim() || !partnerForm.contactPerson.trim() || !partnerForm.brandEmail.trim() || !partnerForm.contactNumber.trim()) {
+      setFormError('Please fill in all required fields.');
       return;
     }
 
     setFormLoading(true);
-    // Simulate API request delay
-    setTimeout(() => {
-      setFormLoading(false);
+    try {
+      const response = await fetch('http://localhost:5000/api/collaborations', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          brandName: partnerForm.brandName,
+          contactPerson: partnerForm.contactPerson,
+          brandEmail: partnerForm.brandEmail,
+          contactNumber: partnerForm.contactNumber,
+          companyWebsite: partnerForm.companyWebsite,
+          brandCategory: partnerForm.brandCategory,
+          monthlyPromotionBudget: partnerForm.retailerBudget,
+          expectedDuration: partnerForm.expectedDuration,
+          collaborationType: partnerForm.expectedDuration,
+          additionalMessage: partnerForm.message
+        }),
+      });
+
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.message || 'Something went wrong while saving application.');
+      }
+
       setFormSuccess(true);
+      addToast('Brand collaboration application submitted successfully!', 'success');
       // Reset form
       setPartnerForm({
         brandName: '',
@@ -68,12 +79,20 @@ export default function Home() {
         companyWebsite: '',
         brandCategory: '',
         monthlyMarketingBudget: '',
-        expectedDuration: '',
-        collaborationType: 'Social Media Promotion',
+        expectedDuration: 'Social Media Promotion',
         retailerBudget: '',
         message: ''
       });
-    }, 1500);
+      // Close modal after delay
+      setTimeout(() => {
+        setShowCollabModal(false);
+        setFormSuccess(false);
+      }, 2000);
+    } catch (err: any) {
+      setFormError(err.message || 'Error connecting to server. Please try again.');
+    } finally {
+      setFormLoading(false);
+    }
   };
 
   const toggleFaq = (index: number) => {
@@ -89,6 +108,7 @@ export default function Home() {
 
   return (
     <div className="aurora-bg min-h-screen">
+      
       {/* 1. Hero Section */}
       <section className="relative pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden">
         {/* Floating gradient circles */}
@@ -100,22 +120,22 @@ export default function Home() {
             
             {/* Left Column: Content */}
             <div className="lg:col-span-7 space-y-8 text-left">
-              <div className="inline-flex items-center space-x-2 text-luxury-blue text-xs font-bold tracking-widest uppercase bg-luxury-blue/10 px-4 py-1.5 rounded-full border border-luxury-blue/20">
+              <div className="inline-flex items-center space-x-2 text-luxury-purple text-xs font-bold tracking-widest uppercase bg-luxury-purple/10 px-4 py-1.5 rounded-full border border-luxury-purple/20">
                 <Sparkles size={12} />
-                <span>Creator & Brand Synergy</span>
+                <span>Habit Building & Rewards</span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-none text-foreground">
-                Connecting Brands <br />
-                <span className="bg-gradient-to-r from-luxury-blue via-luxury-purple to-luxury-cyan bg-clip-text text-transparent">with the Right Creators</span>
+                Build Better Skincare Habits. <br />
+                <span className="bg-gradient-to-r from-luxury-blue via-luxury-purple to-luxury-cyan bg-clip-text text-transparent">Get Rewarded.</span>
               </h1>
 
               <div className="space-y-4">
                 <p className="text-base sm:text-lg font-bold text-foreground/90 leading-relaxed">
-                  ReekStore is a modern influencer marketing platform that helps brands discover the right creators, build meaningful partnerships, and launch successful promotional campaigns with confidence.
+                  ReekStore is India's skincare habit platform that helps you stay consistent with your daily skincare routine through reminders, streak tracking, rewards, and trusted brand partnerships.
                 </p>
                 <p className="text-sm text-foreground/75 leading-relaxed">
-                  ReekStore simplifies brand and creator collaborations by providing a trusted platform where businesses can discover talented influencers and content creators for authentic marketing campaigns. Whether you're a growing startup, an established brand, or a creator looking for exciting opportunities, ReekStore makes collaboration simple, transparent, and effective.
+                  ReekStore is designed to solve the biggest skincare problem—consistency. Many people invest in premium skincare products but struggle to use them regularly. Our platform helps users build healthy skincare habits through personalized routines, daily reminders, streak tracking, and exciting rewards. By staying consistent, users unlock exclusive discounts, offers, and benefits from trusted skincare brands while improving their skincare journey.
                 </p>
               </div>
 
@@ -124,14 +144,14 @@ export default function Home() {
                   href="#brands"
                   className="w-full sm:w-auto px-8 py-4 rounded-full bg-foreground text-background hover:opacity-90 font-bold text-sm tracking-wide shadow-md transition-all flex items-center justify-center space-x-2"
                 >
-                  <span>Explore Brands</span>
+                  <span>Get Started</span>
                   <ArrowRight size={16} />
                 </a>
                 <a
-                  href="#partner"
+                  href="#brands"
                   className="w-full sm:w-auto px-8 py-4 rounded-full glass-panel hover:bg-foreground/5 font-semibold text-sm tracking-wide transition-all flex items-center justify-center space-x-2 border border-card-border"
                 >
-                  <span>Become a Partner</span>
+                  <span>Explore Brand Partners</span>
                 </a>
               </div>
             </div>
@@ -142,18 +162,18 @@ export default function Home() {
               <div className="relative rounded-3xl overflow-hidden aspect-square bg-foreground/5 border border-card-border shadow-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d1?w=600&auto=format&fit=crop&q=80"
-                  alt="SaaS creative campaign analytics dashboard"
+                  alt="SaaS skincare routine tracking dashboard illustration"
                   className="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-500"
                 />
                 
                 {/* Floating metrics glass pill */}
                 <div className="absolute bottom-6 left-6 right-6 glass-panel p-4 rounded-2xl border border-white/10 bg-background/60 backdrop-blur-md flex items-center justify-between shadow-lg">
                   <div className="space-y-0.5">
-                    <span className="text-[9px] font-bold text-luxury-cyan uppercase tracking-widest">Co-Branding Reach</span>
-                    <div className="text-sm font-black text-white">🔥 1.2M+ Views Reached</div>
+                    <span className="text-[9px] font-bold text-luxury-cyan uppercase tracking-widest">Consistency Benchmark</span>
+                    <div className="text-sm font-black text-white">🔥 Day 28 Habit Loop Active</div>
                   </div>
                   <div className="px-2.5 py-1 rounded-lg bg-emerald-500/10 text-emerald-500 text-[10px] font-extrabold border border-emerald-500/20">
-                    +320% ROI
+                    98% Adherence
                   </div>
                 </div>
               </div>
@@ -166,37 +186,52 @@ export default function Home() {
       {/* 2. Highlight Cards Section */}
       <section className="py-16 border-y border-card-border bg-background/20 backdrop-blur-sm">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="text-center space-y-2 mb-12">
+            <div className="text-xs font-bold uppercase tracking-wider text-luxury-blue">Core Engine</div>
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">Ecosystem Highlights</h2>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                title: 'Discover Creators',
-                desc: 'Find influencers and creators across different categories that match your brand\'s goals.',
+                title: 'Personalized Skincare Routine',
+                desc: 'Create customized AM & PM routines matching your skin type.',
                 icon: <Users className="text-luxury-blue" size={20} />
               },
               {
-                title: 'Trusted Brand Partnerships',
-                desc: 'Build genuine collaborations that drive engagement and long-term growth.',
-                icon: <Award className="text-luxury-purple" size={20} />
+                title: 'Daily Reminders',
+                desc: 'Stay alert and build consistent application habits easily.',
+                icon: <Bell className="text-luxury-purple" size={20} />
               },
               {
-                title: 'Campaign Management',
-                desc: 'Manage collaboration requests and promotional campaigns from one platform.',
-                icon: <Zap className="text-luxury-cyan" size={20} />
+                title: 'Streak Tracking',
+                desc: 'Watch your streak grow daily and map your active progress.',
+                icon: <Trophy className="text-luxury-cyan" size={20} />
               },
               {
-                title: 'Secure & Professional',
-                desc: 'A reliable platform focused on transparency, professionalism, and quality partnerships.',
-                icon: <ShieldCheck className="text-emerald-500" size={20} />
+                title: 'Rewards & Coupons',
+                desc: 'Unlock authentic discount vouchers and rewards for consistency.',
+                icon: <Gift className="text-emerald-500" size={20} />
+              },
+              {
+                title: 'Brand Partnerships',
+                desc: 'Discover product releases from top collaborating brands.',
+                icon: <Award className="text-purple-500" size={20} />
+              },
+              {
+                title: 'Habit Building',
+                desc: 'Transform daily skincare into an unstoppable healthy routine.',
+                icon: <Clock className="text-luxury-blue" size={20} />
               }
             ].map((item, idx) => (
               <div
                 key={idx}
-                className="glass-panel p-6 rounded-2xl border border-card-border hover:border-luxury-blue/30 hover:shadow-lg transition-all space-y-3 cursor-pointer group"
+                className="glass-panel p-6 rounded-2xl border border-card-border hover:border-luxury-purple/30 hover:shadow-lg transition-all space-y-3 cursor-pointer group"
               >
                 <div className="inline-flex p-2.5 rounded-xl bg-foreground/5 group-hover:bg-foreground/10 transition-colors">
                   {item.icon}
                 </div>
-                <h3 className="font-extrabold text-sm text-foreground group-hover:text-luxury-blue transition-colors">
+                <h3 className="font-extrabold text-sm text-foreground group-hover:text-luxury-purple transition-colors">
                   {item.title}
                 </h3>
                 <p className="text-xs text-foreground/60 leading-relaxed">
@@ -214,10 +249,10 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-luxury-blue/5 via-luxury-purple/5 to-luxury-cyan/5 pointer-events-none" />
           
           {[
-            { value: '500+', label: 'Active Creators', icon: <Users size={16} className="text-luxury-blue" /> },
-            { value: '100+', label: 'Brand Collaborations', icon: <Sparkles size={16} className="text-luxury-purple" /> },
-            { value: '1,000+', label: 'Campaign Applications', icon: <Zap size={16} className="text-luxury-cyan" /> },
-            { value: '95%', label: 'Partner Satisfaction', icon: <Star size={16} className="text-amber-500" /> }
+            { value: '15,000+', label: 'Active Users', icon: <Users size={16} className="text-luxury-blue" /> },
+            { value: '84%', label: 'Daily Streaks', icon: <Trophy size={16} className="text-luxury-purple" /> },
+            { value: '12+', label: 'Partner Brands', icon: <Sparkles size={16} className="text-luxury-cyan" /> },
+            { value: '25K+', label: 'Rewards Claimed', icon: <Gift size={16} className="text-amber-500" /> }
           ].map((stat, idx) => (
             <div key={idx} className="space-y-2 relative z-10 flex flex-col items-center">
               <div className="inline-flex p-2 rounded-lg bg-foreground/5 mb-1">
@@ -234,73 +269,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. Why Choose ReekStore Section */}
-      <section className="py-20 border-t border-card-border bg-foreground/[0.01]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
-          <div className="text-center space-y-2">
-            <div className="text-xs font-bold uppercase tracking-wider text-luxury-purple">Value Proposition</div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Why Choose ReekStore?</h2>
-            <p className="text-sm text-foreground/60 max-w-md mx-auto">
-              Connecting creator creativity with clear target brand demographics.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'Smart Matching',
-                desc: 'Helping brands connect with creators that fit their campaign objectives.',
-                icon: <Sparkles className="text-luxury-purple" size={24} />
-              },
-              {
-                title: 'Easy Collaboration',
-                desc: 'A simple process for managing partnership requests and campaign communication.',
-                icon: <Zap className="text-luxury-blue" size={24} />
-              },
-              {
-                title: 'Growth Focused',
-                desc: 'Supporting both brands and creators in building successful long-term collaborations.',
-                icon: <Award className="text-luxury-cyan" size={24} />
-              }
-            ].map((card, idx) => (
-              <div
-                key={idx}
-                className="glass-panel p-8 rounded-3xl border border-card-border flex flex-col justify-between space-y-6 hover:shadow-lg transition-all group cursor-pointer"
-              >
-                <div className="space-y-4">
-                  <div className="inline-flex p-3 rounded-2xl bg-foreground/5 group-hover:bg-foreground/10 transition-colors">
-                    {card.icon}
-                  </div>
-                  <h3 className="text-lg font-bold tracking-tight text-foreground group-hover:text-luxury-purple transition-colors">
-                    {card.title}
-                  </h3>
-                  <p className="text-xs text-foreground/60 leading-relaxed">
-                    {card.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 5a. Collaboration Brands & Partnerships Section */}
+      {/* 4. Brand Collaboration Section */}
       <section id="brands" className="py-24 border-t border-card-border relative overflow-hidden bg-foreground/[0.01]">
         <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-luxury-purple/5 blur-3xl pointer-events-none" />
-        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 rounded-full bg-luxury-blue/5 blur-3xl pointer-events-none" />
         
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-20 relative z-10">
           
-          {/* SECTION 1: Brand Collaboration */}
           <div className="space-y-12">
             <div className="text-center space-y-3">
               <div className="inline-flex items-center space-x-2 text-luxury-purple text-xs font-bold tracking-widest uppercase bg-luxury-purple/10 px-4 py-1.5 rounded-full border border-luxury-purple/20">
                 <Sparkles size={12} />
-                <span>Featured Collaboration</span>
+                <span>Our Collaborations</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground">Trusted Brand Collaborations</h2>
+              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground">Our Brand Partners</h2>
               <p className="text-sm text-foreground/60 max-w-2xl mx-auto leading-relaxed">
-                We proudly collaborate with innovative brands that share our vision of quality, creativity, and customer satisfaction.
+                We collaborate with trusted skincare brands to reward users for staying consistent with their skincare journey.
               </p>
             </div>
 
@@ -313,19 +296,18 @@ export default function Home() {
                 {/* Left Column: Brand Info & Highlights */}
                 <div className="lg:col-span-5 space-y-8">
                   <div className="space-y-4">
-                    {/* Brand Logo Placeholder */}
                     <div className="inline-flex items-center space-x-3 bg-foreground/5 border border-card-border px-5 py-3 rounded-2xl">
                       <span className="text-lg font-black tracking-widest text-foreground bg-gradient-to-r from-luxury-blue via-luxury-purple to-luxury-cyan bg-clip-text text-transparent uppercase">
                         SkinInspired
                       </span>
                       <span className="text-[10px] font-bold uppercase tracking-wider text-luxury-purple bg-luxury-purple/10 px-2 py-0.5 rounded-full border border-luxury-purple/20">
-                        Official Partner
+                        Featured Partner
                       </span>
                     </div>
                     
-                    <h3 className="text-2xl font-bold tracking-tight text-foreground">Scientific Skincare Redefined</h3>
+                    <h3 className="text-2xl font-bold tracking-tight text-foreground">Active Clinical Skincare</h3>
                     <p className="text-sm text-foreground/75 leading-relaxed">
-                      SkinInspired is a modern skincare brand dedicated to creating high-quality skincare solutions designed for healthy, glowing skin. The brand focuses on carefully selected active ingredients, innovative formulations, and clinical customer satisfaction. With a commitment to quality and authenticity, SkinInspired continues to inspire confidence through effective skincare products suitable for everyday routines.
+                      SkinInspired is a modern skincare brand dedicated to creating high-quality skincare solutions that help people achieve healthier and more confident skin. The brand focuses on carefully selected ingredients, customer satisfaction, and innovative skincare products designed for everyday use.
                     </p>
                   </div>
 
@@ -334,9 +316,9 @@ export default function Home() {
                     {[
                       'Premium Quality Products',
                       'Trusted Skincare Solutions',
-                      'Customer-Centric Approach',
-                      'Quality Ingredients',
-                      'Growing Brand Presence',
+                      'Customer-Focused',
+                      'High-Quality Ingredients',
+                      'Growing Community',
                       'Modern Beauty & Wellness'
                     ].map((hl, idx) => (
                       <div key={idx} className="flex items-center space-x-2 text-xs font-semibold text-foreground/80">
@@ -347,18 +329,6 @@ export default function Home() {
                       </div>
                     ))}
                   </div>
-
-                  <div className="pt-2">
-                    <a
-                      href="https://skininspired.in"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center space-x-2 px-6 py-3 rounded-full bg-foreground text-background font-bold text-xs hover:opacity-90 transition-all shadow-md"
-                    >
-                      <span>Visit SkinInspired Website</span>
-                      <ArrowRight size={12} />
-                    </a>
-                  </div>
                 </div>
 
                 {/* Right Column: Gallery & Banner */}
@@ -367,12 +337,12 @@ export default function Home() {
                   <div className="relative rounded-2xl overflow-hidden aspect-[21/9] bg-foreground/5 border border-card-border group">
                     <img
                       src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=1000&auto=format&fit=crop&q=80"
-                      alt="SkinInspired Skincare shelf banner"
+                      alt="SkinInspired product formulations shelf banner"
                       className="object-cover w-full h-full group-hover:scale-[1.02] transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent flex flex-col justify-end p-6">
-                      <span className="text-[10px] font-bold text-luxury-cyan uppercase tracking-widest mb-0.5">Brand Showcase</span>
-                      <h4 className="text-base font-bold text-white tracking-tight">Efficacy Meets Active Science</h4>
+                      <span className="text-[10px] font-bold text-luxury-cyan uppercase tracking-widest mb-0.5">Showcase Gallery</span>
+                      <h4 className="text-base font-bold text-white tracking-tight">Active Science, Gentle Formulas</h4>
                     </div>
                   </div>
 
@@ -380,7 +350,11 @@ export default function Home() {
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                     {[
                       {
-                        title: 'Under Arm Mist',
+                        title: 'Cleanser Gel',
+                        img: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&auto=format&fit=crop&q=80'
+                      },
+                      {
+                        title: 'Under Arm Serum',
                         img: 'https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=400&auto=format&fit=crop&q=80'
                       },
                       {
@@ -388,11 +362,7 @@ export default function Home() {
                         img: 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&auto=format&fit=crop&q=80'
                       },
                       {
-                        title: 'Shield Spray',
-                        img: 'https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=400&auto=format&fit=crop&q=80'
-                      },
-                      {
-                        title: 'Barrier Recovery',
+                        title: 'Barrier Hydration',
                         img: 'https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=400&auto=format&fit=crop&q=80'
                       }
                     ].map((item, idx) => (
@@ -408,343 +378,119 @@ export default function Home() {
                       </div>
                     ))}
                   </div>
-
-                  {/* Small Action Prompt */}
-                  <div className="pt-4 border-t border-foreground/5 flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <span className="text-xs font-semibold text-foreground/60">Interested in exploring SkinInspired products?</span>
-                    <a
-                      href="https://skininspired.in"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-4 py-2.5 rounded-xl border border-foreground/10 hover:border-foreground hover:bg-foreground/5 transition-all text-xs font-bold"
-                    >
-                      Visit SkinInspired Website
-                    </a>
-                  </div>
-
                 </div>
 
               </div>
-
             </div>
 
-          </div>
-
-          {/* SECTION 2: Become Our Brand Partner */}
-          <div id="partner" className="space-y-12 border-t border-card-border pt-20">
-            <div className="text-center space-y-3">
-              <div className="inline-flex items-center space-x-2 text-luxury-blue text-xs font-bold tracking-widest uppercase bg-luxury-blue/10 px-4 py-1.5 rounded-full border border-luxury-blue/20">
-                <Users size={12} />
-                <span>Growth & Co-Branding</span>
-              </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground">Partner With Us</h2>
-              <p className="text-sm text-foreground/60 max-w-2xl mx-auto leading-relaxed">
-                Interested in promoting your brand? We'd love to collaborate and create impactful campaigns together.
+            {/* Centered CTA - Partner With ReekStore */}
+            <div className="text-center max-w-xl mx-auto space-y-5 pt-8">
+              <h3 className="text-2xl font-bold tracking-tight">Partner With ReekStore</h3>
+              <p className="text-sm text-foreground/60 leading-relaxed">
+                Invite skincare brands to collaborate with ReekStore to promote their products to highly engaged skincare users.
               </p>
+              <button
+                onClick={() => setShowCollabModal(true)}
+                className="inline-flex items-center space-x-2 px-8 py-4 rounded-full bg-foreground text-background hover:opacity-90 font-bold text-xs transition-all shadow-md"
+              >
+                <span>Apply for Brand Collaboration</span>
+                <ArrowRight size={14} />
+              </button>
             </div>
 
-            <div className="glass-panel p-8 sm:p-12 rounded-3xl border border-card-border max-w-4xl mx-auto shadow-xl relative overflow-hidden">
-              <div className="absolute bottom-0 right-0 w-64 h-64 bg-luxury-purple/5 blur-3xl rounded-full" />
-              
-              <form onSubmit={handlePartnerSubmit} className="space-y-8 relative z-10">
-                {formError && (
-                  <div className="p-4 rounded-xl border border-red-500/20 bg-red-500/10 text-red-500 text-xs font-semibold text-center">
-                    {formError}
-                  </div>
-                )}
-                {formSuccess && (
-                  <div className="p-4 rounded-xl border border-emerald-500/20 bg-emerald-500/10 text-emerald-500 text-xs font-semibold text-center">
-                    Thank you! Your brand collaboration application has been submitted successfully. Our marketing team will connect with you shortly.
-                  </div>
-                )}
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* Brand Name */}
-                  <div className="space-y-1.5">
-                    <label htmlFor="brandName" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Brand Name *</label>
-                    <input
-                      type="text"
-                      id="brandName"
-                      required
-                      placeholder="e.g. SkinInspired"
-                      value={partnerForm.brandName}
-                      onChange={(e) => setPartnerForm({ ...partnerForm, brandName: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-sm outline-none transition-all"
-                    />
-                  </div>
-
-                  {/* Contact Person Name */}
-                  <div className="space-y-1.5">
-                    <label htmlFor="contactPerson" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Contact Person Name *</label>
-                    <input
-                      type="text"
-                      id="contactPerson"
-                      required
-                      placeholder="e.g. Alok Kumar"
-                      value={partnerForm.contactPerson}
-                      onChange={(e) => setPartnerForm({ ...partnerForm, contactPerson: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-sm outline-none transition-all"
-                    />
-                  </div>
-
-                  {/* Official Brand Email */}
-                  <div className="space-y-1.5">
-                    <label htmlFor="brandEmail" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Official Brand Email *</label>
-                    <input
-                      type="email"
-                      id="brandEmail"
-                      required
-                      placeholder="e.g. partners@brand.com"
-                      value={partnerForm.brandEmail}
-                      onChange={(e) => setPartnerForm({ ...partnerForm, brandEmail: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-sm outline-none transition-all"
-                    />
-                  </div>
-
-                  {/* Personal Contact Number */}
-                  <div className="space-y-1.5">
-                    <label htmlFor="contactNumber" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Personal Contact Number *</label>
-                    <input
-                      type="tel"
-                      id="contactNumber"
-                      required
-                      placeholder="e.g. +91 98765 43210"
-                      value={partnerForm.contactNumber}
-                      onChange={(e) => setPartnerForm({ ...partnerForm, contactNumber: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-sm outline-none transition-all"
-                    />
-                  </div>
-
-                  {/* Company Website */}
-                  <div className="space-y-1.5">
-                    <label htmlFor="companyWebsite" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Company Website (Optional)</label>
-                    <input
-                      type="url"
-                      id="companyWebsite"
-                      placeholder="e.g. https://brand.com"
-                      value={partnerForm.companyWebsite}
-                      onChange={(e) => setPartnerForm({ ...partnerForm, companyWebsite: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-sm outline-none transition-all"
-                    />
-                  </div>
-
-                  {/* Brand Category */}
-                  <div className="space-y-1.5">
-                    <label htmlFor="brandCategory" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Brand Category</label>
-                    <input
-                      type="text"
-                      id="brandCategory"
-                      placeholder="e.g. Active Clinical Skincare"
-                      value={partnerForm.brandCategory}
-                      onChange={(e) => setPartnerForm({ ...partnerForm, brandCategory: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-sm outline-none transition-all"
-                    />
-                  </div>
-
-                  {/* Monthly Marketing Budget */}
-                  <div className="space-y-1.5">
-                    <label htmlFor="monthlyMarketingBudget" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Monthly Marketing Budget</label>
-                    <input
-                      type="text"
-                      id="monthlyMarketingBudget"
-                      placeholder="e.g. ₹50,000 - ₹2,000,000"
-                      value={partnerForm.monthlyMarketingBudget}
-                      onChange={(e) => setPartnerForm({ ...partnerForm, monthlyMarketingBudget: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-sm outline-none transition-all"
-                    />
-                  </div>
-
-                  {/* Expected Promotion Duration */}
-                  <div className="space-y-1.5">
-                    <label htmlFor="expectedDuration" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Expected Promotion Duration</label>
-                    <input
-                      type="text"
-                      id="expectedDuration"
-                      placeholder="e.g. 3 Months, 6 Months"
-                      value={partnerForm.expectedDuration}
-                      onChange={(e) => setPartnerForm({ ...partnerForm, expectedDuration: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-sm outline-none transition-all"
-                    />
-                  </div>
-
-                  {/* Preferred Collaboration Type */}
-                  <div className="space-y-1.5">
-                    <label htmlFor="collaborationType" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Preferred Collaboration Type</label>
-                    <select
-                      id="collaborationType"
-                      value={partnerForm.collaborationType}
-                      onChange={(e) => setPartnerForm({ ...partnerForm, collaborationType: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-card-border bg-background focus:border-luxury-blue text-sm outline-none transition-all appearance-none cursor-pointer"
-                    >
-                      <option value="Social Media Promotion">Social Media Promotion</option>
-                      <option value="Product Review">Product Review</option>
-                      <option value="Brand Partnership">Brand Partnership</option>
-                      <option value="Website Promotion">Website Promotion</option>
-                      <option value="Campaign Collaboration">Campaign Collaboration</option>
-                      <option value="Other">Other</option>
-                    </select>
-                  </div>
-
-                  {/* Monthly Retailer Promotion Budget */}
-                  <div className="space-y-1.5">
-                    <label htmlFor="retailerBudget" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Monthly Retailer Promotion Budget</label>
-                    <div className="relative">
-                      <span className="absolute left-4 top-3 text-sm font-bold text-foreground/45">₹</span>
-                      <input
-                        type="text"
-                        id="retailerBudget"
-                        placeholder="Enter your monthly promotion budget"
-                        value={partnerForm.retailerBudget}
-                        onChange={(e) => setPartnerForm({ ...partnerForm, retailerBudget: e.target.value })}
-                        className="w-full pl-8 pr-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-sm outline-none transition-all"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Budget Retail Note */}
-                <p className="text-[11px] text-foreground/50 leading-relaxed italic">
-                  * We offer flexible promotional plans tailored to your marketing goals and campaign requirements.
-                </p>
-
-                {/* Additional Message */}
-                <div className="space-y-1.5">
-                  <label htmlFor="message" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Additional Message</label>
-                  <textarea
-                    id="message"
-                    rows={4}
-                    placeholder="Tell us about your brand, products, marketing goals, and collaboration expectations."
-                    value={partnerForm.message}
-                    onChange={(e) => setPartnerForm({ ...partnerForm, message: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-sm outline-none transition-all resize-none"
-                  />
-                </div>
-
-                {/* Submit Button */}
-                <div className="pt-2 flex justify-center">
-                  <button
-                    type="submit"
-                    disabled={formLoading}
-                    className="w-full sm:w-auto px-8 py-4 rounded-full bg-foreground text-background font-bold text-sm tracking-wide hover:opacity-90 disabled:opacity-75 disabled:pointer-events-none transition-all flex items-center justify-center space-x-2.5 shadow-md shadow-foreground/5"
-                  >
-                    {formLoading ? (
-                      <>
-                        <Loader2 size={16} className="animate-spin" />
-                        <span>Sending Request...</span>
-                      </>
-                    ) : (
-                      <>
-                        <span>Apply for Brand Collaboration</span>
-                        <ArrowRight size={14} />
-                      </>
-                    )}
-                  </button>
-                </div>
-              </form>
-            </div>
           </div>
-
         </div>
       </section>
 
-      {/* 5b. About Section */}
-      <section id="about" className="py-20 border-t border-card-border relative overflow-hidden">
+      {/* 5. About Section */}
+      <section id="about" className="py-24 border-t border-card-border relative overflow-hidden">
         <div className="absolute top-1/2 left-1/4 w-96 h-96 rounded-full bg-luxury-blue/5 blur-3xl pointer-events-none -translate-y-1/2" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-            {/* Left: Brand Vision Statement */}
+            
+            {/* Left: Content */}
             <div className="lg:col-span-5 space-y-6">
               <div className="space-y-3">
-                <div className="text-xs font-bold uppercase tracking-wider text-luxury-blue">Our Vision</div>
-                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Making Skincare an Unstoppable Daily Habit</h2>
+                <div className="text-xs font-bold uppercase tracking-wider text-luxury-blue">Our Mission & Vision</div>
+                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">About ReekStore</h2>
               </div>
               <p className="text-sm text-foreground/80 leading-relaxed">
-                The biggest problem in skincare is not finding the right products—it is using them consistently. Many purchase premium products but forget to apply them regularly or lose motivation.
+                At ReekStore, we believe the path to healthy skin starts with consistency. While millions invest in premium skincare formulas, the greatest obstacle to real skin progress isn't buying the wrong products—it's the struggle to use them daily. We are building India's leading skincare habit and rewards platform to solve this.
+              </p>
+              <p className="text-sm text-foreground/75 leading-relaxed">
+                Through daily reminders, custom routines, streak tracking, and tangible rewards, we keep users motivated. By partnering with leading skincare brands, users unlock actual coupons and products for completing their daily routines.
               </p>
               <p className="text-sm text-foreground/70 leading-relaxed">
-                <strong>Reeks Store</strong> is India's first skincare habit and consistency platform. By turning daily skincare into an interactive streak-based routine, we motivate users to achieve real skin progress while unlocking authentic brand rewards.
+                In the future, we plan to expand this ecosystem to connect users directly with clinical dermatologists, skin clinics, and cosmetic centers, forming a unified network for skincare success.
               </p>
-              <div className="pt-2">
-                <div className="glass-panel p-4 rounded-2xl border border-card-border flex items-center space-x-4">
-                  <div className="text-3xl font-black text-luxury-purple">85%</div>
-                  <div className="text-xs text-foreground/60 leading-normal">
-                    Average increase in user consistency within the first 30 days of streak calibration.
-                  </div>
-                </div>
-              </div>
             </div>
 
-            {/* Right: Layered Image / Visual Composite */}
+            {/* Right: Graphic Layered Image */}
             <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div className="relative group">
                 <div className="absolute -inset-2 rounded-3xl bg-gradient-to-r from-luxury-blue via-luxury-purple to-luxury-cyan opacity-20 blur-xl group-hover:opacity-30 transition-all duration-500" />
                 <div className="relative rounded-3xl overflow-hidden aspect-[4/5] bg-foreground/5 border border-card-border">
                   <img
                     src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=60"
-                    alt="Daily Skincare Consistency Habit"
+                    alt="Consistent skincare habit tracking"
                     className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
                   />
-                  {/* Floating glass card overlay */}
+                  {/* Glass indicator overlay */}
                   <div className="absolute bottom-6 left-6 right-6 glass-panel p-4 rounded-2xl border border-white/10 bg-background/60 backdrop-blur-md space-y-1 shadow-lg">
-                    <div className="flex items-center justify-between">
-                      <span className="text-[10px] font-bold text-luxury-cyan uppercase tracking-wider">Routine Progress</span>
-                      <span className="text-[10px] font-bold text-emerald-500">Active Streak</span>
-                    </div>
-                    <div className="text-sm font-black text-foreground">🔥 Day 18 Consistency Streak</div>
-                    <div className="w-full bg-foreground/10 h-1.5 rounded-full overflow-hidden mt-1.5">
-                      <div className="bg-gradient-to-r from-luxury-blue to-luxury-purple h-full w-[85%]" />
-                    </div>
+                    <span className="text-[10px] font-bold text-luxury-cyan uppercase tracking-wider block">Habits Formed</span>
+                    <div className="text-sm font-black text-foreground">🏆 85% Adherence Goal Hit</div>
                   </div>
                 </div>
               </div>
 
-              {/* Vision Pillars Grid */}
+              {/* Core Anchors */}
               <div className="space-y-6">
                 <div className="glass-panel p-6 rounded-2xl border border-card-border space-y-3">
                   <div className="inline-flex p-2.5 rounded-xl bg-luxury-blue/10 text-luxury-blue">
                     <Sparkles size={18} />
                   </div>
-                  <h3 className="font-extrabold text-sm text-foreground">Skincare Streaks</h3>
+                  <h3 className="font-extrabold text-sm text-foreground">Habit Foundations</h3>
                   <p className="text-[11px] text-foreground/60 leading-relaxed">
-                    Build AM/PM routines, check them off daily to grow consistency streaks.
+                    Personalized routine cards, daily clock alerts, and consistency streak analytics keep you locked in.
                   </p>
                 </div>
 
                 <div className="glass-panel p-6 rounded-2xl border border-card-border space-y-3">
                   <div className="inline-flex p-2.5 rounded-xl bg-luxury-purple/10 text-luxury-purple">
-                    <Award size={18} />
+                    <Gift size={18} />
                   </div>
                   <h3 className="font-extrabold text-sm text-foreground">Real Brand Rewards</h3>
                   <p className="text-[11px] text-foreground/60 leading-relaxed">
-                    Unlock exclusive codes and samples from premium brands (like Skininspired).
+                    Collaborate with quality skincare brands to earn exclusive coupons, discounts, and formulation trials.
                   </p>
                 </div>
 
                 <div className="glass-panel p-6 rounded-2xl border border-card-border space-y-3">
                   <div className="inline-flex p-2.5 rounded-xl bg-luxury-cyan/10 text-luxury-cyan">
-                    <ShieldCheck size={18} />
+                    <Users size={18} />
                   </div>
-                  <h3 className="font-extrabold text-sm text-foreground">Clinical Partners</h3>
+                  <h3 className="font-extrabold text-sm text-foreground">Future Clinical Alliances</h3>
                   <p className="text-[11px] text-foreground/60 leading-relaxed">
-                    Earn consultation credits and analysis offers at dermatology clinics.
+                    Expanding directly into dermatological clinical consultations, diagnostic centers, and treatment networks.
                   </p>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
 
-      {/* 5c. Team Section */}
-      <section id="team" className="py-20 border-t border-card-border bg-foreground/[0.01]">
+      {/* 6. Team Section */}
+      <section id="team" className="py-24 border-t border-card-border bg-foreground/[0.01]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
           <div className="text-center space-y-2">
             <div className="text-xs font-bold uppercase tracking-wider text-luxury-purple">Meet Our Team</div>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">The people behind our vision, technology, and growth.</h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">The passionate people building ReekStore and shaping the future of skincare consistency.</h2>
           </div>
 
           <div className="space-y-12">
-            {/* Leadership Row (Founder & Co-Founder) */}
+            {/* Leadership Row (Founders) */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
               {[
                 {
@@ -769,7 +515,7 @@ export default function Home() {
                       className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>
-                  <div className="space-y-1.5">
+                  <div className="space-y-1">
                     <h3 className="font-extrabold text-lg text-foreground tracking-tight">{member.name}</h3>
                     <div className="inline-flex px-3 py-1 rounded-full bg-luxury-purple/15 text-luxury-purple text-xs font-bold uppercase tracking-wider">
                       {member.role}
@@ -779,23 +525,28 @@ export default function Home() {
               ))}
             </div>
 
-            {/* Core Development & Operations Row */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Core Development & Marketing Row */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
               {[
                 {
+                  name: 'Aarushi Patel',
+                  role: 'Developer',
+                  img: 'https://images.unsplash.com/photo-1594824813573-246434e33963?w=300&auto=format&fit=crop&q=60'
+                },
+                {
                   name: 'Himanshu Kumar',
-                  role: 'CTO & Developer',
-                  img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80'
+                  role: 'Developer',
+                  img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop&q=80'
                 },
                 {
                   name: 'Aditya Sahani',
-                  role: 'CTO & Developer',
-                  img: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&auto=format&fit=crop&q=80'
+                  role: 'Developer',
+                  img: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=300&auto=format&fit=crop&q=80'
                 },
                 {
                   name: 'Ujjwal Prasad Kushwaha',
-                  role: 'Marketing Head',
-                  img: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&auto=format&fit=crop&q=80'
+                  role: 'Marketing & Social Media',
+                  img: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&auto=format&fit=crop&q=60'
                 }
               ].map((member, idx) => (
                 <div
@@ -820,7 +571,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. FAQ Section */}
+      {/* FAQ Section */}
       <section id="faq" className="py-20 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center space-y-2">
           <div className="text-xs font-bold uppercase tracking-wider text-luxury-purple">Common Inquiries</div>
@@ -852,6 +603,183 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* Floating Brand Collaboration Popup Modal */}
+      {showCollabModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/80 backdrop-blur-md animate-fade-in overflow-y-auto">
+          <div className="relative glass-panel p-8 sm:p-10 rounded-3xl border border-card-border w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-2xl space-y-6">
+            
+            <div className="space-y-2">
+              <h3 className="text-2xl font-black text-foreground">Apply for Brand Collaboration</h3>
+              <p className="text-xs text-foreground/60 leading-relaxed">
+                Invite skincare brands to collaborate with ReekStore to promote their products to highly engaged skincare users.
+              </p>
+            </div>
+
+            {formError && (
+              <div className="p-4 rounded-xl border border-red-500/20 bg-red-500/10 text-red-500 text-xs font-semibold text-center">
+                {formError}
+              </div>
+            )}
+
+            {formSuccess && (
+              <div className="p-4 rounded-xl border border-emerald-500/20 bg-emerald-500/10 text-emerald-500 text-xs font-semibold text-center">
+                Application submitted successfully! Our team will contact you shortly.
+              </div>
+            )}
+
+            <form onSubmit={handlePartnerSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                {/* Brand Name */}
+                <div className="space-y-1.5">
+                  <label htmlFor="modalBrandName" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Brand Name *</label>
+                  <input
+                    type="text"
+                    id="modalBrandName"
+                    required
+                    placeholder="e.g. SkinInspired"
+                    value={partnerForm.brandName}
+                    onChange={(e) => setPartnerForm({ ...partnerForm, brandName: e.target.value })}
+                    className="w-full px-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-xs outline-none transition-all"
+                  />
+                </div>
+
+                {/* Contact Person Name */}
+                <div className="space-y-1.5">
+                  <label htmlFor="modalContactPerson" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Contact Person Name *</label>
+                  <input
+                    type="text"
+                    id="modalContactPerson"
+                    required
+                    placeholder="e.g. Alok Kumar"
+                    value={partnerForm.contactPerson}
+                    onChange={(e) => setPartnerForm({ ...partnerForm, contactPerson: e.target.value })}
+                    className="w-full px-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-xs outline-none transition-all"
+                  />
+                </div>
+
+                {/* Official Brand Email */}
+                <div className="space-y-1.5">
+                  <label htmlFor="modalBrandEmail" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Official Brand Email *</label>
+                  <input
+                    type="email"
+                    id="modalBrandEmail"
+                    required
+                    placeholder="e.g. partners@brand.com"
+                    value={partnerForm.brandEmail}
+                    onChange={(e) => setPartnerForm({ ...partnerForm, brandEmail: e.target.value })}
+                    className="w-full px-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-xs outline-none transition-all"
+                  />
+                </div>
+
+                {/* Personal Contact Number */}
+                <div className="space-y-1.5">
+                  <label htmlFor="modalContactNumber" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Personal Contact Number *</label>
+                  <input
+                    type="tel"
+                    id="modalContactNumber"
+                    required
+                    placeholder="e.g. +91 98765 43210"
+                    value={partnerForm.contactNumber}
+                    onChange={(e) => setPartnerForm({ ...partnerForm, contactNumber: e.target.value })}
+                    className="w-full px-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-xs outline-none transition-all"
+                  />
+                </div>
+
+                {/* Company Website */}
+                <div className="space-y-1.5">
+                  <label htmlFor="modalCompanyWebsite" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Company Website</label>
+                  <input
+                    type="url"
+                    id="modalCompanyWebsite"
+                    placeholder="e.g. https://brand.com"
+                    value={partnerForm.companyWebsite}
+                    onChange={(e) => setPartnerForm({ ...partnerForm, companyWebsite: e.target.value })}
+                    className="w-full px-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-xs outline-none transition-all"
+                  />
+                </div>
+
+                {/* Brand Category */}
+                <div className="space-y-1.5">
+                  <label htmlFor="modalBrandCategory" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Brand Category</label>
+                  <input
+                    type="text"
+                    id="modalBrandCategory"
+                    placeholder="e.g. Clinical Skincare"
+                    value={partnerForm.brandCategory}
+                    onChange={(e) => setPartnerForm({ ...partnerForm, brandCategory: e.target.value })}
+                    className="w-full px-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-xs outline-none transition-all"
+                  />
+                </div>
+
+                {/* Monthly Promotion Budget */}
+                <div className="space-y-1.5">
+                  <label htmlFor="modalRetailerBudget" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Monthly Promotion Budget</label>
+                  <input
+                    type="text"
+                    id="modalRetailerBudget"
+                    placeholder="e.g. ₹50,000 - ₹200,000"
+                    value={partnerForm.retailerBudget}
+                    onChange={(e) => setPartnerForm({ ...partnerForm, retailerBudget: e.target.value })}
+                    className="w-full px-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-xs outline-none transition-all"
+                  />
+                </div>
+
+                {/* Preferred Promotion Duration */}
+                <div className="space-y-1.5">
+                  <label htmlFor="modalExpectedDuration" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Preferred Promotion Duration</label>
+                  <input
+                    type="text"
+                    id="modalExpectedDuration"
+                    placeholder="e.g. 3 Months, 6 Months"
+                    value={partnerForm.expectedDuration}
+                    onChange={(e) => setPartnerForm({ ...partnerForm, expectedDuration: e.target.value })}
+                    className="w-full px-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-xs outline-none transition-all"
+                  />
+                </div>
+              </div>
+
+              {/* Additional Message */}
+              <div className="space-y-1.5">
+                <label htmlFor="modalMessage" className="text-xs font-bold text-foreground/80 uppercase tracking-wider">Additional Message</label>
+                <textarea
+                  id="modalMessage"
+                  rows={3}
+                  placeholder="Tell us about your brand, products, marketing goals, and collaboration expectations."
+                  value={partnerForm.message}
+                  onChange={(e) => setPartnerForm({ ...partnerForm, message: e.target.value })}
+                  className="w-full px-4 py-3 rounded-xl border border-card-border bg-foreground/[0.02] focus:border-luxury-blue focus:bg-foreground/[0.04] text-xs outline-none transition-all resize-none"
+                />
+              </div>
+
+              {/* Buttons */}
+              <div className="flex items-center justify-end space-x-3 pt-2">
+                <button
+                  type="button"
+                  onClick={() => setShowCollabModal(false)}
+                  className="px-5 py-2.5 rounded-full border border-foreground/10 hover:bg-foreground/5 text-xs font-bold transition-all"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  disabled={formLoading}
+                  className="px-6 py-2.5 rounded-full bg-foreground text-background font-bold text-xs hover:opacity-90 disabled:opacity-75 disabled:pointer-events-none transition-all flex items-center space-x-2"
+                >
+                  {formLoading ? (
+                    <>
+                      <Loader2 size={12} className="animate-spin" />
+                      <span>Submitting...</span>
+                    </>
+                  ) : (
+                    <span>Submit Application</span>
+                  )}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

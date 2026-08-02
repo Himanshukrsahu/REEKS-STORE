@@ -12,6 +12,7 @@ import couponRoutes from './routes/couponRoutes.js';
 import reviewRoutes from './routes/reviewRoutes.js';
 import dashboardRoutes from './routes/dashboardRoutes.js';
 import notificationRoutes from './routes/notificationRoutes.js';
+import collaborationRoutes from './routes/collaborationRoutes.js';
 
 // Model Imports (for populating orders, etc.)
 import Order from './models/Order.js';
@@ -40,6 +41,7 @@ app.use('/api/coupons', couponRoutes);
 app.use('/api/reviews', reviewRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 app.use('/api/notifications', notificationRoutes);
+app.use('/api/collaborations', collaborationRoutes);
 
 // Invoice PDF/HTML download API endpoint
 app.get('/api/orders/:id/invoice', protect, async (req, res) => {
