@@ -11,10 +11,6 @@ import { useToastStore } from '../store/useToastStore';
 export default function Home() {
   const [faqOpen, setFaqOpen] = useState<{ [key: number]: boolean }>({});
 
-  const [calibratedType, setCalibratedType] = useState<string | null>(null);
-  const [recommendedRoutine, setRecommendedRoutine] = useState<any[]>([]);
-  const [routineLoading, setRoutineLoading] = useState(false);
-
   const { addToast } = useToastStore();
 
   // Collaboration Form State
@@ -80,48 +76,15 @@ export default function Home() {
     }, 1500);
   };
 
-  useEffect(() => {
-    const checkCalibratedSkin = async () => {
-      if (typeof window === 'undefined') return;
-      const saved = localStorage.getItem('reeksto_skin_type');
-      if (saved && saved !== calibratedType) {
-        setCalibratedType(saved);
-        setRoutineLoading(true);
-        try {
-          const data = await apiRequest(`/products?skinType=$1&limit=3`);
-          setRecommendedRoutine(data.products || []);
-        } catch (err) {
-          console.error('Error loading routine recommendations:', err);
-        } finally {
-          setRoutineLoading(false);
-        }
-      } else if (!saved && calibratedType) {
-        setCalibratedType(null);
-        setRecommendedRoutine([]);
-      }
-    };
-
-    const interval = setInterval(checkCalibratedSkin, 2000);
-    checkCalibratedSkin();
-    return () => clearInterval(interval);
-  }, [calibratedType]);
-
   const toggleFaq = (index: number) => {
     setFaqOpen(prev => ({ ...prev, [index]: !prev[index] }));
   };
 
-  const ingredients = [
-    { name: 'Retinol', desc: 'Cell cellular renewal matrix', detail: 'Accelerates epidermal turnover, fades fine lines, and promotes high-density collagen synthesis.' },
-    { name: 'Niacinamide', desc: 'Pore and barrier optimizer', detail: 'Refines pore structure, stabilizes sebum production, and boosts ceramide syntheses.' },
-    { name: 'Hyaluronic Acid', desc: 'Deep hydration plumping', detail: 'Multi-molecular weight matrix locks moisture up to 1000x its weight in the cellular layers.' },
-    { name: 'Vitamin C', desc: 'Radiance renewal shield', detail: 'High-potency antioxidant defends against UV photo-damage and brightens hyperpigmentation.' }
-  ];
-
   const faqs = [
-    { q: 'How does the AI Skin Quiz determine my routine?', a: 'Our diagnostic engine maps your responses against skin barrier indicators (hydration levels, sebum production, reactivity). It calculates your dominant skin profile and queries Swiss formulas designed for that profile.' },
-    { q: 'Are Reeks Store products dermatologist approved?', a: 'Yes. 100% of our products undergo rigorous clinical trials and are approved by European dermatological boards for cellular safety and high-efficacy performance.' },
-    { q: 'How long before I see results?', a: 'While hydration benefits are immediate, cellular renewal and texture improvements are clinically proven to become visible within 14 to 28 days of daily routine adherence.' },
-    { q: 'What is your shipping and return policy?', a: 'We offer free global express shipping on all orders over ₹1,500. If a formula is not compatible with your skin, you can initiate a return within 30 days for a full refund.' }
+    { q: 'How does ReekStore connect brands with creators?', a: 'ReekStore leverages intelligent profiling to match brand campaigns with creators who share similar values, target audience demographics, and creative style.' },
+    { q: 'Is there a fee for joining the platform?', a: 'Creating a profile and browsing partners is completely free for both creators and brand representatives. We offer scalable campaign options for active campaigns.' },
+    { q: 'How are collaboration expectations managed?', a: 'We provide formal application structures, budget proposals, and messaging details directly in our platform to ensure clean, professional, and transparent partnerships.' },
+    { q: 'Can startups with smaller budgets apply?', a: 'Absolutely. ReekStore supports all tier ranges, allowing brands to set flexible retailer promotion budgets tailored specifically to their marketing scale.' }
   ];
 
   return (
@@ -132,259 +95,191 @@ export default function Home() {
         <div className="absolute top-1/4 left-1/10 w-96 h-96 rounded-full bg-luxury-blue/10 blur-3xl animate-float pointer-events-none" />
         <div className="absolute bottom-10 right-1/10 w-80 h-80 rounded-full bg-luxury-purple/5 blur-3xl animate-float pointer-events-none" />
 
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8">
-          <div className="inline-flex items-center space-x-2 text-luxury-blue text-xs font-bold tracking-widest uppercase bg-luxury-blue/10 px-4 py-1.5 rounded-full border border-luxury-blue/20">
-            <Sparkles size={12} />
-            <span>Cellular Skin Science</span>
-          </div>
-
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-none text-foreground max-w-4xl mx-auto">
-            Healthy Skin <br className="sm:hidden" />
-            <span className="bg-gradient-to-r from-luxury-blue via-luxury-purple to-luxury-cyan bg-clip-text text-transparent">Starts Here</span>
-          </h1>
-
-          <p className="text-base sm:text-xl text-foreground/80 max-w-2xl mx-auto leading-relaxed">
-            Swiss-formulated, bio-engineered active matrices customized to your exact DNA profile. Take our diagnostics skin test to unlock molecular radiance.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <a
-              href="#skin-quiz"
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-foreground text-background hover:opacity-90 font-bold text-sm tracking-wide shadow-md transition-all flex items-center justify-center space-x-2"
-            >
-              <span>Calibrate Routine</span>
-              <ArrowRight size={16} />
-            </a>
-            <a
-              href="#skin-quiz"
-              className="w-full sm:w-auto px-8 py-4 rounded-full glass-panel hover:bg-foreground/5 font-semibold text-sm tracking-wide transition-all flex items-center justify-center space-x-2"
-            >
-              <span>Dermatology Quiz</span>
-            </a>
-          </div>
-
-          {/* Stats Bar */}
-          <div className="pt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            <div className="space-y-1">
-              <div className="text-3xl font-extrabold text-foreground">75+</div>
-              <div className="text-xs font-semibold uppercase tracking-wider text-foreground/60">Molecular Formulas</div>
-            </div>
-            <div className="space-y-1">
-              <div className="text-3xl font-extrabold text-foreground">99.4%</div>
-              <div className="text-xs font-semibold uppercase tracking-wider text-foreground/60">Dermatologist Approved</div>
-            </div>
-            <div className="space-y-1">
-              <div className="text-3xl font-extrabold text-foreground">120K+</div>
-              <div className="text-xs font-semibold uppercase tracking-wider text-foreground/60">Happy Skin Cycles</div>
-            </div>
-            <div className="space-y-1">
-              <div className="text-3xl font-extrabold text-foreground">15+</div>
-              <div className="text-xs font-semibold uppercase tracking-wider text-foreground/60">Beauty Awards Won</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 3. Skin Quiz */}
-      <section className="bg-background/25">
-        <SkinQuiz />
-      </section>
-
-      {/* AI Recommendations & Routine Builder Section */}
-      <section id="ai-recommendations" className="py-20 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12 scroll-mt-20">
-        <div className="text-center space-y-2 max-w-xl mx-auto">
-          <div className="text-xs font-bold uppercase tracking-wider text-luxury-purple">Custom Diagnostics</div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">AI Molecular Routine Builder</h2>
-          <p className="text-sm text-foreground/70">
-            A bio-engineered, clinical routine calibrated automatically from your cellular skin diagnostics.
-          </p>
-        </div>
-
-        {calibratedType ? (
-          <div className="glass-panel p-8 sm:p-12 rounded-3xl border border-card-border space-y-8 animate-fade-in relative overflow-hidden">
-            <div className="absolute -top-12 -right-12 w-64 h-64 bg-luxury-purple/5 blur-3xl rounded-full" />
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pb-6 border-b border-foreground/5">
-              <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-luxury-purple">Skin Profile Active</span>
-                <h3 className="text-2xl font-black tracking-tight">{calibratedType} Skin Protocol</h3>
+            {/* Left Column: Content */}
+            <div className="lg:col-span-7 space-y-8 text-left">
+              <div className="inline-flex items-center space-x-2 text-luxury-blue text-xs font-bold tracking-widest uppercase bg-luxury-blue/10 px-4 py-1.5 rounded-full border border-luxury-blue/20">
+                <Sparkles size={12} />
+                <span>Creator & Brand Synergy</span>
               </div>
-              <button
-                onClick={() => {
-                  localStorage.removeItem('reeksto_skin_type');
-                  setCalibratedType(null);
-                  setRecommendedRoutine([]);
-                  addToast('Skin profile cleared. You can now retake the quiz.', 'info');
-                  const quizEl = document.getElementById('skin-quiz');
-                  if (quizEl) quizEl.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="text-xs font-bold text-foreground/50 hover:text-red-500 hover:underline transition-all"
-              >
-                Clear & Recalibrate Diagnostic
-              </button>
+
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-none text-foreground">
+                Connecting Brands <br />
+                <span className="bg-gradient-to-r from-luxury-blue via-luxury-purple to-luxury-cyan bg-clip-text text-transparent">with the Right Creators</span>
+              </h1>
+
+              <div className="space-y-4">
+                <p className="text-base sm:text-lg font-bold text-foreground/90 leading-relaxed">
+                  ReekStore is a modern influencer marketing platform that helps brands discover the right creators, build meaningful partnerships, and launch successful promotional campaigns with confidence.
+                </p>
+                <p className="text-sm text-foreground/75 leading-relaxed">
+                  ReekStore simplifies brand and creator collaborations by providing a trusted platform where businesses can discover talented influencers and content creators for authentic marketing campaigns. Whether you're a growing startup, an established brand, or a creator looking for exciting opportunities, ReekStore makes collaboration simple, transparent, and effective.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
+                <a
+                  href="#brands"
+                  className="w-full sm:w-auto px-8 py-4 rounded-full bg-foreground text-background hover:opacity-90 font-bold text-sm tracking-wide shadow-md transition-all flex items-center justify-center space-x-2"
+                >
+                  <span>Explore Brands</span>
+                  <ArrowRight size={16} />
+                </a>
+                <a
+                  href="#partner"
+                  className="w-full sm:w-auto px-8 py-4 rounded-full glass-panel hover:bg-foreground/5 font-semibold text-sm tracking-wide transition-all flex items-center justify-center space-x-2 border border-card-border"
+                >
+                  <span>Become a Partner</span>
+                </a>
+              </div>
             </div>
 
-            {routineLoading ? (
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {[...Array(3)].map((_, i) => <SkeletonLoader key={i} className="h-60" />)}
-              </div>
-            ) : (
-              <div className="space-y-8">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  {recommendedRoutine.map((product, idx) => {
-                    const stepTimeline = idx === 0 ? 'AM & PM' : idx === 1 ? 'AM' : 'PM';
-                    const stepTitle = idx === 0 ? 'Step 1: Prep & Purify' : idx === 1 ? 'Step 2: Molecular Treatment' : 'Step 3: Barrier Seal';
-                    return (
-                      <div key={product._id} className="glass-panel p-6 rounded-2xl border border-card-border flex flex-col justify-between space-y-6 bg-background/30 hover:shadow-md transition-all">
-                        <div className="space-y-4">
-                          <div className="flex justify-between items-center">
-                            <span className="text-[10px] font-bold text-luxury-purple uppercase tracking-wider">{stepTitle}</span>
-                            <span className="bg-luxury-blue/10 text-luxury-blue text-[9px] font-extrabold px-2 py-0.5 rounded-full">{stepTimeline}</span>
-                          </div>
-                          
-                          <div className="w-24 h-24 rounded-xl overflow-hidden bg-foreground/5 mx-auto border border-card-border">
-                            <img src={product.images[0]} alt={product.name} className="object-cover w-full h-full" />
-                          </div>
-
-                          <div className="text-center space-y-1">
-                              <h4 className="font-extrabold text-sm line-clamp-1">{product.name}</h4>
-                            <p className="text-[10px] text-foreground/50 line-clamp-2 leading-relaxed">
-                              {product.benefits[0] || 'Targeted molecular delivery for skin barrier recovery.'}
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="pt-4 border-t border-foreground/5 flex items-center justify-between">
-                          <span className="font-black text-sm">₹{product.finalPrice}</span>
-                        </div>
-                      </div>
-                    );
-                  })}
+            {/* Right Column: Illustration Graphic */}
+            <div className="lg:col-span-5 relative group">
+              <div className="absolute -inset-2 rounded-3xl bg-gradient-to-r from-luxury-blue via-luxury-purple to-luxury-cyan opacity-20 blur-xl group-hover:opacity-35 transition-all duration-500" />
+              <div className="relative rounded-3xl overflow-hidden aspect-square bg-foreground/5 border border-card-border shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d1?w=600&auto=format&fit=crop&q=80"
+                  alt="SaaS creative campaign analytics dashboard"
+                  className="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-500"
+                />
+                
+                {/* Floating metrics glass pill */}
+                <div className="absolute bottom-6 left-6 right-6 glass-panel p-4 rounded-2xl border border-white/10 bg-background/60 backdrop-blur-md flex items-center justify-between shadow-lg">
+                  <div className="space-y-0.5">
+                    <span className="text-[9px] font-bold text-luxury-cyan uppercase tracking-widest">Co-Branding Reach</span>
+                    <div className="text-sm font-black text-white">🔥 1.2M+ Views Reached</div>
+                  </div>
+                  <div className="px-2.5 py-1 rounded-lg bg-emerald-500/10 text-emerald-500 text-[10px] font-extrabold border border-emerald-500/20">
+                    +320% ROI
+                  </div>
                 </div>
-
-
               </div>
-            )}
-          </div>
-        ) : (
-          <div className="glass-panel p-10 text-center rounded-3xl border border-card-border max-w-2xl mx-auto space-y-6">
-            <div className="inline-flex p-5 rounded-full bg-foreground/5 text-foreground/45">
-              <Sparkles size={36} className="animate-pulse text-luxury-purple" />
             </div>
-            <div className="space-y-2">
-              <h3 className="text-xl font-bold tracking-tight">No routine calibrated</h3>
-              <p className="text-sm text-foreground/60 max-w-md mx-auto leading-relaxed">
-                Take our molecular diagnostic evaluation above. The system will analyze your responses to assemble a personalized 3-step morning and night regimen.
-              </p>
-            </div>
-            <button
-              onClick={() => {
-                const quizEl = document.getElementById('skin-quiz');
-                if (quizEl) quizEl.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="inline-flex items-center space-x-2 px-6 py-3 rounded-full bg-foreground text-background text-xs font-bold hover:opacity-90 transition-all"
-            >
-              <span>Calibrate Your Routine</span>
-              <ArrowRight size={12} />
-            </button>
+
           </div>
-        )}
+        </div>
       </section>
 
-      {/* 4. Bento Ingredients Showcase */}
-      <section id="ingredients" className="py-20 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
-        <div className="text-center space-y-2 max-w-xl mx-auto">
-          <div className="text-xs font-bold uppercase tracking-wider text-luxury-cyan">Scientific Core</div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Active Molecular Ingredients</h2>
-          <p className="text-sm text-foreground/70">
-            We isolate, refine, and capsule highly potent active elements to deliver dermatological healing.
-          </p>
+      {/* 2. Highlight Cards Section */}
+      <section className="py-16 border-y border-card-border bg-background/20 backdrop-blur-sm">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: 'Discover Creators',
+                desc: 'Find influencers and creators across different categories that match your brand\'s goals.',
+                icon: <Users className="text-luxury-blue" size={20} />
+              },
+              {
+                title: 'Trusted Brand Partnerships',
+                desc: 'Build genuine collaborations that drive engagement and long-term growth.',
+                icon: <Award className="text-luxury-purple" size={20} />
+              },
+              {
+                title: 'Campaign Management',
+                desc: 'Manage collaboration requests and promotional campaigns from one platform.',
+                icon: <Zap className="text-luxury-cyan" size={20} />
+              },
+              {
+                title: 'Secure & Professional',
+                desc: 'A reliable platform focused on transparency, professionalism, and quality partnerships.',
+                icon: <ShieldCheck className="text-emerald-500" size={20} />
+              }
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="glass-panel p-6 rounded-2xl border border-card-border hover:border-luxury-blue/30 hover:shadow-lg transition-all space-y-3 cursor-pointer group"
+              >
+                <div className="inline-flex p-2.5 rounded-xl bg-foreground/5 group-hover:bg-foreground/10 transition-colors">
+                  {item.icon}
+                </div>
+                <h3 className="font-extrabold text-sm text-foreground group-hover:text-luxury-blue transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-xs text-foreground/60 leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
+      </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {ingredients.map((ing, idx) => (
-            <div
-              key={idx}
-              className="glass-panel p-8 rounded-3xl border border-card-border flex flex-col justify-between space-y-6 hover:shadow-lg transition-all"
-            >
-              <div className="space-y-4">
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-luxury-blue/10 text-luxury-blue font-bold text-sm">
-                  0{idx + 1}
-                </span>
-                <h3 className="text-xl font-bold tracking-tight text-foreground">{ing.name}</h3>
-                <p className="text-xs font-bold uppercase tracking-wider text-luxury-purple">{ing.desc}</p>
-                <p className="text-sm text-foreground/75 leading-relaxed">{ing.detail}</p>
+      {/* 3. Platform Statistics Section */}
+      <section className="py-16 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="glass-panel p-8 sm:p-12 rounded-3xl border border-card-border grid grid-cols-2 md:grid-cols-4 gap-8 text-center shadow-lg relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-luxury-blue/5 via-luxury-purple/5 to-luxury-cyan/5 pointer-events-none" />
+          
+          {[
+            { value: '500+', label: 'Active Creators', icon: <Users size={16} className="text-luxury-blue" /> },
+            { value: '100+', label: 'Brand Collaborations', icon: <Sparkles size={16} className="text-luxury-purple" /> },
+            { value: '1,000+', label: 'Campaign Applications', icon: <Zap size={16} className="text-luxury-cyan" /> },
+            { value: '95%', label: 'Partner Satisfaction', icon: <Star size={16} className="text-amber-500" /> }
+          ].map((stat, idx) => (
+            <div key={idx} className="space-y-2 relative z-10 flex flex-col items-center">
+              <div className="inline-flex p-2 rounded-lg bg-foreground/5 mb-1">
+                {stat.icon}
+              </div>
+              <div className="text-3xl font-black text-foreground tracking-tight">
+                {stat.value}
+              </div>
+              <div className="text-[10px] font-bold uppercase tracking-wider text-foreground/50">
+                {stat.label}
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* 5. Why Choose Reeksto */}
-      <section className="py-20 bg-background/50 border-t border-card-border">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-8">
-            <div className="space-y-2">
-              <div className="text-xs font-bold uppercase tracking-wider text-luxury-blue">Swiss Standards</div>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Why Choose Reeks Store Skincare?</h2>
-            </div>
-            
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-2xl bg-luxury-blue/10 text-luxury-blue">
-                  <ShieldCheck size={24} />
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg text-foreground">Clinical Efficacy Guarantee</h3>
-                  <p className="text-sm text-foreground/75 mt-1 leading-relaxed">Every formula is tested and backtested by independent dermatological institutes. Results are measured down to the micrometer level.</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-2xl bg-luxury-purple/10 text-luxury-purple">
-                  <Zap size={24} />
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg text-foreground">Bio-Molecular Vectors</h3>
-                  <p className="text-sm text-foreground/75 mt-1 leading-relaxed">Our encapsulation tech routes active agents deep within cell layers, bypassing immediate oxidization for peak recovery power.</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-2xl bg-luxury-cyan/10 text-luxury-cyan">
-                  <Award size={24} />
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg text-foreground">Luxury Design, Clean Footprint</h3>
-                  <p className="text-sm text-foreground/75 mt-1 leading-relaxed">All Reeks Store bottles feature ultra-premium frosted glass and are designed for infinite recyclability with Zero carbon packaging.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Visual before/after card */}
-          <div className="glass-panel p-6 sm:p-10 rounded-3xl border border-card-border space-y-6 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-luxury-cyan/10 blur-2xl rounded-full" />
-            <h3 className="text-xl font-bold tracking-tight text-foreground flex items-center space-x-2">
-              <span>Molecular Renewal Trial</span>
-            </h3>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <div className="text-[10px] font-bold uppercase tracking-wider text-foreground/50">Day 0: Cellular Fatigue</div>
-                <div className="aspect-square rounded-2xl overflow-hidden bg-foreground/5 relative">
-                  <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=300&auto=format&fit=crop&q=60" alt="Skin Day 0" className="object-cover w-full h-full grayscale" />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <div className="text-[10px] font-bold uppercase tracking-wider text-luxury-cyan">Day 14: Cellular Radiance</div>
-                <div className="aspect-square rounded-2xl overflow-hidden bg-foreground/5 relative">
-                  <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=300&auto=format&fit=crop&q=60" alt="Skin Day 14" className="object-cover w-full h-full" />
-                </div>
-              </div>
-            </div>
-            <p className="text-xs text-foreground/70 text-center leading-relaxed italic">
-              "After introducing Reeks Store to my daily routine, my skin redness dropped and the overall radiance went up significantly."
+      {/* 4. Why Choose ReekStore Section */}
+      <section className="py-20 border-t border-card-border bg-foreground/[0.01]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="text-center space-y-2">
+            <div className="text-xs font-bold uppercase tracking-wider text-luxury-purple">Value Proposition</div>
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Why Choose ReekStore?</h2>
+            <p className="text-sm text-foreground/60 max-w-md mx-auto">
+              Connecting creator creativity with clear target brand demographics.
             </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Smart Matching',
+                desc: 'Helping brands connect with creators that fit their campaign objectives.',
+                icon: <Sparkles className="text-luxury-purple" size={24} />
+              },
+              {
+                title: 'Easy Collaboration',
+                desc: 'A simple process for managing partnership requests and campaign communication.',
+                icon: <Zap className="text-luxury-blue" size={24} />
+              },
+              {
+                title: 'Growth Focused',
+                desc: 'Supporting both brands and creators in building successful long-term collaborations.',
+                icon: <Award className="text-luxury-cyan" size={24} />
+              }
+            ].map((card, idx) => (
+              <div
+                key={idx}
+                className="glass-panel p-8 rounded-3xl border border-card-border flex flex-col justify-between space-y-6 hover:shadow-lg transition-all group cursor-pointer"
+              >
+                <div className="space-y-4">
+                  <div className="inline-flex p-3 rounded-2xl bg-foreground/5 group-hover:bg-foreground/10 transition-colors">
+                    {card.icon}
+                  </div>
+                  <h3 className="text-lg font-bold tracking-tight text-foreground group-hover:text-luxury-purple transition-colors">
+                    {card.title}
+                  </h3>
+                  <p className="text-xs text-foreground/60 leading-relaxed">
+                    {card.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
