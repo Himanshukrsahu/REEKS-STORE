@@ -32,13 +32,10 @@ export default function Footer() {
                 <Link href="/" className="hover:text-luxury-blue transition-colors">Home</Link>
               </li>
               <li>
-                <Link href="/#about" className="hover:text-luxury-blue transition-colors">About</Link>
-              </li>
-              <li>
                 <Link href="/#brands" className="hover:text-luxury-blue transition-colors">Brand Partners</Link>
               </li>
               <li>
-                <Link href="/#team" className="hover:text-luxury-blue transition-colors">Team</Link>
+                <Link href="/#about" className="hover:text-luxury-blue transition-colors">About</Link>
               </li>
               <li>
                 <a href="mailto:reekstore14@gmail.com" className="hover:text-luxury-blue transition-colors">Contact</a>

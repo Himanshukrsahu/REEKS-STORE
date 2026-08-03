@@ -34,8 +34,7 @@ export default function Navbar() {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'Brands', href: '/#brands' },
-    { name: 'About', href: '/#about' },
-    { name: 'Team', href: '/#team' }
+    { name: 'About', href: '/#about' }
   ];
 
   if (!mounted) {
