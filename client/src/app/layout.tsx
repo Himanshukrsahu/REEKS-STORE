@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Outfit, Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -7,19 +7,26 @@ import ThemeHandler from '../components/ThemeHandler';
 import ToastContainer from '../components/Toast';
 import FloatingSocials from '../components/FloatingSocials';
 
-const inter = Inter({
+const outfit = Outfit({
+  subsets: ['latin'],
+  variable: '--font-outfit',
+  weight: ['300', '400', '500', '600', '700'],
+});
+
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
   variable: '--font-sans',
+  weight: ['300', '400', '500', '600', '700', '800'],
 });
 
 export const metadata: Metadata = {
-  title: 'Reeks Store | Molecular Skincare & Radiance Renewal',
-  description: 'Premium Swiss-formulated cellular skincare tailored for your exact skin type. Healthy skin starts with molecular science.',
-  keywords: 'skincare, luxury beauty, day cream, retinol serum, skin type quiz, AI recommendations',
+  title: 'REEKS STORE | Build Better Skincare Habits',
+  description: 'REEKS STORE is India\'s skincare habit platform helping you stay consistent with your daily routine through reminders, streak tracking, and rewards.',
+  keywords: 'skincare, habits, streak tracking, rewards, REEKS STORE, brand partners',
   manifest: '/manifest.json',
   openGraph: {
-    title: 'Reeks Store | Molecular Skincare & Radiance Renewal',
-    description: 'Swiss-formulated skincare tailored for your exact skin type.',
+    title: 'REEKS STORE | Build Better Skincare Habits',
+    description: 'Build better skincare habits and get rewarded with REEKS STORE.',
     type: 'website',
   }
 };
@@ -30,8 +37,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-background text-foreground">
+    <html lang="en" className={`${outfit.variable} ${plusJakarta.variable} h-full antialiased`}>
+      <body className="min-h-full flex flex-col bg-background text-foreground font-sans">
         <ThemeHandler />
         <Navbar />
         <main className="flex-grow">

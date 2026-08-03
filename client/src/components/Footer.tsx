@@ -15,8 +15,9 @@ export default function Footer() {
           <div className="md:col-span-4 space-y-4">
             <div className="flex items-center space-x-3 mb-2">
               <img src="/logo.jpg" alt="ReekStore Logo" className="w-12 h-12 rounded-xl object-cover border border-card-border shadow-md" />
-              <span className="text-xl font-black tracking-tight text-foreground bg-gradient-to-r from-luxury-blue via-luxury-purple to-luxury-cyan bg-clip-text text-transparent">
-                REEKS STORE.
+              <span className="text-xl font-light brand-font tracking-[0.2em] flex items-center space-x-1.5">
+                <span className="text-foreground dark:text-white font-normal">REEKS</span>
+                <span className="brand-store-gradient font-medium">STORE</span>
               </span>
             </div>
             <p className="text-xs sm:text-sm text-foreground/75 leading-relaxed max-w-sm">

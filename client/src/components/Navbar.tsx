@@ -56,8 +56,9 @@ export default function Navbar() {
         <Link href="/" className="flex items-center space-x-2">
           <div className="flex items-center space-x-2.5">
             <img src="/logo.jpg" alt="Reeks Store Logo" className="w-12 h-12 rounded-xl object-cover border border-card-border shadow-sm" />
-            <span className="text-xl font-black tracking-tight text-foreground bg-gradient-to-r from-luxury-blue via-luxury-purple to-luxury-cyan bg-clip-text text-transparent">
-              REEKS STORE.
+            <span className="text-lg sm:text-xl font-light brand-font tracking-[0.2em] flex items-center space-x-1.5">
+              <span className="text-foreground dark:text-white font-normal">REEKS</span>
+              <span className="brand-store-gradient font-medium">STORE</span>
             </span>
           </div>
         </Link>

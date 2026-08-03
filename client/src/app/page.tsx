@@ -12,15 +12,15 @@ export default function Home() {
 
   const faqs = [
     {
-      q: 'How does ReekStore help me stay consistent?',
-      a: 'ReekStore provides daily AM & PM reminders, interactive streak tracking, and unlocks real reward vouchers from partner brands as you maintain your routine.'
+      q: 'How does REEKS STORE help me stay consistent?',
+      a: 'REEKS STORE provides daily AM & PM reminders, interactive streak tracking, and unlocks real reward vouchers from partner brands as you maintain your routine.'
     },
     {
       q: 'Are the brand rewards free to unlock?',
       a: 'Yes! By simply checking off your daily skincare steps and building your streak, you earn points and discount codes redeemable with our brand partners.'
     },
     {
-      q: 'How can skincare brands partner with ReekStore?',
+      q: 'How can skincare brands partner with REEKS STORE?',
       a: 'Skincare brands can reach out directly via our contact channels to collaborate on co-branded rewards and product discovery campaigns.'
     }
   ];
@@ -44,19 +44,19 @@ export default function Home() {
                 <span>Habit Building & Rewards</span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-none text-foreground">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-none text-foreground">
                 Build Better Skincare Habits. <br />
-                <span className="bg-gradient-to-r from-luxury-blue via-luxury-purple to-luxury-cyan bg-clip-text text-transparent">
+                <span className="brand-store-gradient font-black">
                   Get Rewarded.
                 </span>
               </h1>
 
               <div className="space-y-3 max-w-2xl">
-                <p className="text-base sm:text-lg font-bold text-foreground/90 leading-relaxed">
-                  ReekStore helps you stay consistent with your daily skincare routine through reminders, streak tracking, rewards, and trusted brand partnerships.
+                <p className="text-base sm:text-lg font-semibold text-foreground/90 leading-relaxed">
+                  <span className="inline-flex items-center space-x-1 font-light brand-font tracking-[0.18em] text-xs sm:text-sm mr-1"><span className="text-foreground dark:text-white font-normal">REEKS</span><span className="brand-store-gradient font-medium">STORE</span></span> helps you stay consistent with your daily skincare routine through reminders, streak tracking, rewards, and trusted brand partnerships.
                 </p>
                 <p className="text-sm text-foreground/70 leading-relaxed">
-                  ReekStore solves skincare consistency. Build healthy daily habits, track your progress streaks, and unlock exclusive rewards from top skincare brands.
+                  <span className="inline-flex items-center space-x-1 font-light brand-font tracking-[0.18em] text-xs mr-1"><span className="text-foreground dark:text-white font-normal">REEKS</span><span className="brand-store-gradient font-medium">STORE</span></span> solves skincare consistency. Build healthy daily habits, track your progress streaks, and unlock exclusive rewards from top skincare brands.
                 </p>
               </div>
 
@@ -327,10 +327,13 @@ export default function Home() {
             <div className="lg:col-span-5 space-y-5">
               <div className="space-y-2">
                 <div className="text-xs font-bold uppercase tracking-wider text-luxury-blue">Our Mission</div>
-                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">About ReekStore</h2>
+                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight flex items-center space-x-2">
+                  <span>About</span>
+                  <span className="inline-flex items-center space-x-1 font-light brand-font tracking-[0.18em] text-2xl sm:text-3xl"><span className="text-foreground dark:text-white font-normal">REEKS</span><span className="brand-store-gradient font-medium">STORE</span></span>
+                </h2>
               </div>
               <p className="text-sm text-foreground/80 leading-relaxed">
-                At ReekStore, we believe healthy skin starts with consistency. Most people don't struggle with buying products—they struggle with using them daily. ReekStore provides daily reminders, streak tracking, and rewards to keep you motivated every step of the way.
+                At <span className="inline-flex items-center space-x-1 font-light brand-font tracking-[0.18em] text-xs mr-0.5"><span className="text-foreground dark:text-white font-normal">REEKS</span><span className="brand-store-gradient font-medium">STORE</span></span>, we believe healthy skin starts with consistency. Most people don't struggle with buying products—they struggle with using them daily. <span className="inline-flex items-center space-x-1 font-light brand-font tracking-[0.18em] text-xs mr-0.5"><span className="text-foreground dark:text-white font-normal">REEKS</span><span className="brand-store-gradient font-medium">STORE</span></span> provides daily reminders, streak tracking, and rewards to keep you motivated every step of the way.
               </p>
               <p className="text-sm text-foreground/75 leading-relaxed">
                 By partnering with trusted skincare brands, users unlock exclusive rewards for completing daily routines while discovering top formulations.
