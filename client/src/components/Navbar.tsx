@@ -95,7 +95,20 @@ export default function Navbar() {
         </nav>
 
         {/* Icons */}
-        <div className="hidden md:flex items-center space-x-6">
+        <div className="hidden md:flex items-center space-x-5">
+          {/* Theme Toggle Button */}
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-full text-foreground/80 hover:text-luxury-purple hover:bg-foreground/10 transition-all flex items-center justify-center border border-card-border shadow-sm"
+            title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} Mode`}
+            aria-label="Toggle Theme"
+          >
+            {theme === 'dark' ? (
+              <Sun size={18} className="text-amber-400 transition-transform duration-300 hover:rotate-45" />
+            ) : (
+              <Moon size={18} className="text-luxury-purple transition-transform duration-300 hover:-rotate-12" />
+            )}
+          </button>
 
 
 
@@ -147,12 +160,18 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Toggle */}
-        <div className="flex items-center space-x-4 md:hidden">
-
-
-
-
-          {/* Menu */}
+        <div className="flex items-center space-x-3 md:hidden">
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-full text-foreground/80 hover:text-luxury-purple hover:bg-foreground/10 transition-all flex items-center justify-center border border-card-border"
+            aria-label="Toggle Theme"
+          >
+            {theme === 'dark' ? (
+              <Sun size={18} className="text-amber-400" />
+            ) : (
+              <Moon size={18} className="text-luxury-purple" />
+            )}
+          </button>
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="p-2 rounded-full text-foreground"
