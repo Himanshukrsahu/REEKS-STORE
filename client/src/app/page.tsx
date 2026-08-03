@@ -127,10 +127,16 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Floating UI Widget 4: Brand Partner Code Badge */}
-              <div className="absolute bottom-12 -right-4 glass-panel px-4 py-2 rounded-full border border-white/20 shadow-lg flex items-center space-x-2 backdrop-blur-xl">
+              {/* Floating UI Widget 4: Coupons Code Badge */}
+              <div className="absolute bottom-12 -right-4 glass-panel px-4 py-2.5 rounded-full border border-white/20 shadow-lg flex items-center space-x-2 backdrop-blur-xl animate-float [animation-delay:3.5s]">
                 <Tag size={14} className="text-luxury-cyan" />
                 <span className="text-[11px] font-extrabold text-foreground tracking-wide">🎟️ SkinInspired 20% OFF</span>
+              </div>
+
+              {/* Floating UI Widget 5: Brand Partner Pill */}
+              <div className="absolute top-12 left-1/3 glass-panel px-3.5 py-1.5 rounded-full border border-white/20 shadow-md flex items-center space-x-2 backdrop-blur-xl pointer-events-none">
+                <ShieldCheck size={14} className="text-emerald-400" />
+                <span className="text-[10px] font-bold text-foreground uppercase tracking-widest">🤝 Verified Brand Partner</span>
               </div>
 
             </div>
